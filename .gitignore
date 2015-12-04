@@ -1,1 +1,6 @@
+# history files
 .zsh-history
+.gnuplot_history
+
+# dumpfiles
+.zcompdump
