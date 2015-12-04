@@ -8,6 +8,7 @@ SAVEHIST=100000
 #./archey
 
 # PATH setting
+export DOTPATH=~/.dotfiles
 PATH=/usr/local/bin:$PATH:~/dotfiles/bin
 # export MANPATH=/usr/local/share/man:/usr/local/man:/usr/share/man
 
