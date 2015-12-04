@@ -1,0 +1,58 @@
+\documentclass[a4j,dvipdfmx]{jsarticle}
+\usepackage[dvipdfm]{graphicx}
+\usepackage{amsmath}
+\usepackage{txfonts}
+\usepackage{lscape}
+\usepackage{listings,jlisting}
+\usepackage{ascmac}
+\usepackage{tikz}
+\usetikzlibrary{matrix,calc}
+\renewcommand{\lstlistingname}{リスト}
+
+\lstset{%
+	language=C, 
+	basicstyle={\ttfamily\footnotesize},%
+	identifierstyle={\small},%
+	commentstyle={\small\itshape},%
+	keywordstyle={\small\bfseries},%
+	ndkeywordstyle={\small},%
+	stringstyle={\small\ttfamily},
+	frame=ltbr,
+	breaklines=true
+	columns=[l]{fullflexible},%
+	numbers=left,%
+	xrightmargin=0zw,%
+	xleftmargin=3zw,%
+	numberstyle={\scriptsize},%
+	showstringspaces=false,%
+	stepnumber=1,
+	numbersep=1zw,%
+	lineskip=-0.5ex,%
+	keepspaces=true%
+}
+
+\begin{document}
+
+\def\tomorrow{\advance\day by 1
+			 \today
+			 \advance\day by -1}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{30pt}
+{\huge title}\\
+\vspace{10pt}
+{\Large subtitle}\\
+\vspace{12cm}
+\begin{tabular}{rl}
+氏名 & name\\
+組番号xxx & 学籍番号 yyyyy\\
+\end{tabular} \vspace{3pt} \\
+提出日 \today \vspace{12pt} \\
+\end{center}
+\end{titlepage}
+
+\input{input}
+
+\end{document}
+
