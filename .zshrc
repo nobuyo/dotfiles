@@ -93,7 +93,7 @@ setopt print_eight_bit
 setopt share_history
 
 zstyle ':completion:*:default' menu select=1
-
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 setopt auto_cd
