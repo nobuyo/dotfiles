@@ -56,7 +56,7 @@ fi
 # `make init`
 # ===Makefile Form===
 
-cat <<'EOT'  > "PWD"/Makefile
+cat <<'EOT'  > "$PWD"/Makefile
 # This is Makefile for LaTeX compiling
 
 TARGET=main
@@ -69,9 +69,10 @@ TEX=platex
 all: pdf
 
 init: 
-	cp $HOME/dotfiles/doc/report_template.tex main.tex
-	touch $(SUB_TARGET).tex
-	@echo "create $(TARGET).tex"
+	@cp $(HOME)/dotfiles/doc/report_template.tex main.tex
+	@touch $(SUB_TARGET).tex
+	@echo "prepareing..."
+	@echo "OK!"
 
 pdf: $(TARGET).tex
 
