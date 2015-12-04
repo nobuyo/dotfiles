@@ -45,7 +45,7 @@ fi
 
 # After making folders and file,
 # please run follow commands 
-# `cd`
+# `cd <dir name>`
 # `make init`
 # ===Makefile Form===
 
@@ -82,7 +82,7 @@ pd: $(SUB_TARGET).md
 	pandoc $(SUB_TARGET).md -o $(SUB_TARGET).tex --latex-engine=lualatex
 
 open: build/$(TARGET).pdf
-	@cygstart build/$(TARGET).pdf
+	@open build/$(TARGET).pdf
 
 bb: 
 	ebb image/*.png
