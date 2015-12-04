@@ -3033,3 +3033,15 @@ exit\
 : 1449220604:0;subl REA
 : 1449220637:0;git init
 : 1449220645:0;git add .
+: 1449220656:0;la
+: 1449220661:0;l
+: 1449220736:0;git commit -m "first commit"
+: 1449220755:0;git remote add origin https://github.com/nobuyo/dotfiles.git
+: 1449220764:0;git push origin master
+: 1449220776:0;git pull
+: 1449220788:0;git add .
+: 1449220794:0;git status
+: 1449220811:0;subl .gitignore
+: 1449220822:0;la
+: 1449220830:0;git add .gitignore
+: 1449220841:0;git commit -am "add .gitignore"
