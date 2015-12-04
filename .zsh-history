@@ -1,0 +1,3035 @@
+: 1431849274:0;rm .zprezto
+: 1431849283:0;rmdir .zprezto
+: 1431943923:0;cd
+: 1431943930:0;..
+: 1431943933:0;Unity
+: 1431943938:0;3d_tetris
+: 1431944006:0;..
+: 1431944026:0;cd
+: 1431944047:0;git clone https://github.com/TeX2e/3J_class_project.git
+: 1431944052:0;ll
+: 1431944090:0;3_class_project
+: 1431944099:0;3J_class_project
+: 1431944106:0;git branch
+: 1431944137:0;git checkout -b update-overview
+: 1431944469:0;git add overview.md
+: 1431944494:0;git commit -m "Update overview.md"
+: 1431944525:0;git push origin update-overview
+: 1431944836:0;clear
+: 1431944841:0;cd
+: 1431944847:0;git clone https://github.com/nobuyo/3J_class_project.git
+: 1431944870:0;3J_class_project
+: 1431944929:0;git checkout -b update-overview
+: 1431944938:0;git branch
+: 1431945082:0;3_class_project
+: 1431945086:0;3J_class_project
+: 1431945126:0;git add overview.md
+: 1431945132:0;git commit -m "Update overview.md"
+: 1431945150:0;git remote -v
+: 1431945171:0;git push origin update-overview
+: 1431945671:0;git status
+: 1431945698:0;exit
+: 1431947452:0;3J_class_project
+: 1431947458:0;git branch
+: 1431947504:0;git add README.md
+: 1431947590:0;git commit -m "Corrected link to overview"
+: 1431947615:0;git push origin update-overview
+: 1431947803:0;git status
+: 1431948045:0;git add README.md
+: 1431948051:0;git commit -m "Corrected link to overview"
+: 1431948063:0;git branch -v
+: 1431949976:0;exit
+: 1431958583:0;cd G:/report
+: 1431958589:0;cd /G:/report
+: 1431958601:0;cd E:/report
+: 1431958606:0;etc
+: 1431958635:0;platex cover.tex
+: 1431958659:0;dvipdfmx cover.dvi
+: 1432030560:0;ls
+: 1432030567:0;3J_class_project
+: 1432030579:0;git checkout master
+: 1432030590:0;git merge update-overview
+: 1432030706:0;git pull https://github.com/13J-Programmers/3J_class_project
+: 1432032627:0;git branch
+: 1432038792:0;it checkout -b Update-BlockEntity
+: 1432038799:0;git checkout -b Update-BlockEntity
+: 1432038931:0;git add BlockEntity.cs
+: 1432038941:0;ls
+: 1432038949:0;Assets
+: 1432038953:0;Script
+: 1432038958:0;git add BlockEntity.cs
+: 1432038990:0;git commit -m "named block-instance"
+: 1432039121:0;git add BlockEntity.cs
+: 1432039133:0;git commit -m "named block"
+: 1432039180:0;git branch
+: 1432039197:0;git push origin Update-BlockEntity
+: 1432040565:0;..
+: 1432042836:0;exit
+: 1432101990:0;3J_class_project
+: 1432102001:0;Assets
+: 1432102009:0;Sc
+: 1432102031:0;n~
+: 1432102031:0;q
+: 1432102031:0;ecitxit
+: 1432102039:0;ls
+: 1432102046:0;Script
+: 1432102061:0;git add KeyAction.cs
+: 1432102113:0;cd
+: 1432102117:0;3J_class_project
+: 1432102124:0;git diff
+: 1432102195:0;git commit -m "Add KeyAction"
+: 1432102215:0;git branch
+: 1432102226:0;git push origin Update-BlockEntity
+: 1432102246:0;git status
+: 1432103156:0;git remote
+: 1432105071:0;ls
+: 1432105076:0;Assets
+: 1432105081:0;Script
+: 1432105097:0;git add KeyAction.cs.meta
+: 1432105102:0;..
+: 1432105107:0;3J_class_project
+: 1432105134:0;git commit -m "add KeyAction.cs.meta"
+: 1432105141:0;git branch
+: 1432105157:0;git push origin Update-BlockEntity
+: 1432109187:0;git fetch
+: 1432109322:0;git add upstream https://github.com/13J-Programmers/3J_class_project.git
+: 1432109336:0;git remote add upstream https://github.com/13J-Programmers/3J_class_project.git
+: 1432109345:0;git branch
+: 1432109356:0;git checkout master
+: 1432109415:0;git commit -m "update-KeyAction"
+: 1432109432:0;git fetch upstream
+: 1432109459:0;git branch -a
+: 1432109616:0;git checkout master
+: 1432109663:0;Assets
+: 1432109670:0;Script
+: 1432109687:0;git commit -m "KeyAction-Update"
+: 1432109694:0;//
+: 1432109699:0;cd
+: 1432109705:0;3J_class_project
+: 1432109716:0;git checkout master
+: 1432109799:0;git status
+: 1432109847:0;git checkout .
+: 1432109853:0;git checkout master
+: 1432109861:0;git fetch
+: 1432109912:0;git branch
+: 1432110050:0;git fetch
+: 1432110134:0;git branch -a
+: 1432110151:0;git remote
+: 1432110184:0;git fetch master
+: 1432110221:0;git merge upstream/merge
+: 1432110322:0;git merge upstream/master
+: 1432110349:0;git checkout .
+: 1432110351:0;git merge upstream/master
+: 1432110355:0;exit
+: 1432110359:0;3J_class_project
+: 1432110389:0;git merge upstream/master
+: 1432111273:0;Assets
+: 1432111277:0;Script
+: 1432111289:0;..
+: 1432111313:0;git commit -m "Script KA Updaye"
+: 1432111364:0;git checkout -b Update-KeyAction
+: 1432111392:0;git commit -m "KeyAction updated"
+: 1432111409:0;git push origin Update-KeyAction
+: 1432111551:0;git status
+: 1432111570:0;git branch
+: 1432111595:0;git commit -m "Update-KeyAction.cs"
+: 1432111639:0;git push 
+: 1432111677:0;git push origin Update-KeyAcion
+: 1432111703:0;git branch -a
+: 1432111860:0;git status
+: 1432111888:0;git commit -a
+: 1432111914:0;git branch
+: 1432111950:0;git commit -am "Update-KeyAction"
+: 1432111971:0;git push origin Update-KeyAction
+: 1432112079:0;git checkout master
+: 1432112083:0;git branch
+: 1432112099:0;git push origin master
+: 1432112286:0;git fetch upstream
+: 1432112323:0;git merge upstream/master
+: 1432112360:0;git branch -a
+: 1432112409:0;git diff upstream/master
+: 1432112423:0;git merge upstream/master
+: 1432112634:0;git fetch upstream
+: 1432112638:0;git merge upstream/master
+: 1432113541:0;git checkout -b Control-Update
+: 1432113621:0;git branch
+: 1432114015:0;git checkout master
+: 1432114032:0;git fetch upstream/master
+: 1432114136:0;git fetch upstream
+: 1432114141:0;git merge upstream/master
+: 1432115719:0;git branch
+: 1432115731:0;git checkout Control-Update
+: 1432115772:0;git commit -am "fix KeyAction.cs"
+: 1432115786:0;git push origin master
+: 1432115889:0;git checkout -b Add-Pool
+: 1432115922:0;git fetch upstream
+: 1432115946:0;git merge upstream/master
+: 1432115957:0;git branch
+: 1432117938:0;git checkout master
+: 1432117949:0;git fetch upstream
+: 1432117953:0;git merge upstream/master
+: 1432121523:0;git fetch upstream
+: 1432121526:0;git merge upstream/master
+: 1432121533:0;git branch
+: 1432121554:0;git check out .
+: 1432121563:0;git checkout .
+: 1432121566:0;git merge upstream/master
+: 1432121572:0;git push 
+: 1432121586:0;git push origin master
+: 1432125743:0;git checkout .
+: 1432125751:0;git fetch upstream
+: 1432125756:0;git merge upstream/master
+: 1432126409:0;exit
+: 1432201248:0;git branch
+: 1432201256:0;3J_class_project
+: 1432201258:0;git branch
+: 1432201262:0;git fetch upstream
+: 1432201267:0;git merge upstream/master
+: 1432209064:0;exit
+: 1432280678:0;3J_class_project
+: 1432282210:0;git checkout update-overview
+: 1432282245:0;commit -am "add about Ecoris to overview"
+: 1432282250:0;git commit -am "add about Ecoris to overview"
+: 1432282283:0;ls
+: 1432282291:0;git status
+: 1432282965:0;git commit -m "update-overview about Ecoris"
+: 1432282984:0;git push origin master
+: 1432283063:0;git status
+: 1432283066:0;git push origin master
+: 1432283079:0;git commit -m "update-overview"
+: 1432283083:0;git push origin master
+: 1432283158:0;git commit -m "Update about Ecoris -> overview.md"
+: 1432283225:0;git commit -m "Update about Ecoris -> overview"
+: 1432283262:0;git add overview.md
+: 1432283265:0;git commit -m "Update about Ecoris -> overview"
+: 1432283270:0;git push origin master
+: 1432285499:0;git fetch upstream
+: 1432285522:0;git merge upstream/master
+: 1432285543:0;git checkout -b update-overview
+: 1432285548:0;git checkout update-overview
+: 1432285563:0;git merge master
+: 1432285581:0;git commit -am "fix"
+: 1432285586:0;git merge master
+: 1432285590:0;git checkout update-overview
+: 1432285627:0;git add overview.md
+: 1432285658:0;git commit -m "about ecoris added"
+: 1432285671:0;git push origin update-overview
+: 1432285907:0;git branch
+: 1432285913:0;git checkout master
+: 1432285922:0;git fetch upstream
+: 1432286069:0;git clone https://github.com/nobuyo/3J_class_project
+: 1432286080:0;..
+: 1432286087:0;cd ..
+: 1432286097:0;git clone https://github.com/nobuyo/3J_class_project
+: 1432286161:0;3J_class_project
+: 1432286166:0;git branch
+: 1432286235:0;git remote add upstream https://github.com/13J-Programmers/3J_class_project
+: 1432286241:0;git branch -a
+: 1432286251:0;git fetch upstream
+: 1432286265:0;git merge upstream/master
+: 1432286288:0;git checkout -b update-overview
+: 1432286327:0;git add overview.md
+: 1432286347:0;git commit -m "update about ecoris"
+: 1432286363:0;git push origin update-overview
+: 1432287492:0;git checkout master
+: 1432291826:0;git fetch upstream
+: 1432291856:0;git merge upstream/master
+: 1432294244:0;git fetch upstream
+: 1432294251:0;git merge upstream/master
+: 1432294269:0;git branch
+: 1432294272:0;exit
+: 1432294277:0;3J_class_project
+: 1432294288:0;git fetch upstream
+: 1432294301:0;git merge upstream/master
+: 1432297931:0;git fetch upstream
+: 1432297950:0;git merge upstream/master
+: 1432297965:0;git checkout .
+: 1432297966:0;git merge upstream/master
+: 1432348199:0;3J_class_project
+: 1432348217:0;Assets
+: 1432348223:0;Script
+: 1432348238:0;git add BlockController.cs
+: 1432348240:0;..
+: 1432348249:0;3J_class_project
+: 1432348260:0;git ranch
+: 1432348267:0;git branch
+: 1432348311:0;git checkout -b update-BlockController
+: 1432348331:0;git commit -m "add CorrectPosition()"
+: 1432348346:0;git push origin update-BlockController
+: 1432348467:0;git checkout master
+: 1432349694:0;cd
+: 1432349717:0;cd E:/
+: 1432349719:0;C
+: 1432349724:0;3J_que
+: 1432349729:0;ex2
+: 1432349734:0;make ex2
+: 1432349741:0;./ex2
+: 1432349796:0;ls
+: 1432349800:0;ll
+: 1432349920:0;make ex2
+: 1432349946:0;./ex2
+: 1432350032:0;make ex2
+: 1432350035:0;./ex2
+: 1432350309:0;make ex2
+: 1432350311:0;./ex2
+: 1432350416:0;make ex2
+: 1432350418:0;./ex2
+: 1432350613:0;make ex2
+: 1432350617:0;./ex2
+: 1432352626:0;git checkout update-BlockController
+: 1432353817:0;ls
+: 1432353823:0;Assets
+: 1432353827:0;Script
+: 1432353844:0;git add BlockController.cs
+: 1432353846:0;..
+: 1432353870:0;git commit -m "fix CorrectPosition()"
+: 1432353886:0;git push origin update-BlockController
+: 1432353960:0;git checkout master
+: 1432353969:0;git fetch upstream
+: 1432353982:0;git merge upstream/master
+: 1432363089:0;git add Assets/Script/BlockController.cs
+: 1432363115:0;git commit -m " fixed BlockController"
+: 1432363143:0;git branch
+: 1432363156:0;git push origin master
+: 1432372079:0;git fetch upstream
+: 1432372090:0;git merge upstream/master
+: 1432378797:0;git fetch upstream
+: 1432378804:0;git merge upstream/master
+: 1432388155:0;exit
+: 1432388162:0;exir]
+: 1432388164:0;exit
+: 1432433788:0;3J
+: 1432433791:0;3J_class_project
+: 1432433797:0;git fetch upstream
+: 1432433803:0;git merge upstream/master
+: 1432433993:0;git fetch upstream
+: 1432433996:0;git merge upstream/master
+: 1432443774:0;exit
+: 1432549870:0;3J_class_project
+: 1432549874:0;git fetch upstream
+: 1432549950:0;git merge upstream/master
+: 1432554474:0;exit
+: 1432713571:0;3J_class_project
+: 1432713574:0;git fetch upstream
+: 1432713579:0;git merge upstream/master
+: 1432717475:0;exit
+: 1433051234:0;E:/C
+: 1433051240:0;cd E:/
+: 1433051242:0;C
+: 1433051248:0;3j_que
+: 1433051252:0;./ex3
+: 1433051267:0;rm ex3
+: 1433051272:0;./ex3
+: 1433051586:0;make ex3
+: 1433051633:0;./ex3
+: 1433051657:0;make ex3
+: 1433051661:0;./ex3
+: 1433051788:0;make ex3
+: 1433051790:0;./ex3
+: 1433052049:0;make ex3
+: 1433052051:0;./ex3
+: 1433052540:0;make ex2
+: 1433052548:0;./ex2
+: 1433052558:0;ls
+: 1433052565:0;make ex2
+: 1433052654:0;ex2
+: 1433052657:0;ls
+: 1433052665:0;..
+: 1433052669:0;make ex2
+: 1433052673:0;./ex2
+: 1433052682:0;..
+: 1433052692:0;./ex3
+: 1433052694:0;./ex2
+: 1433052697:0;ls
+: 1433052718:0;./ex2
+: 1433052722:0;..
+: 1433052724:0;ex1
+: 1433052729:0;make ex1
+: 1433052733:0;./ex1
+: 1433052987:0;cd
+: 1433052990:0;pip --v
+: 1433053106:0;gem --v
+: 1433490708:0;ll
+: 1433490753:0;open
+: 1433490865:0;open .
+: 1433490878:0;source ./zshrc
+: 1433490884:0;source ~/.zshrc
+: 1433490889:0;open .
+: 1433490908:0;source ~/.zshrc
+: 1433490910:0;open .
+: 1433490927:0;ls
+: 1433490929:0;ll
+: 1433490936:0;exit
+: 1433491145:0;ls
+: 1433491147:0;ll
+: 1433491480:0;ll /cygdrive
+: 1433491561:0;ll //cygdrive
+: 1433491591:0;ll //NAS
+: 1433491602:0;ll //NAS/Data
+: 1433491610:0;cd //NAS/Data
+: 1433491618:0;cd æƒº¢çƒ´Ÿ
+: 1433491639:0;sikako
+: 1433491651:0;open 092.png
+: 1433491661:0;open .
+: 1433491692:0;cd
+: 1433491695:0;exit
+: 1433492813:0;man zshoptions
+: 1433493045:0;setobt
+: 1433493048:0;setopt
+: 1433493247:0;exit
+: 1433546811:0;cd //NAS
+: 1433546860:0;Data
+: 1433546868:0;.
+: 1433546870:0;..
+: 1433546990:0;cd
+: 1433547652:0;tell -v
+: 1433547774:0;apt-cug install tell
+: 1433547778:0;apt-cyg install tell
+: 1433547878:0;tell --v
+: 1433548009:0;itunes
+: 1433548495:0;ll
+: 1433549707:0;free
+: 1433550001:0;..
+: 1433550007:0;Document
+: 1433550017:0;Nobuo
+: 1433550034:0;..
+: 1433550038:0;home
+: 1433550046:0;open -a Nobuo
+: 1433550058:0;open -f Nobuo
+: 1433550078:0;open /cygdrive/f/Document/Nobuo
+: 1433550313:0;itunes
+: 1433550317:0;iTunes
+: 1433550325:0;exit
+: 1433550340:0;iTunes
+: 1433550596:0;exit
+: 1433550711:0;Google\ chrome
+: 1433635813:0;//NAS
+: 1433635817:0;Data
+: 1433635818:0;Nobuo
+: 1433635822:0;open .
+: 1433637721:0;exit
+: 1433669215:0;opem //NAS/Data/Nobuo
+: 1433669220:0;open //NAS/Data/Nobuo
+: 1433669238:0;exit
+: 1433679059:0;//NAS
+: 1433679065:0;Data
+: 1433679069:0;Nobuo
+: 1433679074:0;open .
+: 1433679094:0;cd
+: 1433679100:0;exit
+: 1434092409:0;dd --v
+: 1434092423:0;..
+: 1434092427:0;Download
+: 1434092484:0;dd if=KaOS-2014.12-x86_64-jp.iso of=G:/
+: 1434092490:0;dd if=KaOS-2014.12-x86_64-jp.iso of=G:
+: 1434092567:0;cd
+: 1434092568:0;exit
+: 1434092594:0;cd G
+: 1434092596:0;cd G:
+: 1434092599:0;ls
+: 1434092948:0;cat /proc/partitions
+: 1434093208:0;dd if=KaOS-2014.12-x86_64-jp.iso of=/dev/sdc1
+: 1434093258:0;dd if=KaOS.iso of=/dev/sdc1
+: 1434093270:0;cd ../Download
+: 1434093272:0;dd if=KaOS.iso of=/dev/sdc1
+: 1434094565:0;cd ../Download
+: 1434094572:0;cat /proc/partitions
+: 1434094579:0;dd if=KaOS.iso of=/dev/sdc1
+: 1434096356:0;exir
+: 1434096358:0;exit
+: 1434246759:0;cd E:
+: 1434246766:0;open .
+: 1434246773:0;report
+: 1434246778:0;3j-2
+: 1434246819:0;open input.tex
+: 1434247186:0;make pdf
+: 1434247389:0;make open
+: 1434249460:0;ls
+: 1434249481:0;ebb *.png
+: 1434249510:0;make pdf
+: 1434252518:0;ebb *.png
+: 1434252520:0;make pdf
+: 1434253251:0;ebb *.png
+: 1434253252:0;make pdf
+: 1434260388:0;cd
+: 1434260399:0;cd E:/C/3j_que
+: 1434260403:0;make ex1
+: 1434260409:0;./ex1
+: 1434260421:0;..
+: 1434260427:0;./ex1
+: 1434260429:0;./
+: 1434260452:0;..
+: 1434260456:0;./ex2
+: 1434260458:0;./
+: 1434260459:0;..
+: 1434260487:0;make q1
+: 1434260494:0;./q1
+: 1434260798:0;make q1
+: 1434260801:0;./q1
+: 1434262132:0;cd
+: 1434262133:0;ll
+: 1434262215:0;exit
+: 1434262342:0;cd E:/c/3j_que
+: 1434262348:0;..
+: 1434262354:0;report
+: 1434262357:0;..
+: 1434262359:0;report
+: 1434262362:0;3j-2
+: 1434262363:0;ls
+: 1434262525:0;./q1
+: 1434263362:0;make pdf
+: 1434266722:0;exit
+: 1434272394:0;cd E:/c/3j_que
+: 1434272423:0;make q2
+: 1434272428:0;./q2
+: 1434272435:0;make q3
+: 1434272439:0;./q3
+: 1434272447:0;./q2
+: 1434272450:0;./q3
+: 1434273473:0;..
+: 1434273478:0;report
+: 1434273481:0;3j-2
+: 1434273487:0;make pdf
+: 1434276293:0;ls
+: 1434276322:0;cd
+: 1434276327:0;..
+: 1434276330:0;Download
+: 1434276334:0;Ctrl2Cap
+: 1434276346:0;ctrl2cap /install
+: 1434276381:0;exit
+: 1434277175:0;make pdf
+: 1434279480:0;make q3
+: 1434279484:0;./q3
+: 1434279630:0;make pdf
+: 1434280592:0;~
+: 1434280606:0;cd E:/report/
+: 1434280608:0;3j-2
+: 1434280622:0;make pdf
+: 1434284180:0;exit
+: 1434355755:0;cd E:/report/3j-2
+: 1434355758:0;make pdf
+: 1434371294:0;ebb *.png
+: 1434371297:0;make pdf
+: 1434371731:0;cd E:/c/3j_queue
+: 1434371734:0;cd E:/c/3j-queue
+: 1434371745:0;cd E:/c/
+: 1434371752:0;3j_que
+: 1434371757:0;./q3
+: 1434372084:0;make pdf
+: 1434372852:0;exit
+: 1434444645:0;cd F:/c/
+: 1434444665:0;cd E:/c/3j_que
+: 1434444672:0;./q3_e
+: 1434444681:0;make q3_e
+: 1434444685:0;./q3_e
+: 1434444720:0;make q3_e
+: 1434444723:0;./q3_e
+: 1434444739:0;make q3_e
+: 1434444743:0;./q3_e
+: 1434444768:0;make q3_e
+: 1434444771:0;./q3_e
+: 1434444977:0;make q3_e
+: 1434445022:0;./q3_e
+: 1434445069:0;cd E:/c/3j_que
+: 1434445088:0;rm q3_e.c q3_e.exe
+: 1434445091:0;ls
+: 1434446965:0;cd E:/c/3j_que
+: 1434446976:0;//
+: 1434446986:0;cd E:/report
+: 1434446988:0;3j-2
+: 1434446991:0;make pdf
+: 1434447002:0;ebb list_queue.png
+: 1434447004:0;make pdf
+: 1434447375:0;ebb list_queue.png
+: 1434447377:0;make pdf
+: 1434447416:0;ebb *.png
+: 1434447420:0;make pdf
+: 1434448017:0;free
+: 1434449874:0;jscript
+: 1434451477:0;make pdf
+: 1434452752:0;make ex3
+: 1434452760:0;./ex3
+: 1434454927:0;make pdf
+: 1434463512:0;exit
+: 1434521778:0;cd E:/report/3j-2
+: 1434521781:0;make ex3
+: 1434521785:0;make pdf
+: 1434523762:0;open .
+: 1434523869:0;make pdf
+: 1434523968:0;open .
+: 1434524197:0;make pdf
+: 1434524406:0;..
+: 1434524409:0;cd
+: 1434524415:0;3J_class_project
+: 1434524424:0;git fetch upstream
+: 1434524439:0;git merge upstream/master
+: 1434533850:0;ls
+: 1434533857:0;Assets
+: 1434533867:0;Script/
+: 1434533876:0;git add ViewPointChange.cs
+: 1434533879:0;..
+: 1434533908:0;git commit -m "Add ViewPointChange.cs"
+: 1434533925:0;git push origin
+: 1434533984:0;git branch
+: 1434533993:0;git push origin master
+: 1434534130:0;git commit -m "Add ViewPointChange.cs"
+: 1434534149:0;git commit -m "created ViewPointChange.cs"
+: 1434534259:0;git add Assets/Scenes/Test_forTeX2e.unity ProjectSettings/ProjectSettings.asset  ProjectSettings/QualitySettings.asset Assets/Script/ViewPointChange.cs.meta
+: 1434534263:0;git commit -m "created ViewPointChange.cs"
+: 1434534267:0;git push origin master
+: 1434539939:0;open .
+: 1434540383:0;git push origin master
+: 1434540402:0;git fetch upstream
+: 1434540413:0;git merge upstream/master
+: 1434544472:0;exit
+: 1434621656:0;3J_class_project
+: 1434622919:0;git checkout -b CamController
+: 1434622933:0;git status
+: 1434623329:0;git commit -am "[wip] Rename ViewPointChange -> CameraController and fix"
+: 1434623360:0;git push origin CamController
+: 1434623590:0;ls
+: 1434623595:0;Assets
+: 1434623599:0;Script
+: 1434623618:0;git add CameraController.cs CameraController.cs.meta
+: 1434623649:0;..
+: 1434623679:0;git commit -m "change and fix Camera script"
+: 1434623687:0;git push origin CamController
+: 1434623832:0;git ad  -u
+: 1434623841:0;git add -A
+: 1434623853:0;git commit -m "change and fix Camera's script"
+: 1434623859:0;git push origin CamController
+: 1434632508:0;exit
+: 1434793675:0;apt-cyg install archey
+: 1434793702:0;nano .zshrc
+: 1434793846:0;source .zshrc
+: 1434793850:0;apc
+: 1434793883:0;apci screenfetch
+: 1434794099:0;chmod +x archey.sh
+: 1434794109:0;./archey.sh
+: 1434794121:0;chmod +x archey
+: 1434794123:0;./archey
+: 1434794133:0;chmod 755 archey
+: 1434794135:0;./archey
+: 1434794174:0;./archey.sh
+: 1434794178:0;chmod 755 archey.sh
+: 1434794180:0;./archey.sh
+: 1434794206:0;sed --v
+: 1434794213:0;wc --v
+: 1434794300:0;nkf -w -Lw --overwrite archey.sh
+: 1434794303:0;./archey.sh
+: 1434794375:0;nkf -w -Lu --overwrite archey.sh
+: 1434794377:0;./archey.sh
+: 1434794416:0;chmod 755 archey
+: 1434794419:0;./archey
+: 1434795155:0;source .zshrc
+: 1434795257:0;./archey
+: 1434795366:0;ls
+: 1434795371:0;ll
+: 1434795372:0;l
+: 1434795374:0;la
+: 1434795381:0;ls -al
+: 1434795402:0;exit
+: 1434795940:0;./archey
+: 1434796131:0;exit
+: 1434796208:0;./archey
+: 1434796428:0;exit
+: 1434796673:0;ls
+: 1434796680:0;ll
+: 1434796691:0;3J_class_project
+: 1434799741:0;apc
+: 1434799750:0;apci ghc
+: 1434800348:0;source .zshrc
+: 1434800351:0;exit
+: 1434800359:0;ll
+: 1434800360:0;ls
+: 1434800364:0;exit
+: 1434804225:0;3J_class_project
+: 1434804267:0;git checkout -b CamCOm
+: 1434804273:0;git checkout -b CamCom
+: 1434804278:0;git checkout -b Camera
+: 1434804290:0;git add --update
+: 1434804309:0;git commit -am "update CameraController"
+: 1434804328:0;git push origin Camera
+: 1434807534:0;exit
+: 1434859025:0;3J_class_project
+: 1434859036:0;git getch upstrean
+: 1434859047:0;git fetch upstream
+: 1434859065:0;git merge upstream/master
+: 1434958351:0;3J_class_project
+: 1434958358:0;git fetch upstream
+: 1434958373:0;git merge upstream/master
+: 1434958392:0;git checkout .
+: 1434958394:0;git merge upstream/master
+: 1434967708:0;git checkout .
+: 1434967711:0;git fetch upstream
+: 1434967714:0;git merge upstream/master
+: 1434971396:0;git fetch upstream
+: 1434971411:0;git merge upstream/master
+: 1434976135:0;git branch
+: 1434976208:0;git branch master
+: 1434976215:0;git checkout master
+: 1434976283:0;git checkout -b ChangeKeyBind
+: 1434976308:0;git commit -m "fixed Keyaction to change keybind"
+: 1434976315:0;git commit -am "fixed Keyaction to change keybind"
+: 1434976323:0;git branch
+: 1434976337:0;git push origin :CamCOm
+: 1434976346:0;git branch
+: 1434976369:0;git branch -d CamCOm
+: 1434976386:0;git push origin ChangeKeyBind
+: 1434976497:0;git branch
+: 1434976515:0;git push origin : update-overview
+: 1434976534:0;git branch -d : update-overview
+: 1434976543:0;git branch -d update-overview
+: 1434976547:0;git branch
+: 1434976564:0;git push origin :update-BlockController
+: 1434976609:0;git branch -d update-BlockController
+: 1434976620:0;git branch
+: 1434976625:0;git branch -D update-BlockController
+: 1434976627:0;git branch
+: 1434978716:0;git fetch upstream
+: 1434978722:0;git merge upstream/master
+: 1434978871:0;exit
+: 1434982271:0;apci ffmpeg
+: 1435146017:0;3J_class_project
+: 1435146029:0;git fetch upstream
+: 1435146107:0;git merge upstream/master
+: 1435150125:0;exit
+: 1435234001:0;3J
+: 1435234004:0;3J_class_project/
+: 1435234007:0;git fetch upstream
+: 1435234012:0;git merge upstream/master
+: 1435655611:0;git fetch upstream
+: 1435655621:0;3J_class_project
+: 1435655623:0;git fetch upstream
+: 1435655628:0;git merge upstream/master
+: 1435658832:0;git branch
+: 1435658845:0;git checkout master
+: 1435658863:0;git checkout .
+: 1435658865:0;git checkout master
+: 1435742274:0;3J_class_project
+: 1435742280:0;git fetch upstream
+: 1435742287:0;git merge upstream/master
+: 1435752654:0;exit
+: 1435824949:0;cd E:/jtm
+: 1435824961:0;DigitRecognition
+: 1435824967:0;Program
+: 1435824975:0;make
+: 1435824986:0;ls
+: 1435824999:0;./DigitRecognition.exe
+: 1435844183:0;3J_class_project
+: 1435844191:0;git fetch upstream
+: 1435844201:0;git merge upstream/master
+: 1435844507:0;git merge upstream/changeBlockPool
+: 1435844512:0;git branch
+: 1435845774:0;exit
+: 1435997621:0;..
+: 1435997631:0;Document/Nobuo/C
+: 1435998220:0;make 150703
+: 1435998245:0;./150703
+: 1435998305:0;make 150703
+: 1435998308:0;./150703
+: 1435998455:0;make 150703
+: 1435998486:0;./150703
+: 1435998509:0;make 150703
+: 1435998511:0;./150703
+: 1435999417:0;..
+: 1435999419:0;rm C
+: 1435999425:0;rmdir C
+: 1435999432:0;C
+: 1435999441:0;rm .
+: 1435999450:0;rm 150703.c 150703.exe
+: 1435999453:0;..
+: 1435999456:0;rmdir C
+: 1435999457:0;ls
+: 1436000836:0;cd E:/report/3j-2
+: 1436002032:0;make pdf
+: 1436002516:0;cat main.log | grep 'Label'
+: 1436002564:0;make pdf
+: 1436002759:0;echo $?
+: 1436002775:0;cat main.log | grep 'Label' | echo &?
+: 1436002781:0;cat main.log | grep 'Label'
+: 1436002783:0;echo $?
+: 1436002828:0;make pdf
+: 1436002885:0;cat main.log | grep '2nd'
+: 1436003077:0;make log
+: 1436003457:0;make pdf
+: 1436003763:0;cat $(TARGET).log | grep 'labels' | tr -d ' '
+: 1436003771:0;cat main.log | grep 'labels' | tr -d ' '
+: 1436003784:0;make pdf
+: 1436004379:0;make test
+: 1436004383:0;./test
+: 1436004525:0;make test
+: 1436004530:0;./test]
+: 1436004533:0;./test
+: 1436004705:0;exit
+: 1436004718:0;cat $(TARGET).log | grep 'labels' | tr -d ' '
+: 1436004726:0;cat main.log | grep 'labels' | tr -d ' '
+: 1436004796:0;make log
+: 1436004901:0;make pdf
+: 1436005123:0;make clean
+: 1436005132:0;make pdf
+: 1436005264:0;echo LaTeX Warning: There were undefined references. | tr -d ' '
+: 1436005296:0;make clean
+: 1436005299:0;make pdf
+: 1436005342:0;make clean
+: 1436005343:0;make pdf
+: 1436005363:0;make clean
+: 1436005366:0;make log
+: 1436005392:0;make pdf
+: 1436005397:0;make log
+: 1436005445:0;cat main.log | grep 'change' | tr -d ' '
+: 1436005462:0;make log
+: 1436005476:0;make pdf
+: 1436005484:0;make clean
+: 1436005486:0;make pdf
+: 1436005604:0;make log
+: 1436005610:0;make pdf
+: 1436005644:0;platex main.tex -interaction=nonstopmode | grep 'change' | tr -d ' '
+: 1436005678:0;make clean
+: 1436005682:0;platex main.tex -interaction=nonstopmode | grep 'change' | tr -d ' '
+: 1436005797:0;platex main.tex -interaction=nonstopmode
+: 1436005804:0;make clean
+: 1436005805:0;platex main.tex -interaction=nonstopmode
+: 1436005823:0;platex main.tex -interaction=nonstopmode | grep 'change' | tr -d ' '
+: 1436005855:0;platex main.tex -interaction=nonstopmode | grep 'change'
+: 1436005868:0;platex main.tex -interaction=nonstopmode
+: 1436005922:0;make clean
+: 1436005929:0;make pdf
+: 1436005973:0;make clean
+: 1436005974:0;make pdf
+: 1436006249:0;make clean
+: 1436006258:0;make pdf
+: 1436006283:0;make clean
+: 1436006291:0;make pdf
+: 1436006440:0;make clean
+: 1436006441:0;make pdf
+: 1436006901:0;latexmk
+: 1436006923:0;latexmk main
+: 1436006928:0;latexmk main.tex
+: 1436088693:0;tar -xvzf ruby-2.2.2.tar.gz
+: 1436088763:0;ruby-2.2.2
+: 1436088766:0;make
+: 1436088785:0;cd
+: 1436089104:0;chmod +x /cygdrive/c/cygwin64/bin/cyg-fast
+: 1436089223:0;cyg-fast build-deptree
+: 1436089239:0;rm /cygdrive/c/cygwin64/bin/cyg-fast
+: 1436089271:0;git clone https://github.com/tmshn/cyg-fast
+: 1436089275:0;ls
+: 1436089280:0;cyg-fast
+: 1436089311:0;cp cyg-fast /cygdrive/c/cygwin64/bin/cyg-fast
+: 1436089314:0;chmod +x /cygdrive/c/cygwin64/bin/cyg-fast
+: 1436089321:0;cd
+: 1436089341:0;cyg-fast build-deptree
+: 1436089362:0;apti aria2c
+: 1436089373:0;apci aria2c
+: 1436089377:0;apci aria2
+: 1436089543:0;git clone https://github.com/transcode-open/apt-cyg
+: 1436089552:0;apt-cyg/
+: 1436089583:0;cp apt-cyg /cygdrive/c/cygwin64/bin/apt-cyg
+: 1436089600:0;chmod +x /cygdrive/c/cygwin64/bin/apt-cyg
+: 1436089607:0;apci aria2
+: 1436089619:0;cyg-fast build-deptree
+: 1436089665:0;cyg-fast find ruby
+: 1436089732:0;cyg-fast install ruby
+: 1436090161:0;cyg-fast update
+: 1436090242:0;rm /cygdrive/c/cygwin64/bin/cyg-fast
+: 1436090243:0;ls
+: 1436090376:0;wget https://raw.githubusercontent.com/lambdalice/cyg-fast/master/cyg-fast -P /usr/bin
+: 1436090387:0;chmod +x /usr/bin/cyg-fast
+: 1436090401:0;cyg-fast -m ftp://ftp.iij.ad.jp/pub/cygwin/ update
+: 1436090421:0;cyg-fast find ruby
+: 1436090466:0;cd
+: 1436090514:0;cyg-fast install ruby
+: 1436090536:0;ruby -v
+: 1436090623:0;cyg-fast install ruby-rake
+: 1436091095:0;cyg-fast find ghc
+: 1436091114:0;cyg-fast find haskell
+: 1436092128:0;gem install kramdown
+: 1436099196:0;exit
+: 1436103494:0;cd E:/
+: 1436103496:0;C
+: 1436103497:0;nishi
+: 1436103504:0;make ex2-6
+: 1436173291:0;cd E:/C
+: 1436173293:0;nishi
+: 1436173303:0;./ex2-6
+: 1436173318:0;make ex2-6
+: 1436173328:0;rm ex2-6.exe
+: 1436173331:0;make ex2-6
+: 1436173342:0;rm ex2-6
+: 1436173344:0;make ex2-6
+: 1436173351:0;./ex2-6
+: 1436173370:0;cyg-fast install gnuplot
+: 1436174460:0;./ex2-6
+: 1436174475:0;./ex2-6 > ex2-6.eps
+: 1436174643:0;exit
+: 1436174793:0;cyg-fast autoremove
+: 1436252699:0;cd E:/
+: 1436252703:0;report
+: 1436252705:0;ej-3
+: 1436252708:0;3j-3
+: 1436252713:0;make pdf
+: 1436252758:0;make pd
+: 1436252890:0;cd
+: 1436252896:0;cyg-fast find pandoc
+: 1436252923:0;cyg-fast update
+: 1436253070:0;cd E:/report
+: 1436253073:0;3j-3
+: 1436253076:0;make pd
+: 1436253224:0;make pdf
+: 1436253351:0;..
+: 1436253353:0;.
+: 1436253355:0;..
+: 1436253358:0;e
+: 1436253370:0;C/nishi
+: 1436253372:0;nishi
+: 1436253613:0;open E:/3j-text
+: 1436254112:0;make pd
+: 1436254115:0;make pdf
+: 1436254148:0;make pd
+: 1436254148:0;make pdf
+: 1436254243:0;make pd
+: 1436254244:0;make pdf
+: 1436254404:0;./ex4
+: 1436254491:0;make ex4
+: 1436254494:0;./ex4
+: 1436254788:0;make pd
+: 1436254791:0;make pdf
+: 1436254918:0;cd E:/report/3j-3
+: 1436254921:0;make pd
+: 1436254923:0;make pdf
+: 1436255192:0;cd E:/c/nishi/nishi
+: 1436255196:0;make ex4
+: 1436255199:0;./ex4
+: 1436255230:0;make ex4
+: 1436255232:0;./ex4
+: 1436255282:0;make ex4
+: 1436255285:0;./ex4
+: 1436255385:0;make ex4
+: 1436255388:0;./ex4
+: 1436255416:0;1
+: 1436255427:0;make ex4
+: 1436255430:0;./ex4
+: 1436255603:0;make ex4
+: 1436255619:0;./ex4
+: 1436255653:0;make ex4
+: 1436255656:0;./ex4
+: 1436255758:0;make pd
+: 1436255760:0;make pdf
+: 1436255800:0;make pd
+: 1436255801:0;make pdf
+: 1436255929:0;gnuplot
+: 1436255975:0;make ex6
+: 1436255982:0;ls
+: 1436255988:0;make ex5
+: 1436256035:0;./ex5
+: 1436256123:0;./ex5 > ex5penta.dat
+: 1436256134:0;./ex5
+: 1436256206:0;make ex5
+: 1436256208:0;./ex5
+: 1436256232:0;make ex5
+: 1436256235:0;./ex5
+: 1436256562:0;make pd
+: 1436256564:0;make pdf
+: 1436256603:0;make pd
+: 1436256604:0;make pdf
+: 1436256627:0;make pd
+: 1436256628:0;make pdf
+: 1436256714:0;make pd
+: 1436256715:0;make pdf
+: 1436258461:0;make pd
+: 1436258468:0;make pdf
+: 1436258501:0;make pd
+: 1436258502:0;make pdf
+: 1436258514:0;make pd
+: 1436258515:0;make pdf
+: 1436258675:0;exit
+: 1436259832:0;cd E:/report
+: 1436259834:0;3j-3
+: 1436259836:0;make pd
+: 1436259838:0;make pdf
+: 1436259856:0;ebb include/*pdf
+: 1436259861:0;ebb include/*.pdf
+: 1436259878:0;ebb image/*.pdf
+: 1436259885:0;make pdf
+: 1436260657:0;cd E:/c/nishi
+: 1436260659:0;nishi
+: 1436260663:0;make ex5
+: 1436260679:0;./ex5 > ex5.dat
+: 1436260686:0;gnuplot ex5.g
+: 1436260734:0;./ex5 > ex5.dat
+: 1436260746:0;gnuplot ex5.g
+: 1436260789:0;./ex5
+: 1436260840:0;ebb image/*.png
+: 1436260846:0;ebb image/*.pdf
+: 1436260852:0;ebb image/*.png
+: 1436260868:0;make pd
+: 1436260869:0;make pdf
+: 1436260898:0;./ex5
+: 1436260952:0;make pd
+: 1436260954:0;make pdf
+: 1436260999:0;make pd
+: 1436261001:0;make pdf
+: 1436261098:0;make open
+: 1436261161:0;make pdf
+: 1436261281:0;make ex6
+: 1436261288:0;ls
+: 1436261341:0;make ex6
+: 1436261346:0;./ex6
+: 1436261361:0;./ex6 > ex6.dat
+: 1436261395:0;gnuplot ex6.g
+: 1436261605:0;./ex6 > ex6.dat
+: 1436261609:0;gnuplot ex6.g
+: 1436261723:0;ebb image/*.png
+: 1436261746:0;make pd
+: 1436261748:0;make pdf
+: 1436261784:0;make pd
+: 1436261786:0;make pdf
+: 1436261841:0;make pd
+: 1436261843:0;make pdf
+: 1436262004:0;./ex5 > ex5.dat
+: 1436262010:0;gnuplot ex5.g
+: 1436262290:0;make pdf
+: 1436262698:0;make ex6
+: 1436262706:0;./ex6
+: 1436262759:0;make ex6
+: 1436262762:0;./ex6
+: 1436262775:0;./ex6 > ex6.dat
+: 1436262784:0;gnuplot ex6.g
+: 1436262914:0;make pd
+: 1436262917:0;make pdf
+: 1436263067:0;make ex6
+: 1436263071:0;./ex6 > ex6.dat
+: 1436263076:0;gnuplot ex6.g
+: 1436263090:0;./ex6
+: 1436263327:0;make ex6
+: 1436263341:0;./ex6
+: 1436263367:0;make ex6
+: 1436263369:0;./ex6
+: 1436263427:0;make ex6
+: 1436263429:0;./ex6
+: 1436263446:0;./ex6 > ex6.dat
+: 1436263451:0;gnuplot ex6.g
+: 1436263598:0;make ex6
+: 1436263602:0;./ex6 > ex6.dat
+: 1436263634:0;gnuplot ex6.g
+: 1436263656:0;./ex6
+: 1436263661:0;make ex6
+: 1436263664:0;./ex6 > ex6.dat
+: 1436263666:0;gnuplot ex6.g
+: 1436264242:0;make ex7
+: 1436264331:0;./ex7
+: 1436264342:0;./ex7 > ex7.dat
+: 1436264366:0;gnuplot ex7.g
+: 1436264598:0;make pd
+: 1436264601:0;make pdf
+: 1436264658:0;./ex7 > ex7.dat
+: 1436264661:0;gnuplot ex7.g
+: 1436264722:0;ebb image/*.png
+: 1436264742:0;make pd
+: 1436264743:0;make pdf
+: 1436264764:0;make pd
+: 1436264766:0;make pdf
+: 1436264778:0;make pd
+: 1436264781:0;make pdf
+: 1436265027:0;./ex2-1
+: 1436265054:0;cd E:/
+: 1436265061:0;C/nishi
+: 1436265063:0;nishi
+: 1436265070:0;./ex2-1
+: 1436265160:0;gnuplot wx2-1.g
+: 1436265164:0;gnuplot ex2-1.g
+: 1436265331:0;./ex2-1
+: 1436265342:0;make ex2-1
+: 1436265348:0;ls
+: 1436265357:0;make ex2-1
+: 1436265360:0;./ex2-1
+: 1436265370:0;make ex2-1
+: 1436265372:0;./ex2-1
+: 1436265496:0;./ex2-1 > ex2-1.dat
+: 1436265523:0;//
+: 1436265526:0;cd
+: 1436265531:0;cd E:/report
+: 1436265534:0;3j-3
+: 1436265538:0;make pdf
+: 1436265542:0;make pd
+: 1436265544:0;make pdf
+: 1436265562:0;make pd
+: 1436265564:0;make pdf
+: 1436265621:0;make pd
+: 1436265624:0;make pdf
+: 1436265646:0;make pd
+: 1436265649:0;make pdf
+: 1436265781:0;make pd
+: 1436265783:0;make pdf
+: 1436265819:0;make pd
+: 1436265821:0;make pdf
+: 1436266590:0;make pd
+: 1436266591:0;make pdf
+: 1436266611:0;ebb image/*.png
+: 1436266612:0;make pdf
+: 1436266710:0;make ex2-1
+: 1436266717:0;./ex2-1 > ex2-1.dat
+: 1436266732:0;./ex2-1
+: 1436266778:0;gnuplot ex2-1.g
+: 1436266814:0;./ex2-1
+: 1436266827:0;./ex2-1 > ex2-1.dat
+: 1436266876:0;gnuplot ex2-1.g
+: 1436267018:0;make pd
+: 1436267020:0;make pdf
+: 1436267034:0;ebb image/*.png
+: 1436267036:0;make pdf
+: 1436267201:0;make ex2-2
+: 1436267206:0;./ex2-2
+: 1436267261:0;make ex2-2
+: 1436267271:0;./ex2-2 > ex2-2.dat
+: 1436267311:0;gnuplot ex2-2.g
+: 1436267407:0;ebb image/*.png
+: 1436267491:0;make pd
+: 1436267493:0;make pdf
+: 1436267654:0;make ex2-3
+: 1436267661:0;./ex2-3
+: 1436267703:0;make ex2-3
+: 1436267707:0;./ex2-3
+: 1436267723:0;./ex2-3 > ex2-3.png
+: 1436267899:0;ebb image/*.png
+: 1436267920:0;make pd
+: 1436267922:0;make pdf
+: 1436268135:0;make ex2-4
+: 1436268209:0;./ex2-4 > ex2-4.png
+: 1436268246:0;make ex2-4
+: 1436268248:0;./ex2-4 > ex2-4.png
+: 1436268361:0;make ex2-4
+: 1436268364:0;./ex2-4 > ex2-4.png
+: 1436268385:0;make ex2-4
+: 1436268387:0;./ex2-4 > ex2-4.png
+: 1436268611:0;make ex2-4
+: 1436268613:0;./ex2-4 > ex2-4.png
+: 1436268658:0;ebb image/*.png
+: 1436268662:0;make pd
+: 1436268664:0;make pdf
+: 1436268823:0;open E:/3j-text
+: 1436269057:0;make ex2-5
+: 1436269129:0;./ex2-5 > ex2-5.png
+: 1436269455:0;make ex2-5
+: 1436269457:0;./ex2-5 > ex2-5.png
+: 1436269496:0;make ex2-5
+: 1436269499:0;./ex2-5 > ex2-5.png
+: 1436269520:0;make ex2-5
+: 1436269522:0;./ex2-5 > ex2-5.png
+: 1436269592:0;make ex2-5
+: 1436269594:0;./ex2-5 > ex2-5.png
+: 1436269750:0;make ex2-5
+: 1436269753:0;./ex2-5 > ex2-5.png
+: 1436269771:0;make ex2-5
+: 1436269773:0;./ex2-5 > ex2-5.png
+: 1436269825:0;make ex2-5
+: 1436269827:0;./ex2-5 > ex2-5.png
+: 1436269886:0;ebb image/*.png
+: 1436269929:0;make pd
+: 1436269931:0;make pdf
+: 1436270297:0;make pd
+: 1436270299:0;make pdf
+: 1436270379:0;make ex2-6
+: 1436270388:0;./ex2-6 > ex2-6.png
+: 1436270391:0;10
+: 1436270466:0;make ex2-6
+: 1436270470:0;./ex2-6 > ex2-6.png
+: 1436270533:0;make ex2-6
+: 1436270535:0;./ex2-6 > ex2-6.png
+: 1436270613:0;make ex2-6
+: 1436270616:0;./ex2-6 > ex2-6.png
+: 1436270656:0;make ex2-6
+: 1436270658:0;./ex2-6 > ex2-6.png
+: 1436270717:0;ebb image/*.png
+: 1436270721:0;make pd
+: 1436270723:0;make pdf
+: 1436270785:0;make pd
+: 1436270787:0;make pdf
+: 1436270833:0;ebb image/*.png
+: 1436270835:0;make pdf
+: 1436270863:0;make ex2-6
+: 1436270868:0;./ex2-6 > ex2-6.png
+: 1436270932:0;ebb image/*.png
+: 1436270937:0;make pdf
+: 1436272851:0;make pd
+: 1436272859:0;make pdf
+: 1436273414:0;make pd
+: 1436273416:0;make pdf
+: 1436274087:0;make ex6
+: 1436274090:0;make ex2-6
+: 1436274094:0;./ex2-6
+: 1436274161:0;make pd
+: 1436274163:0;make pdf
+: 1436274483:0;make pd
+: 1436274485:0;make pdf
+: 1436274542:0;make pd
+: 1436274544:0;make pdf
+: 1436274558:0;make pd
+: 1436274559:0;make pdf
+: 1436274591:0;make pd
+: 1436274592:0;make pdf
+: 1436274678:0;make pd
+: 1436274680:0;make pdf
+: 1436274791:0;make pd
+: 1436274792:0;make pdf
+: 1436274815:0;make pd
+: 1436274816:0;make pdf
+: 1436275123:0;make pd
+: 1436275124:0;make pdf
+: 1436276907:0;make pd
+: 1436276915:0;make pdf
+: 1436276958:0;make pd
+: 1436276960:0;make pdf
+: 1436276993:0;make pd
+: 1436276995:0;make pdf
+: 1436277007:0;make pd
+: 1436277009:0;make pdf
+: 1436277035:0;make clean
+: 1436277045:0;make pd
+: 1436277051:0;make pdf
+: 1436277099:0;make pd
+: 1436277100:0;make pdf
+: 1436277116:0;make pd
+: 1436277117:0;make pdf
+: 1436277136:0;make pd
+: 1436277138:0;make pdf
+: 1436277165:0;make pd
+: 1436277166:0;make pdf
+: 1436277988:0;make pd
+: 1436277989:0;make pdf
+: 1436278245:0;gnuplot ex7.g
+: 1436278874:0;make pd
+: 1436278877:0;make pdf
+: 1436278933:0;make pd
+: 1436278934:0;make pdf
+: 1436280637:0;make pd
+: 1436280644:0;make pdf
+: 1436280680:0;make pd
+: 1436280681:0;make pdf
+: 1436280935:0;exit
+: 1436280937:0;make pdfexit
+: 1436280940:0;exit
+: 1436281036:0;cd E:/report/3j-4
+: 1436281044:0;mkdir image include
+: 1436281581:0;make init
+: 1436282461:0;echo '\documentclass[a4j]{jsarticle}@\usepackage[dvipdfm]{graphicx}@\usepackage{amsmath}@\usepackage{txfonts}@\usepackage{lscape}@\usepackage{listings,jlisting}@\usepackage{ascmac}@\renewcommand{\lstlistingname}{ãƒ£ªã‚¹ãƒ£ƒ¨}@@\lstset{%@  language=C, @  basicstyle={\small},%@  identifierstyle={\small},%@  commentstyle={\small\itshape},%@  keywordstyle={\small\bfseries},%@  ndkeywordstyle={\small},%@  stringstyle={\small\ttfamily},@  frame=ltbr,@  breaklines=true@  columns=[l]{fullflexible},%@  numbers=left,%@  xrightmargin=0zw,%@  xleftmargin=3zw,%@  numberstyle={\scriptsize},%@  stepnumber=1,@  numbersep=1zw,%@  lineskip=-0.5ex,%@  keepspaces=true%@}@@@\begin{document}@@\def\tomorrow{\advance\day by 1@       \today@       \advance\day by -1}@@@\begin{titlepage}@\begin{center}@\vspace*{30pt}@{\huge å·¥å­¦å®Ÿé¨ƒ³å®Ÿç¿ƒ²IIIç¬¬4åƒ»ž}\\@\vspace{10pt}@{\Large ç°¡åƒ­ƒ¸ãªã‚·ãƒ£Ÿãƒ£¥ãƒ£¬ãƒ£¼ã‚·ãƒ£§ãƒ£³ã¨åƒ¯¯è¦ƒ¶åƒ¬ƒ¶}\\@\vspace{12cm}@\begin{tabular}{rl}@æ°ƒ¯åƒ°ƒ­ & ç€§æ²¢æƒº¢çƒ´Ÿ\\@çµƒ¤çƒµªåƒ¯·423 & å­¦ç±ƒ­çƒµªåƒ¯· 13426\\@\end{tabular} \vspace{3pt} \\@æƒ¯ƒ°åƒ§ºæƒ·¥ \today \vspace{12pt} \\@\end{center}@\end{titlepage}@@@\input{input}@@@@\end{document}@' | sed -e 's/@\+/\n/g'
+: 1436282512:0;make init
+: 1436282714:0;exit
+: 1436339259:0;cd E:/report
+: 1436339262:0;3j-4
+: 1436339439:0;make init
+: 1436339457:0;make init 3j-4
+: 1436340411:0;..
+: 1436340413:0;3j-3
+: 1436340415:0;make
+: 1436351290:0;..
+: 1436351298:0;3j-4
+: 1436351303:0;make init
+: 1436359391:0;exit
+: 1436433246:0;cd E:/
+: 1436433250:0;report
+: 1436433262:0;subl rei
+: 1436433325:0;cd e*?
+: 1436433328:0;cd e:/
+: 1436433331:0;report
+: 1436433334:0;subl rei
+: 1436433702:0;./rei aaa bbb 
+: 1436433825:0;./rei aaa bbb
+: 1436434061:0;./rei
+: 1436434202:0;./rei a a
+: 1436434345:0;./rei 3J-5
+: 1436434374:0;cd 3j-5
+: 1436434376:0;make init
+: 1436434380:0;pushd
+: 1436434394:0;3j-3
+: 1436434397:0;make pdf
+: 1436434426:0;..
+: 1436434763:0;./rei 3J-5
+: 1436434958:0;..
+: 1436434973:0;report
+: 1436434975:0;3j-3
+: 1436434997:0;..
+: 1436435009:0;./rei 3J-3_orig
+: 1436435021:0;3j-3.orig
+: 1436435025:0;3j-3_orig
+: 1436435028:0;make pdf
+: 1436435064:0;..
+: 1436435067:0;./rei 3J-3_orig
+: 1436435069:0;3j-3_orig
+: 1436435081:0;..
+: 1436435084:0;./rei 3J-3_orig
+: 1436435088:0;3j-3_orig
+: 1436435091:0;make pdf
+: 1436435365:0;rec --v
+: 1436436987:0;..
+: 1436436991:0;tree
+: 1436437038:0;tree/f > tree.txt
+: 1436437052:0;tree /f > tree.txt
+: 1436437095:0;./rei example
+: 1436437099:0;tree /f > tree.txt
+: 1436437124:0;./rei example
+: 1436437206:0;tree /f > tree.txt
+: 1436437456:0;cd
+: 1436437459:0;3J_class_project
+: 1436437468:0;git fetch upstream
+: 1436437481:0;git merge upstream/master
+: 1436438476:0;cd f:/
+: 1436438480:0;cd E:/
+: 1436438483:0;report
+: 1436438497:0;./rei 3J-5
+: 1436446901:0;git checkout .
+: 1436446906:0;git fetch upstream
+: 1436446910:0;git merge upstream/master
+: 1436447039:0;ls
+: 1436447043:0;3j-5
+: 1436447046:0;..
+: 1436447108:0;exit
+: 1436515507:0;cd E:/
+: 1436515509:0;c
+: 1436515513:0;3j_stack
+: 1436515521:0;subl hanoi.c
+: 1436515562:0;make hanoi
+: 1436515572:0;..
+: 1436515579:0;3j-text
+: 1436515585:0;open 3
+: 1436515590:0;open 3J-programming_stack.pdf
+: 1436515599:0;./hanoi
+: 1436515656:0;make hanoi
+: 1436515668:0;./hanoi
+: 1436517977:0;make hanoi
+: 1436517979:0;./hanoi
+: 1436518006:0;make hanoi
+: 1436518009:0;./hanoi
+: 1436518187:0;make hanoi
+: 1436518191:0;./hanoi
+: 1436518285:0;make hanoi
+: 1436518289:0;./hanoi
+: 1436518322:0;make hanoi
+: 1436518324:0;./hanoi
+: 1436518367:0;make hanoi
+: 1436518369:0;./hanoi
+: 1436518567:0;make hanoi
+: 1436518570:0;./hanoi
+: 1436518604:0;make hanoi
+: 1436518606:0;./hanoi
+: 1436518804:0;make hanoi
+: 1436518806:0;./hanoi
+: 1436518997:0;make hanoi
+: 1436518999:0;./hanoi
+: 1436519024:0;make hanoi
+: 1436519026:0;./hanoi
+: 1436519037:0;make hanoi
+: 1436519037:0;./hanoi
+: 1436519067:0;make hanoi
+: 1436519069:0;./hanoi
+: 1436520695:0;make hanoi
+: 1436520703:0;./hanoi
+: 1436520738:0;make hanoi
+: 1436520739:0;./hanoi
+: 1436520750:0;make hanoi
+: 1436520752:0;./hanoi
+: 1436520806:0;make hanoi
+: 1436520808:0;./hanoi
+: 1436520916:0;make hanoi
+: 1436520918:0;./hanoi
+: 1436520952:0;make hanoi
+: 1436520954:0;./hanoi
+: 1436520988:0;fg
+: 1436521058:0;make hanoi
+: 1436521060:0;fg
+: 1436521063:0;./hanoi
+: 1436521092:0;fg
+: 1436521094:0;make hanoi
+: 1436521097:0;./hanoi
+: 1436521166:0;make hanoi
+: 1436521168:0;./hanoi
+: 1436521196:0;make hanoi
+: 1436521198:0;./hanoi
+: 1436521238:0;make hanoi
+: 1436521240:0;./hanoi
+: 1436521297:0;make hanoi
+: 1436521299:0;./hanoi
+: 1436521658:0;make hanoi
+: 1436521686:0;./hanoi
+: 1436521779:0;make hanoi
+: 1436521781:0;./hanoi
+: 1436522023:0;make hanoi
+: 1436522026:0;./hanoi
+: 1436522095:0;make hanoi
+: 1436522097:0;./hanoi
+: 1436522173:0;make hanoi
+: 1436522175:0;./hanoi
+: 1436522331:0;make hanoi
+: 1436522333:0;./hanoi
+: 1436522383:0;make hanoi
+: 1436522384:0;./hanoi
+: 1436522456:0;make hanoi
+: 1436522458:0;./hanoi
+: 1436522544:0;make hanoi
+: 1436522547:0;./hanoi
+: 1436522789:0;make hanoi
+: 1436522791:0;./hanoi
+: 1436523774:0;make hanoi
+: 1436523776:0;./hanoi
+: 1436523855:0;make hanoi
+: 1436523857:0;./hanoi
+: 1436524046:0;make hanoi
+: 1436524048:0;./hanoi
+: 1436524072:0;make hanoi
+: 1436524073:0;./hanoi
+: 1436524082:0;make hanoi
+: 1436524083:0;./hanoi
+: 1436524100:0;make hanoi
+: 1436524101:0;./hanoi
+: 1436524129:0;make hanoi
+: 1436524131:0;./hanoi
+: 1436524260:0;make hanoi
+: 1436524262:0;./hanoi
+: 1436524422:0;make hanoi
+: 1436524692:0;./hanoi
+: 1436524817:0;make hanoi
+: 1436524820:0;./hanoi
+: 1436525093:0;make hanoi
+: 1436525120:0;./hanoi
+: 1436525144:0;make hanoi
+: 1436525147:0;./hanoi
+: 1436525322:0;make hanoi
+: 1436525334:0;./hanoi
+: 1436525403:0;make hanoi
+: 1436525405:0;./hanoi
+: 1436525728:0;make hanoi
+: 1436525730:0;./hanoi
+: 1436525842:0;make hanoi
+: 1436525844:0;./hanoi
+: 1436526158:0;make hanoi
+: 1436526160:0;./hanoi
+: 1436526321:0;make hanoi
+: 1436526322:0;./hanoi
+: 1436526367:0;make hanoi
+: 1436526370:0;./hanoi
+: 1436526396:0;make hanoi
+: 1436526408:0;./hanoi
+: 1436526465:0;make hanoi
+: 1436526467:0;./hanoi
+: 1436526487:0;make hanoi
+: 1436526490:0;./hanoi
+: 1436526513:0;make hanoi
+: 1436526515:0;./hanoi
+: 1436526597:0;make hanoi
+: 1436526599:0;./hanoi
+: 1436529651:0;make hanoi
+: 1436529658:0;./hanoi
+: 1436529943:0;make hanoi
+: 1436529947:0;./hanoi
+: 1436529985:0;make hanoi
+: 1436529986:0;./hanoi
+: 1436530290:0;..
+: 1436530292:0;report
+: 1436530301:0;./rei 3J-4
+: 1436530306:0;cd 3j-4
+: 1436530310:0;make init
+: 1436530318:0;subl input.md
+: 1436530332:0;subl main.tex
+: 1436537834:0;exit
+: 1436573956:0;cd e:/
+: 1436573959:0;report
+: 1436573962:0;3j-4
+: 1436574160:0;cat input.md | grep '@lil' | sed -e 's/@lil:(.*?):/\\listinputlisting{include/\1}/g'
+: 1436574222:0;cat input.md | grep '@lil' | sed -i -e 's/@lil:(.*?):/\\listinputlisting{include/\1}/g'
+: 1436574263:0;cat input.md | grep '@lil' | sed -i -e 's#@lil:(.*?):#\\listinputlisting{include/\1}#g'
+: 1436574330:0;cat input.md | grep '@lil' | sed -i -e 's_@lil:(.*?):_\\listinputlisting{include/\1}_g'
+: 1436574391:0;cat input.md | grep '@lil' | sed -i -e 's_@lil:(.*?):_\\listinputlisting\{include/\1\}_g'
+: 1436574441:0;cat input.md | grep '@lil' | sed -i -e 's_@lil:\(.*?\):_\\listinputlisting\{include/\1\}_g'
+: 1436574450:0;cat input.md | grep '@lil' | sed -e 's_@lil:\(.*?\):_\\listinputlisting\{include/\1\}_g'
+: 1436574546:0;cat input.md | grep '@lil' | sed -e 's_@lil\s\(.*?\)\s_\\listinputlisting\{include/\1\}_g'
+: 1436574578:0;echo @lil hoge.c | sed -e 's_@lil\s\(.*?\)\s_\\listinputlisting\{include/\1\}_g'
+: 1436574601:0;cat input.md | grep '@lil' | sed -e 's_@lil\s\(.*?\)\s_\listinputlisting\{include/\1\}_g'
+: 1436577103:0;cat input.md | grep '@lil' | sed -e 's_@lil\s(.*?)\s_\listinputlisting\{include/\1\}_g'
+: 1436577118:0;cat input.md | grep '@lil' | sed -e 's_@lil\s\(.*?\)\s_\listinputlisting\{\1\}_g'
+: 1436577127:0;cat input.md | sed -e 's_@lil\s\(.*?\)\s_\listinputlisting\{\1\}_g'
+: 1436577211:0;cat input.md | grep '@lil' | sed -e 's_@lil\xargs sed -e s\(.*?\)\s_\listinputlisting\{\1\}_g'
+: 1436577231:0;cat input.md | grep '@lil' | xargs sed -e 's_@lil\s\(.*?\)\s_\listinputlisting\{\1\}_g'
+: 1436577694:0;cat input.md | grep '@lil' | sed -e 's_@lil\s\(.*?\)\s_\listinputlisting\{\1\}_g'
+: 1436577729:0;cat input.md | grep '@lil' | sed -e 's_@lil\s?\(.*?\)\s?_\\listinputlisting\{\1\}_g'
+: 1436577876:0;cat input.md | grep '@lil' | sed -e 's_@lil_\\listinputlisting_g'
+: 1436577883:0;cat input.md | grep '@lil' | sed -e 's_@lil_\\lstinputlisting_g'
+: 1436578052:0;cat input.md | grep '@lil' | sed -e 's_@lil\s?\(.*\?\)\s?_\\listinputlisting\{\1\}_g'
+: 1436578252:0;cat input.md | grep '@lil' | sed -e 's/@lil\s?\(.*?\)\s?/\listinputlisting\{\1\}/g'
+: 1436578339:0;cat input.md | grep '@lil' | sed -e 's/.?@lil\s?\(.*\)\s?/\listinputlisting\{\1\}/g'
+: 1436578368:0;cat input.md | grep '@lil' | sed -e 's/.?@lil\s?\(.*\)\s?/\1/g'
+: 1436578424:0;cat input.md | grep '@lil' | sed -e 's/@lil:\(.*?\)\s?/\1/g'
+: 1436578521:0;cat input.md | grep '@lil' | sed -e 's/@lil:\(.*?\)\s?//g'
+: 1436578530:0;cat input.md | grep '@lil' | sed -e 's/@lil:\(.*?\)\s?//'
+: 1436578866:0;cat input.md | grep '@lil' | sed -e 's/@lil:\(.*\+\):/\1/g'
+: 1436591543:0;..
+: 1436591548:0;jtm
+: 1436591562:0;DigitRecognition
+: 1436591567:0;DictionaryData
+: 1436591570:0;E
+: 1436591573:0;make
+: 1436591762:0;..
+: 1436591774:0;cp Makefile /F
+: 1436591807:0;F
+: 1436591808:0;make
+: 1436592043:0;..
+: 1436592049:0;make TARGET=G
+: 1436592103:0;cd G
+: 1436592105:0;ls
+: 1436592116:0;make TARGET=G
+: 1436592119:0;..
+: 1436592121:0;make TARGET=G
+: 1436592140:0;cd G/
+: 1436592142:0;..
+: 1436592197:0;make test
+: 1436592239:0;make TARGET=G
+: 1436592335:0;make TARGET=H
+: 1436592539:0;make TARGET=I
+: 1436592799:0;make TARGET=J
+: 1436592912:0;make TARGET=K
+: 1436593266:0;make TARGET=L
+: 1436593355:0;make TARGET=M
+: 1436593502:0;make TARGET=N
+: 1436593625:0;make TARGET=O
+: 1436593800:0;make TARGET=P
+: 1436594604:0;make TARGET=Q
+: 1436594692:0;make TARGET=R
+: 1436594779:0;make TARGET=S
+: 1436594868:0;make TARGET=T
+: 1436594957:0;make TARGET=U
+: 1436595075:0;make TARGET=V
+: 1436595159:0;make TARGET=W
+: 1436595250:0;make TARGET=X
+: 1436595342:0;make TARGET=Y
+: 1436595436:0;make TARGET=Z
+: 1436595544:0;..
+: 1436595549:0;Program
+: 1436595551:0;make
+: 1436595557:0;..
+: 1436595583:0;DigitRecognition
+: 1436595589:0;Program
+: 1436595604:0;./MakeDictionary.exe
+: 1436595657:0;ls
+: 1436595674:0;./DigitRecognition.exe
+: 1436613578:0;..
+: 1436613596:0;./rei 3J-dr
+: 1436613599:0;ej-dr
+: 1436613603:0;ej-dr3j-dr
+: 1436613606:0;3j-dr
+: 1436613609:0;make init
+: 1436613682:0;subl input.md
+: 1436614964:0;subl main.tex
+: 1436615004:0;make pd
+: 1436615007:0;make odf
+: 1436615010:0;make pdf
+: 1436615038:0;subl Makefile
+: 1436615046:0;make pdf
+: 1436615352:0;make pd
+: 1436615354:0;make pdf
+: 1436615374:0;make pd
+: 1436615375:0;make pdf
+: 1436615386:0;make pd
+: 1436615387:0;make pdf
+: 1436616086:0;make pd
+: 1436616088:0;make pdf
+: 1436616998:0;make pd
+: 1436616999:0;make pdf
+: 1436617084:0;make pd
+: 1436617085:0;make pdf
+: 1436617176:0;cat main.log | grep '![\s\S]*?\?\s\'
+: 1436617185:0;cat main.log | grep '![\s\S]*?\?\s'
+: 1436617254:0;make pd
+: 1436617256:0;make pdf
+: 1436617261:0;cat main.log | grep '![\s\S]*?\?\s'
+: 1436617347:0;cat main.log | grep -a '![\s\S]*?\?\s'
+: 1436617368:0;cat main.log | grep -aA 6 '![\s\S]*?\?\s'
+: 1436618751:0;echo cat | echo '\e[33m\e[m'
+: 1436618876:0;make pdf
+: 1436618984:0;make pd
+: 1436618985:0;make pdf
+: 1436619260:0;make pd
+: 1436619261:0;make pdf
+: 1436621734:0;..
+: 1436621745:0;jtm
+: 1436621750:0;DigitRecognition
+: 1436621754:0;Program
+: 1436621755:0;make
+: 1436621824:0;ls
+: 1436621838:0;./DigitRecognition.exe
+: 1436623695:0;make
+: 1436623901:0;./DigitRecognition.exe 4-00.pbm
+: 1436623905:0;./DigitRecognition.exe
+: 1436624340:0;make pd
+: 1436624343:0;make pdf
+: 1436624809:0;make pd
+: 1436624810:0;make pdf
+: 1436624862:0;make pd
+: 1436624864:0;make pdf
+: 1436625348:0;make pd
+: 1436625350:0;make pdf
+: 1436626335:0;./DigitRecognition.exe
+: 1436626383:0;make bb
+: 1436626832:0;make
+: 1436626839:0;./DigitRecognition.exe
+: 1436626855:0;make
+: 1436626858:0;./DigitRecognition.exe
+: 1436627023:0;make pd
+: 1436627024:0;make pdf
+: 1436627416:0;./DigitRecognition.exe O-00.pbm
+: 1436627824:0;make pd
+: 1436627830:0;make pdf
+: 1436627901:0;make pd
+: 1436627903:0;make pdf
+: 1436628402:0;make pd
+: 1436628403:0;make pdf
+: 1436628520:0;./DigitRecognition.exe O-00.pbm B-00.pbm
+: 1436628604:0;make pd
+: 1436628606:0;make pdf
+: 1436628625:0;make pd
+: 1436628626:0;make pdf
+: 1436628652:0;make pd
+: 1436628653:0;make pdf
+: 1436629086:0;make pd
+: 1436629088:0;make pdf
+: 1436629304:0;make pd
+: 1436629306:0;make pdf
+: 1436629344:0;make pd
+: 1436629346:0;make pdf
+: 1436629799:0;make bb
+: 1436629935:0;./DigitRecognition.exe N-01.pbm
+: 1436630039:0;make pd
+: 1436630040:0;make pdf
+: 1436630289:0;./DigitRecognition.exe Q-99.pbm
+: 1436630343:0;make pd
+: 1436630344:0;make pdf
+: 1436630401:0;make pd
+: 1436630402:0;make pdf
+: 1436630521:0;make pd
+: 1436630522:0;make pdf
+: 1436630594:0;exit
+: 1436662946:0;cd E:/
+: 1436662962:0;report
+: 1436662965:0;3j-4
+: 1436662974:0;subl input.md
+: 1436662986:0;subl Makefile
+: 1436663012:0;..
+: 1436663036:0;open 3j-text/
+: 1436663050:0;C
+: 1436663055:0;3j-stack
+: 1436663060:0;3j_stack
+: 1436670357:0;..
+: 1436670362:0;3j-dr
+: 1436670370:0;subl input.md
+: 1436670382:0;pwd
+: 1436670388:0;pushd
+: 1436670400:0;3j-4
+: 1436671768:0;make bb
+: 1436673716:0;make pd
+: 1436673723:0;make pdf
+: 1436673738:0;make pd
+: 1436673740:0;make pdf
+: 1436673775:0;make pd
+: 1436673776:0;make pdf
+: 1436673821:0;make pd
+: 1436673822:0;make pdf
+: 1436674927:0;make bb
+: 1436674930:0;make pdf
+: 1436676949:0;exit
+: 1436777901:0;cd E:/
+: 1436777905:0;report
+: 1436777910:0;ej-4
+: 1436777913:0;3j-4
+: 1436777956:0;..
+: 1436777969:0;3jj-dr
+: 1436777972:0;3j-dr
+: 1436777977:0;make pd
+: 1436777980:0;make pdf
+: 1436778018:0;make pd
+: 1436778021:0;make pdf
+: 1436778036:0;make pd
+: 1436778037:0;make pdf
+: 1436778049:0;make pd
+: 1436778051:0;make pdf
+: 1436778074:0;make pd
+: 1436778075:0;make pdf
+: 1436778097:0;..
+: 1436778100:0;ej-4
+: 1436778103:0;3j-4
+: 1436789470:0;cd
+: 1436789484:0;3J_class_project
+: 1436789495:0;git fetch upstream
+: 1436789575:0;git merge upstream/master
+: 1436789588:0;git checkout .
+: 1436789589:0;git merge upstream/master
+: 1436789728:0;git clone https://github.com/13J-Programmers/3J_class_project
+: 1436789912:0;git status
+: 1436789920:0;3J_class_project
+: 1436789923:0;git status
+: 1436790898:0;exit
+: 1436871320:0;3J_class_project
+: 1436871327:0;git fetch upstream
+: 1436871360:0;git branch
+: 1436871387:0;git remote add upstream https://github.com/13J-Programmers/3J_class_project
+: 1436871397:0;git fetch upstream
+: 1436871407:0;git merge upstream/master
+: 1436875755:0;..
+: 1436875763:0;cd E:/
+: 1436875766:0;C/algo
+: 1436875771:0;make shellSort
+: 1436875810:0;touch :>c
+: 1436875814:0;touch *.c
+: 1436875824:0;make shellSort
+: 1436875831:0;./shellSort
+: 1436875894:0;make shellSort
+: 1436875896:0;./shellSort
+: 1436875939:0;make shellSort
+: 1436875942:0;./shellSort
+: 1436876016:0;make shellSort
+: 1436876018:0;./shellSort
+: 1436876068:0;make shellSort
+: 1436876070:0;./shellSort
+: 1436876095:0;make shellSort
+: 1436876098:0;./shellSort
+: 1436876188:0;make shellSort
+: 1436876190:0;./shellSort
+: 1436876215:0;make shellSort
+: 1436876216:0;./shellSort
+: 1436876385:0;make shellSort
+: 1436876388:0;./shellSort
+: 1436876437:0;make shellSort
+: 1436876439:0;./shellSort
+: 1436876454:0;make shellSort
+: 1436876456:0;./shellSort
+: 1436876487:0;make shellSort
+: 1436876490:0;./shellSort
+: 1436876695:0;make shellSort
+: 1436876697:0;./shellSort
+: 1436951857:0;colors
+: 1436951865:0;pcolor
+: 1436952400:0;source ~/.zshrc
+: 1436952406:0;cd
+: 1436952433:0;source ~/.zshrc
+: 1436952773:0;ls
+: 1436953083:0;whoami
+: 1436953481:0;jobs
+: 1436955365:0;source ~/.zshrc
+: 1436955495:0;ls
+: 1436955497:0;ll
+: 1436955501:0;eee
+: 1436955504:0;ls
+: 1436955543:0;source ~/.zshrc
+: 1436955546:0;ls
+: 1436955550:0;li
+: 1436955552:0;ls
+: 1436955583:0;source ~/.zshrc
+: 1436955587:0;li
+: 1436955590:0;ls
+: 1436955909:0;source ~/.zshrc
+: 1436955983:0;ls
+: 1436956009:0;source ~/.zshrc
+: 1436956013:0;ls
+: 1436956046:0;source ~/.zshrc
+: 1436956057:0;ree
+: 1436956062:0;tree
+: 1436956077:0;ll
+: 1436956082:0;lg
+: 1436956086:0;ls
+: 1436957170:0;source ~/.zshrc
+: 1436957172:0;ll
+: 1436957176:0;lm
+: 1436957178:0;exit
+: 1437270831:0;e:/report
+: 1437270835:0;cd e:/report
+: 1437270840:0;3j-4
+: 1437270846:0;make open
+: 1437271079:0;make pd
+: 1437271081:0;make pdf
+: 1437271566:0;make pd
+: 1437271567:0;make pdf
+: 1437273208:0;exit
+: 1437303182:0;cd E:/report-3j-4
+: 1437303187:0;cd E:/report/3j-4
+: 1437303191:0;make pdf
+: 1437313956:0;exit
+: 1437354159:0;cd e:/report/3j-4
+: 1437354165:0;make open
+: 1437355248:0;//
+: 1437355251:0;cd
+: 1437355258:0;cd e:/c/3j_stack
+: 1437355263:0;./hanoi
+: 1437355502:0;make hanoi
+: 1437355506:0;./hanoi
+: 1437360057:0;make hanoi
+: 1437360065:0;./hanoi
+: 1437360310:0;make pd
+: 1437360314:0;make pdf
+: 1437360445:0;make pd
+: 1437360448:0;make pdf
+: 1437360526:0;make pd
+: 1437360527:0;make pdf
+: 1437360534:0;./hanoi
+: 1437360658:0;make pd
+: 1437360660:0;make pdf
+: 1437360788:0;make pd
+: 1437360789:0;make pdf
+: 1437360934:0;..
+: 1437360942:0;./rei 3J-5
+: 1437360957:0;3J-5
+: 1437360959:0;make init
+: 1437361144:0;..
+: 1437361153:0;./rei 3J-5
+: 1437361158:0;3J-5
+: 1437361159:0;make init
+: 1437365593:0;make pd
+: 1437365603:0;..
+: 1437365611:0;3j-4
+: 1437365614:0;make pd
+: 1437365615:0;make pdf
+: 1437368284:0;make pd
+: 1437368285:0;make pdf
+: 1437370918:0;exit
+: 1437393322:0;cd E:/report/3j^4
+: 1437393330:0;cd E:/report/3j-4
+: 1437393334:0;make pf
+: 1437393336:0;make pd
+: 1437393338:0;make pdf
+: 1437393355:0;make pd
+: 1437393356:0;make pdf
+: 1437395286:0;..
+: 1437395294:0;3j-dr
+: 1437395299:0;make pdf
+: 1437395328:0;make pd
+: 1437395329:0;make pdf
+: 1437397724:0;..
+: 1437397731:0;3j-4
+: 1437397734:0;make pd
+: 1437397736:0;make pdf
+: 1437399999:0;exit
+: 1437573167:0;cd E:/report
+: 1437573171:0;3j-4
+: 1437573173:0;make pd
+: 1437573180:0;make pdf
+: 1437573455:0;make pd
+: 1437573456:0;make pdf
+: 1437573563:0;make pd
+: 1437573564:0;make pdf
+: 1437573572:0;make pd
+: 1437573573:0;make pdf
+: 1437573606:0;make pd
+: 1437573606:0;make pdf
+: 1437574417:0;make pd
+: 1437574419:0;make pdf
+: 1437574431:0;exit
+: 1437574842:0;cd E:/report
+: 1437574845:0;3j-4
+: 1437574848:0;make pd
+: 1437574851:0;make pdf
+: 1437574906:0;make pd
+: 1437574907:0;make pdf
+: 1437574948:0;make pd
+: 1437574949:0;make pdf
+: 1437575040:0;make pd
+: 1437575041:0;make pdf
+: 1437575322:0;exit
+: 1437618571:0;3J_class_project
+: 1437618576:0;git fetch upstream
+: 1437618594:0;git merge upstream/master
+: 1437640007:0;3J_class_project
+: 1437640044:0;git commit -m "fix KeyBind to Rotate the block"
+: 1437640090:0;git add Assets/Script/BlockController.cs Assets/Script/KeyAction.cs
+: 1437640096:0;git add ProjectSettings/ProjectSettings.asset
+: 1437640099:0;git commit -m "fix KeyBind to Rotate the block"
+: 1437640112:0;git push origin master
+: 1437640149:0;git pull upstream
+: 1437640156:0;git push origin master
+: 1437640193:0;git merge upstream/master
+: 1437640223:0;3J1~
+: 1437640225:0;3J_class_project
+: 1437640228:0;git status
+: 1437640238:0;git fetch upstream
+: 1437640251:0;git merge upstream/master
+: 1437640264:0;git commit -m "fix keybind"
+: 1437640267:0;git merge upstream/master
+: 1437640304:0;3J_class_project
+: 1437640315:0;git push origin master
+: 1437640351:0;git pull
+: 1437640370:0;3J_class_project
+: 1437640377:0;git fetch upstream
+: 1437640389:0;git rebase upstream/master
+: 1437640409:0;git push origin master
+: 1437640433:0;git branch
+: 1437640443:0;git checkout master
+: 1437640454:0;git branch
+: 1437640464:0;git branch master
+: 1437640468:0;git checkout master
+: 1437640471:0;git merge
+: 1437640545:0;git checkout .
+: 1437640550:0;git branch
+: 1437640584:0;git branch -D
+: 1437640613:0;git checkout master
+: 1437640623:0;git pull origin master
+: 1437640639:0;git commit -am "to rebase"
+: 1437640648:0;git pull origin master
+: 1437640683:0;git status
+: 1437640699:0;git add .
+: 1437640707:0;git rebase upstream/master
+: 1437640716:0;git rebase --continue
+: 1437640725:0;git status
+: 1437640733:0;git rebase --continue
+: 1437640737:0;git status
+: 1437640740:0;git add .
+: 1437640742:0;git rebase --continue
+: 1437640751:0;git rebase --abort
+: 1437640763:0;git rebase upstream/master
+: 1437640786:0;git status
+: 1437640806:0;git commit -am "add title"
+: 1437640906:0;rm 3J_class_project
+: 1437640911:0;rm -f 3J_class_project
+: 1437640915:0;rm -d 3J_class_project
+: 1437640920:0;rm -fd 3J_class_project
+: 1437640928:0;rm -dr 3J_class_project
+: 1437640994:0;sudo rm -dr 3J_class_project
+: 1437641076:0;rm -dr 3J_class_project
+: 1437641086:0;3J_class_project
+: 1437641089:0;.git
+: 1437641094:0;rm .MERGE_MSG.sw
+: 1437641108:0;cp .MERGE_MSG.sw a
+: 1437641115:0;mv .MERGE_MSG.sw a
+: 1437641119:0;exit
+: 1437641397:0;git clone https://github.com/13J-Programmers/3J_class_project
+: 1437641494:0;3J_class_project
+: 1437641548:0;git remote add upstream https://github.com/13J-Programmers/3J_class_project
+: 1437641554:0;git branch -a
+: 1437641658:0;git commit -am "fix keybind"
+: 1437641682:0;git push origin master
+: 1437641799:0;..
+: 1437641804:0;exit
+: 1437641823:0;git clone https://github.com/nobuyo/3J_class_project
+: 1437642324:0;git remote add upstream https://github.com/13J-Programmers/3J_class_project
+: 1437642336:0;3J_class_project
+: 1437642338:0;git remote add upstream https://github.com/13J-Programmers/3J_class_project
+: 1437642341:0;git status
+: 1437642348:0;git push origin master
+: 1437642911:0;git fetch upstream
+: 1437643079:0;git merge upstream/master
+: 1437643097:0;git checkout .
+: 1437643100:0;git merge upstream/master
+: 1437643713:0;exit
+: 1437649454:0;3J_class_project
+: 1437649459:0;git checkout .
+: 1437649464:0;git fetch upstream
+: 1437649469:0;git merge upstream/master
+: 1437649850:0;git commit -m "refixed keybind"
+: 1437649856:0;git commit -am "refixed keybind"
+: 1437649868:0;git push origin master
+: 1437651168:0;git fetch upstream
+: 1437651173:0;git merge upstream/master
+: 1437652485:0;git fetch upstream
+: 1437652488:0;git merge upstream/master
+: 1437738257:0;3J_class_project
+: 1437738269:0;git fetch upstream
+: 1437738283:0;git merge upstream/master
+: 1437744854:0;git checkout .
+: 1437744880:0;git checkout -b Score
+: 1437744910:0;git checkout master
+: 1437744918:0;git branch
+: 1437745193:0;git fetch upstream
+: 1437745209:0;git merge upstream/master
+: 1437747119:0;exit
+: 1437800451:0;3J_class_project
+: 1437800460:0;git fetch upstream
+: 1437800474:0;git merge upstream/master
+: 1437829333:0;3j
+: 1437829339:0;3J
+: 1437829340:0;3J_class_project
+: 1437829353:0;git fetch upstream
+: 1437829366:0;git merge upstream/master
+: 1437829392:0;git checkout .
+: 1437829393:0;git merge upstream/master
+: 1437834653:0;git commit -am "add GameInfoViewer"
+: 1437834663:0;git push origin master
+: 1437834713:0;ls
+: 1437834732:0;git add Assets/Script/GameInfoViewer.cs
+: 1437834756:0;git add Assets/Script/GameInfoViewer.cs.meta
+: 1437834760:0;git commit -am "add GameInfoViewer"
+: 1437834764:0;git push origin master
+: 1437835533:0;exit
+: 1437871276:0;3J_class_project
+: 1437871298:0;git checkout .
+: 1437871305:0;git fetch upstream
+: 1437871312:0;git merge upstream/master
+: 1437871637:0;git commit -m "link components in GameManeger"
+: 1437871647:0;git commit -am "link components in GameManeger"
+: 1437871656:0;git status
+: 1437872727:0;git commit -m "add conponent link in BlockPoolController"
+: 1437872734:0;git commit -am "add conponent link in BlockPoolController"
+: 1437872748:0;git push origin master
+: 1437873734:0;git status
+: 1437874319:0;git commit -am "fix variable declaration errors"
+: 1437874323:0;git push origin master
+: 1437875483:0;git fetch upstream
+: 1437875502:0;git merge upstream/master
+: 1437878621:0;exit
+: 1437914181:0;3J_class_project
+: 1437914186:0;git fetch upstream
+: 1437914200:0;git merge upstream/master
+: 1437914204:0;exit
+: 1437915794:0;3J_class_project
+: 1437915810:0;git commit -m "not important change"
+: 1437915815:0;git commit -am "not important change"
+: 1437918516:0;exit
+: 1437986199:0;3J_class_project
+: 1437986207:0;git fetch upstream
+: 1437986218:0;git merge upstream/master
+: 1437986232:0;3J_class_project
+: 1437986238:0;git status
+: 1437986258:0;git checkout .
+: 1437986260:0;git merge upstream/master
+: 1437986271:0;git checkout .
+: 1437986272:0;git merge upstream/master
+: 1437986288:0;git commit -m "not important change"
+: 1437986291:0;git merge upstream/master
+: 1437986309:0;git 3J
+: 1437986315:0;3J_class_project
+: 1437986317:0;git status
+: 1437986329:0;git fetch upstream
+: 1437986333:0;git merge upstream/master
+: 1437986372:0;3J_class_project
+: 1437986377:0;git merge upstream/master --no-edit
+: 1437986477:0;git log
+: 1437986501:0;git status
+: 1437986506:0;git brancj
+: 1437986508:0;git branch
+: 1437986543:0;git checkout .
+: 1437986552:0;git pull upstream
+: 1437986677:0;git checkout Score
+: 1437987120:0;git commit -am "delete ShowRemainingTime()"
+: 1437987154:0;git add Assets/Script/GameInfoViewer.cs
+: 1437987156:0;git commit -am "delete ShowRemainingTime()"
+: 1437988651:0;git fetch upstream
+: 1437988660:0;git merge upstream/master
+: 1437988676:0;git checkout .
+: 1437988677:0;git fetch upstream
+: 1437988680:0;git merge upstream/master
+: 1437988684:0;exit
+: 1437988718:0;git clone https://github.com/nobuyo/3J_class_project
+: 1437988876:0;3J_class_project
+: 1437989980:0;git checkout -b title
+: 1437989993:0;git commit -am "update title comment"
+: 1437993113:0;git pull
+: 1437993161:0;git remote add upstream https://github.com/13J-Programmers/3J_class_project
+: 1437993168:0;git fetch upstream
+: 1437993182:0;git merge upstream/master
+: 1437993200:0;git merge upstream/Score
+: 1437993221:0;git commit -am "add result.unity"
+: 1437993227:0;git merge upstream/Score
+: 1437993233:0;git merge upstream/master
+: 1437993328:0;git branch -a
+: 1437993345:0;git merge upstream/title
+: 1437993352:0;git merge upstream/master
+: 1437993357:0;git status
+: 1437994060:0;exit
+: 1437994225:0;git clone https://github.com/nobuyo/3J_class_project
+: 1437994431:0;git remote add upstream https://github.com/13J-Programmers/3J_class_project
+: 1437994438:0;branch -a
+: 1437994447:0;3J_class_project
+: 1437994458:0;git branch -a
+: 1437996308:0;git fetch upstream
+: 1437996351:0;git remote add upstream https://github.com/13J-Programmers/3J_class_project
+: 1437996358:0;git fetch upstream
+: 1437996367:0;git merge upstream/master
+: 1437999774:0;git commit -am "change screen text"
+: 1437999783:0;git push origin master
+: 1437999970:0;git checkout .
+: 1438001888:0;git fetch upstream
+: 1438001901:0;git merge upstream/master
+: 1438003837:0;exit
+: 1438043952:0;3J_class_project
+: 1438043983:0;git commit -m "delete unnecessary function"
+: 1438044012:0;add Assets/Script/GameInfoViewer.cs
+: 1438044016:0;git add Assets/Script/GameInfoViewer.cs
+: 1438044019:0;git commit -m "delete unnecessary function"
+: 1438045584:0;git commit -am "(minior)change Block generating method"
+: 1438049738:0;git commit -am "reserve change about ShowNextBlock"
+: 1438049745:0;git push origin master
+: 1438049891:0;git commit -am "return to origin(reserving Showing next block's changes)"
+: 1438049900:0;git push origin master
+: 1438057174:0;exit
+: 1438087371:0;3J_class_project~
+: 1438087373:0;3J_class_project
+: 1438087379:0;git fetch upstream
+: 1438087390:0;git merge upstream/master
+: 1438090722:0;exit
+: 1438092852:0;cyg-fast find ghc
+: 1438092869:0;cyg-fast find haskell
+: 1438092889:0;ruby --version
+: 1438094307:0;exit
+: 1438175803:0;3J_class_project
+: 1438175810:0;git fetch upstream
+: 1438175838:0;git merge upstream/change-block-pool-look
+: 1438177585:0;3J_class_project
+: 1438177594:0;git pull upstream
+: 1438177669:0;git branch -a
+: 1438177697:0;git checkout -b change-block-pool-look
+: 1438177703:0;git merge upstream/change-block-pool-look
+: 1438177713:0;git status
+: 1438177718:0;3J_class_project
+: 1438177721:0;git status
+: 1438177763:0;git checkout -b change-block-pool-look upstream/change-block-pool-look
+: 1438177792:0;git branch -d change-block-pool-look
+: 1438177806:0;git checkout master
+: 1438177809:0;git branch -d change-block-pool-look
+: 1438177814:0;git checkout -b change-block-pool-look upstream/change-block-pool-look
+: 1438177823:0;git status
+: 1438178261:0;git checkout master
+: 1438178264:0;git branch
+: 1438178397:0;exit
+: 1438219071:0;3J_class_project
+: 1438219076:0;git branch
+: 1438219099:0;git commit -am "add game images"
+: 1438219120:0;git add Assets/Resources/Images/
+: 1438219122:0;git commit -am "add game images"
+: 1438219130:0;git push origin master
+: 1438223695:0;git add Assets/Resources/Images/
+: 1438223707:0;git commit -am "add lacked metafiles"
+: 1438223804:0;git add Assets/Result
+: 1438223831:0;git commit -am "add Result scene(empty)"
+: 1438223905:0;git add Assets/Result/Font
+: 1438223920:0;git commit -am "add font file to result"
+: 1438223932:0;git push origin master
+: 1438234513:0;exit
+: 1438246777:0;git checkout change-block-pool-look
+: 1438246785:0;3J_class_project
+: 1438246789:0;git checkout change-block-pool-look
+: 1438246806:0;git fetch upstream
+: 1438246847:0;git merge upstream/change-block-pool-look
+: 1438246857:0;git checkout master
+: 1438246863:0;git merge upstream/master
+: 1438261312:0;exit
+: 1438300881:0;3J_class_project
+: 1438300920:0;git checkout change-block-pool-look
+: 1438313023:0;git branch
+: 1438313047:0;git checkout master
+: 1438313054:0;git fetch upstream
+: 1438313068:0;git merge master
+: 1438313078:0;git merge upstream/master
+: 1438315097:0;git commit -am "change time format"
+: 1438315107:0;git push origin master
+: 1438320285:0;exit
+: 1438342990:0;3J_class_project
+: 1438342994:0;git fetch upstream
+: 1438343001:0;git merge upstream/master
+: 1438343241:0;git remove Assets/Resources/Images.meta
+: 1438343252:0;git rm Assets/Resources/Images.meta
+: 1438343324:0;git merge upstream/master
+: 1438348379:0;exit
+: 1438421328:0;3J_class_project/[
+: 1438421330:0;3J_class_project/
+: 1438421334:0;git fetch upstream
+: 1438421339:0;git merge upstream/master
+: 1438437891:0;exit
+: 1438508078:0;ssh-keygen -t rsa
+: 1438508184:0;ls
+: 1438508186:0;pwd
+: 1438508193:0;ssh-keygen -t rsa
+: 1438508299:0;la
+: 1438508308:0;la -d
+: 1438508315:0;ls -ld
+: 1438508320:0;ll
+: 1438508326:0;.ssh
+: 1438508331:0;ssh-keygen -t rsa
+: 1438508383:0;mkdir .ssh
+: 1438508387:0;ssh-keygen -t rsa
+: 1438508437:0;ls -ld
+: 1438508442:0;ls -ld .ssh
+: 1438508453:0;ll
+: 1438580749:0;3J
+: 1438580752:0;3J_class_project
+: 1438580805:0;git checkout -b addEffect
+: 1438580812:0;git branch
+: 1438592135:0;git commit -m "not important change"
+: 1438592140:0;git commit -am "not important change"
+: 1438596022:0;3J_class_project
+: 1438596048:0;git commit -m "add images and update floor texture"
+: 1438596053:0;git commit -am "add images and update floor texture"
+: 1438596076:0;git add Assets/
+: 1438596081:0;.
+: 1438596087:0;git add /Assets
+: 1438596090:0;git add Assets
+: 1438596103:0;git commit -am "add some files"
+: 1438596211:0;git rm Assets/Standard\ Assets Assets/Standard\ Assets.meta
+: 1438596239:0;git rm -r --chaced Assets/Standard\ Assets Assets/Standard\ Assets.meta
+: 1438596260:0;git rm -r --cached Assets/Standard\ Assets Assets/Standard\ Assets.meta
+: 1438596312:0;git push origin addEffect 
+: 1438596368:0;git commit -am "remove standard assets from tracking"
+: 1438596375:0;git push origin addEffect
+: 1439270431:0;3J_class_project
+: 1439270439:0;git branch
+: 1439464806:0;git clone https://github.com/hayamiz/comfort/blob/master/scripts/slackme
+: 1439464950:0;mv slackme.rb slackme
+: 1439464987:0;subl ~/.slackme.yml
+: 1439465138:0;slackme test
+: 1439465150:0;./slackme test
+: 1439465255:0;cd
+: 1439465257:0;ls
+: 1439465818:0;perl slack.pl
+: 1439465860:0;cpanm Config::Pit
+: 1439465886:0;gem install pit
+: 1439465982:0;perl -V
+: 1439465993:0;perl slack.pl
+: 1439466131:0;gem install pit
+: 1439466180:0;perl slack.pl
+: 1439466304:0;gem uninstall pit
+: 1439554362:0;3J_class_project
+: 1439554375:0;git checkout master
+: 1439554395:0;git checkout .
+: 1439554397:0;git checkout master
+: 1439554413:0;git fetch upstream
+: 1439554428:0;git merge upstream/master
+: 1439898333:0;3J_class_project
+: 1439898335:0;git fetch upstream
+: 1439898338:0;3J_class_project
+: 1439898341:0;git merge upstream/master
+: 1439900316:0;git commit -am "change images to sprite"
+: 1439900510:0;git push origin master
+: 1439901725:0;git commit -am "add result canvas"
+: 1439901728:0;git push origin master
+: 1439903620:0;exit
+: 1440925498:0;cd E
+: 1440925502:0;cd E/
+: 1440925519:0;cd E://
+: 1440925537:0;Report
+: 1440925543:0;etc
+: 1440925596:0;make pdf TARGET=cover
+: 1440925974:0;exit
+: 1440932953:0;cyg-fast php
+: 1440932959:0;cyg-fast find php
+: 1440937777:0;exit
+: 1441893185:0;apt-cyg install libncurses-dev
+: 1441893190:0;apt-cyg install libncurses-dev5
+: 1441893201:0;cyg-fast install libncurses-dev5
+: 1441893212:0;cyg-fast install libncurses
+: 1441893218:0;cyg-fast install curses
+: 1441893226:0;cyg-fast install ncurses
+: 1441893313:0;make 
+: 1441893320:0;E:/
+: 1441893323:0;cd E:/
+: 1441893325:0;C
+: 1441893351:0;make myeditor03 LDFLAGS=-lncurses
+: 1441893440:0;cyg-fast install libncurses-devel
+: 1441893522:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441893536:0;./myeditor03
+: 1441893753:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441894264:0;./myeditor03
+: 1441894308:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441894310:0;./myeditor03
+: 1441894607:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441894609:0;./myeditor03
+: 1441894817:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441894856:0;./myeditor03
+: 1441894880:0;ls
+: 1441894888:0;cat outputtext.txt
+: 1441895000:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441895003:0;./myeditor03
+: 1441895077:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441895079:0;./myeditor03
+: 1441895120:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441895122:0;./myeditor03
+: 1441895200:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441895202:0;./myeditor03
+: 1441895314:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441895316:0;./myeditor03
+: 1441895388:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441895390:0;./myeditor03
+: 1441895703:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441895704:0;./myeditor03
+: 1441895736:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441895738:0;./myeditor03
+: 1441896216:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441896291:0;./myeditor03
+: 1441896292:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441896338:0;./myeditor03
+: 1441896394:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441896399:0;./myeditor03
+: 1441896430:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441896434:0;./myeditor03
+: 1441896447:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441896449:0;./myeditor03
+: 1441896513:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441896515:0;./myeditor03
+: 1441896619:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441896621:0;./myeditor03
+: 1441896688:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441896690:0;./myeditor03
+: 1441897151:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441897153:0;./myeditor03
+: 1441897200:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441897202:0;./myeditor03
+: 1441897689:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441897691:0;./myeditor03
+: 1441897823:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441897825:0;./myeditor03
+: 1441897905:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441897908:0;./myeditor03
+: 1441898640:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441898643:0;./myeditor03
+: 1441898702:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441898704:0;./myeditor03
+: 1441898852:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441898854:0;./myeditor03
+: 1441898913:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441898915:0;./myeditor03
+: 1441898959:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441898961:0;./myeditor03
+: 1441899045:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441899046:0;./myeditor03
+: 1441899156:0;gcc myeditor03.c -o myeditor03 -lncurses -I/usr/include/ncurses/
+: 1441899158:0;./myeditor03
+: 1441899308:0;exit
+: 1442744867:0;3J_class_project
+: 1442744904:0;git add Assets/Resources/Images/times.png
+: 1442744948:0;git commit -am "fix "tiime's up" image"\
+\
+q\
+exit\
+\
+
+: 1442744960:0;git commit -m "fix "tiime's up" image"\
+\
+
+: 1442744979:0;git commit -m "fix time's up image"\
+\
+
+: 1442744998:0;git push origin master
+: 1442745012:0;git branch
+: 1442745066:0;git fetch upstream
+: 1442745079:0;git merge upstream/master
+: 1442745100:0;git checkout .
+: 1442745101:0;git merge upstream/master
+: 1442745128:0;git commit -am "not important change"
+: 1442745134:0;git fetch upstream
+: 1442745136:0;git commit -am "not important change"
+: 1442745140:0;git merge upstream/master
+: 1442745235:0;git amend d0c1882
+: 1442745246:0;git ammend d0c1882
+: 1442755094:0;git clone https://github.com/nobuyo/3J_class_project
+: 1442804568:0;3J_class_project
+: 1442804594:0;git remote add upstream https://github.com/13J-Programmers
+: 1442804600:0;git fetch upstream
+: 1442804628:0;git remote delete upstream
+: 1442804635:0;git remote remove upstream
+: 1442804644:0;git remote add upstream https://github.com/13J-Programmers/3J_class_project
+: 1442804646:0;git fetch upstream
+: 1442804658:0;git merge upstream/master
+: 1442805430:0;3J_class_project/Assets/Resources/Images/
+: 1442805437:0;rm *.,eta
+: 1442805447:0;rm *.png.meta
+: 1442805486:0;cd
+: 1442805491:0;git checkout .
+: 1442805497:0;3J_class_project
+: 1442805509:0;git checkout .
+: 1442805516:0;git fetch upstream
+: 1442805523:0;git merge upstream/master
+: 1442805527:0;git branch
+: 1442805530:0;git branch -a
+: 1442805575:0;rm Assets/Resouses/Images/*.png.meta
+: 1442805584:0;rm /Assets/Resouses/Images/*.png.meta
+: 1442805591:0;rm /Assets/Resouces/Images/*.png.meta
+: 1442805599:0;rm /Assets/Resources/Images/*.png.meta
+: 1442805620:0;cd /Assets/Resources/Images/
+: 1442805639:0;Assets/Resources/Images
+: 1442805646:0;rm *.png.meta
+: 1442805740:0;git checkout .
+: 1442805836:0;rm *.png.meta
+: 1442806633:0;..
+: 1442806680:0;git commit -am "change title images"
+: 1442806696:0;git push origin master
+: 1442841246:0;git fetch upstream
+: 1442841260:0;git merge upstream/master
+: 1443144018:0;3j
+: 1443144020:0;3J_class_project
+: 1443144024:0;git fetch upstream
+: 1443144032:0;git merge upstream/master
+: 1443144037:0;exit
+: 1443173363:0;cd E:/
+: 1443173368:0;C/algo
+: 1443173371:0;make bm
+: 1443173419:0;./bm
+: 1443173596:0;make bm
+: 1443173623:0;./bm
+: 1443174254:0;make bm
+: 1443174256:0;./bm
+: 1443174300:0;make bm
+: 1443174302:0;./bm
+: 1443175996:0;make bm
+: 1443176011:0;./bm
+: 1443176039:0;make bm
+: 1443176100:0;./bm
+: 1443176272:0;make bm
+: 1443176274:0;./bm
+: 1443176295:0;make bm
+: 1443176298:0;./bm
+: 1443176327:0;make bm
+: 1443176329:0;./bm
+: 1443176350:0;make bm
+: 1443176351:0;./bm
+: 1443176373:0;make bm
+: 1443176375:0;./bm
+: 1443182640:0;make bm
+: 1443182649:0;./bm
+: 1443182687:0;make bm
+: 1443182692:0;./bm
+: 1443182755:0;make bm
+: 1443182757:0;./bm
+: 1443182866:0;make bm
+: 1443182867:0;./bm
+: 1443182931:0;make bm
+: 1443182934:0;./bm
+: 1443183002:0;make bm
+: 1443183004:0;./bm
+: 1443183602:0;make bm
+: 1443183604:0;./bm
+: 1443183642:0;make bm
+: 1443183644:0;./bm
+: 1443183665:0;make bm
+: 1443183666:0;./bm
+: 1443184974:0;make bm
+: 1443184976:0;./bm
+: 1443186505:0;make bm
+: 1443186507:0;./bm
+: 1443186565:0;make bm
+: 1443186588:0;./bm
+: 1443186627:0;make bm
+: 1443186629:0;./bm
+: 1443186677:0;make bm
+: 1443186681:0;./bm
+: 1443186714:0;make bm
+: 1443186723:0;./bm
+: 1443186821:0;make bm
+: 1443186823:0;./bm
+: 1443186844:0;make bm
+: 1443186852:0;./bm
+: 1443186860:0;make bm
+: 1443186863:0;./bm
+: 1443187022:0;make bm
+: 1443187024:0;./bm
+: 1443188442:0;make bm
+: 1443188449:0;./bm
+: 1443189550:0;make bm
+: 1443189552:0;./bm
+: 1443189641:0;make bm
+: 1443189644:0;./bm
+: 1443189720:0;make bm
+: 1443189722:0;./bm
+: 1443189749:0;make bm
+: 1443189751:0;./bm
+: 1443189880:0;make bm
+: 1443189882:0;./bm
+: 1443190054:0;make bm
+: 1443190056:0;./bm
+: 1443190144:0;make bm
+: 1443190146:0;./bm
+: 1443190845:0;make bm
+: 1443190847:0;./bm
+: 1443242676:0;cd E:/
+: 1443242681:0;C/algo
+: 1443242683:0;./bm
+: 1443243613:0;C/algo
+: 1443243616:0;make bm
+: 1443243623:0;./bm
+: 1443244118:0;make bm
+: 1443244120:0;./bm
+: 1443244137:0;make bm
+: 1443244139:0;./bm
+: 1443244292:0;make bm
+: 1443244295:0;./bm
+: 1443244504:0;make bm
+: 1443244509:0;wagahaiwanekodearu
+: 1443244513:0;./bm
+: 1443244885:0;wagahaiwanekodearu
+: 1443244888:0;make bm
+: 1443244890:0;./bm
+: 1443244960:0;make bm
+: 1443244967:0;./bm
+: 1443245235:0;make bm
+: 1443245237:0;./bm
+: 1443245367:0;make bm
+: 1443245399:0;./bm
+: 1443245498:0;make bm
+: 1443245500:0;./bm
+: 1443245551:0;make bm
+: 1443245561:0;./bm
+: 1443245779:0;man ascii
+: 1443246266:0;./bm
+: 1443248464:0;man ascii
+: 1443248467:0;make bm
+: 1443248471:0;./bm
+: 1443248528:0;make bm
+: 1443248530:0;./bm
+: 1443249023:0;make bm
+: 1443249024:0;./bm
+: 1443249097:0;make bm
+: 1443249099:0;./bm
+: 1443250693:0;make bm
+: 1443250701:0;./bm
+: 1443250782:0;make bm
+: 1443250784:0;./bm
+: 1443250822:0;make bm
+: 1443251242:0;./bm
+: 1443251305:0;make bm
+: 1443251306:0;./bm
+: 1443251684:0;make bm
+: 1443251686:0;./bm
+: 1443252148:0;make bm
+: 1443252150:0;./bm
+: 1443253049:0;make bm
+: 1443253051:0;./bm
+: 1443253072:0;make bm
+: 1443253075:0;./bm
+: 1443253097:0;make bm
+: 1443253176:0;./bm
+: 1443253206:0;make bm
+: 1443253207:0;./bm
+: 1443253354:0;make bm
+: 1443253369:0;./bm
+: 1443253395:0;make bm
+: 1443253397:0;./bm
+: 1443253939:0;make bm
+: 1443253941:0;./bm
+: 1443254093:0;make bm
+: 1443254094:0;./bm
+: 1443254276:0;make bm
+: 1443254278:0;./bm
+: 1443256324:0;cd
+: 1443256330:0;3J_class_project
+: 1443256363:0;git fetch upstream
+: 1443256377:0;git merge upstream/master
+: 1443261667:0;./bm
+: 1443269786:0;make bm
+: 1443269899:0;./bm
+: 1443269959:0;make bm
+: 1443269962:0;./bm
+: 1443270097:0;make bm
+: 1443270098:0;./bm
+: 1443270504:0;make bm
+: 1443270507:0;./bm
+: 1443270568:0;make bm
+: 1443270570:0;./bm
+: 1443270607:0;make bm
+: 1443270609:0;./bm
+: 1443270667:0;make bm
+: 1443270760:0;./bm
+: 1443270883:0;make bm
+: 1443270885:0;./bm
+: 1443271032:0;make bm
+: 1443271034:0;./bm
+: 1443271093:0;make bm
+: 1443271095:0;./bm
+: 1443271205:0;make bm
+: 1443271207:0;./bm
+: 1443271364:0;make bm
+: 1443271365:0;./bm
+: 1443271867:0;make bm
+: 1443271869:0;./bm
+: 1443271958:0;make bm
+: 1443271959:0;./bm
+: 1443272035:0;make bm
+: 1443272038:0;./bm
+: 1443272272:0;make bm
+: 1443272274:0;./bm
+: 1443273929:0;git fetch upstream
+: 1443273945:0;git merge upstream/master
+: 1443273950:0;exit
+: 1443274759:0;make bm
+: 1443274780:0;./bm
+: 1443274836:0;make bm
+: 1443274837:0;./bm
+: 1443274869:0;make bm
+: 1443274871:0;./bm
+: 1443275168:0;make bm
+: 1443275170:0;./bm
+: 1443275278:0;make bm
+: 1443275279:0;./bm
+: 1443275377:0;make bm
+: 1443275379:0;./bm
+: 1443275407:0;make bm
+: 1443275409:0;./bm
+: 1443276711:0;make bm
+: 1443276714:0;./bm
+: 1443276831:0;exit
+: 1443335629:0;cd E:/C/algo
+: 1443335634:0;make bm
+: 1443335642:0;./bm
+: 1443336922:0;make bm
+: 1443336997:0;./bm
+: 1443337060:0;make bm
+: 1443337070:0;./bm
+: 1443337165:0;make bm
+: 1443337168:0;./bm
+: 1443337649:0;make bm
+: 1443337651:0;./bm
+: 1443337696:0;make bm
+: 1443337698:0;./bm
+: 1443337722:0;make bm
+: 1443337724:0;./bm
+: 1443337900:0;make bm
+: 1443337902:0;./bm
+: 1443338673:0;make bm
+: 1443339349:0;./bm
+: 1443339393:0;make bm
+: 1443339397:0;./bm
+: 1443339494:0;make bm
+: 1443339498:0;jskjfhs bjkdhfk kjdgskjkhjf kj
+: 1443339501:0;./bm
+: 1443339547:0;make bm
+: 1443339548:0;./bm
+: 1443339763:0;make bm
+: 1443339766:0;./bm
+: 1443339800:0;make bm
+: 1443339815:0;ijijan jhoiaidhfjka.jejkfhjkdlajbjfk
+: 1443339817:0;./bm
+: 1443340018:0;make bm
+: 1443340019:0;./bm
+: 1443340335:0;make bm
+: 1443340337:0;./bm
+: 1443341392:0;exit
+: 1443344344:0;subl clan.c
+: 1443344548:0;make clan
+: 1443344566:0;./clan
+: 1443344603:0;make clan
+: 1443344605:0;./clan
+: 1443344761:0;make clan
+: 1443344770:0;./clan
+: 1443344848:0;make clan
+: 1443344849:0;./clan
+: 1443344905:0;ls
+: 1443344916:0;rm clan.*
+: 1443344918:0;ls
+: 1443344956:0;exi
+: 1443344959:0;exit
+: 1443407152:0;3J_class_project
+: 1443407164:0;git fetch upstream
+: 1443407226:0;git merge upstream/master
+: 1443408349:0;git fetch upstream
+: 1443408352:0;git merge upstream/master
+: 1443408857:0;exit
+: 1443428712:0;3J_class_project
+: 1443428715:0;git fetch upstream
+: 1443428754:0;git merge upstream/master
+: 1443864371:0;3J_class_project
+: 1443864377:0;git fetch upstream
+: 1443864388:0;git merge upstream/master
+: 1443926165:0;3J_class_project
+: 1443926176:0;git fetch upstream
+: 1443926191:0;git merge upstream/master
+: 1443930189:0;git checkout .
+: 1444049413:0;3J_class_project
+: 1444049422:0;git fetch upstream
+: 1444049433:0;git merge upstream/master
+: 1444050521:0;exit
+: 1444052663:0;3J_class_project
+: 1444052668:0;git fetch upstream
+: 1444052673:0;git merge upstream/master
+: 1444053478:0;exit
+: 1444198881:0;cyg-fast find php
+: 1444207589:0;exit
+: 1444374520:0;python -V
+: 1444374529:0;python3 -V
+: 1444374553:0;cyg-fast list
+: 1444374588:0;cyg-fast help
+: 1444374598:0;cyg-fast show
+: 1444374952:0;python2 -V
+: 1444380543:0;exit
+: 1444726876:0;3J_class_project
+: 1444726882:0;git fetch upstream
+: 1444726892:0;git merge upstream/master
+: 1444726921:0;subl man/man_for3j.md
+: 1444727161:0;git commit -am "update man"
+: 1444727169:0;git push origin
+: 1444727173:0;git push origin master
+: 1444727246:0;git commit -am "update man "
+: 1444727249:0;git push origin master
+: 1444727333:0;git commit -am "update man"
+: 1444727426:0;git push origin master
+: 1444727776:0;git commit -am "update man"
+: 1444727791:0;subl man/man.md
+: 1444727983:0;git commit -am "update man"
+: 1444728087:0;git push origin master
+: 1444832432:0;./rei manual
+: 1444832459:0;3J_class_project
+: 1444832464:0;git fetch upstream
+: 1444832473:0;git merge upstream/,
+: 1444832475:0;git merge upstream/master
+: 1444832522:0;manual
+: 1444832527:0;make pd
+: 1444832539:0;make pdf
+: 1444832581:0;make init
+: 1444832585:0;make pdf
+: 1444832702:0;exit
+: 1444832897:0;man
+: 1444832904:0;manual
+: 1444832909:0;make pdf
+: 1444832940:0;subl main.tex
+: 1444832962:0;make pdf
+: 1444832997:0;subl input.tex
+: 1444833110:0;make bb
+: 1444833201:0;make pdf
+: 1444833822:0;make pd
+: 1444833866:0;make pdf
+: 1444834017:0;exit
+: 1444910444:0;3J_class_project
+: 1444910450:0;git fetch
+: 1444910455:0;git fetch upstream
+: 1444910495:0;git merge upstream/master
+: 1444910507:0;git checkout .
+: 1444910509:0;git merge upstream/master
+: 1444911718:0;..
+: 1444911903:0;man
+: 1444911907:0;manual
+: 1444911918:0;subl input.tex
+: 1444912082:0;make pdf
+: 1444912487:0;cd
+: 1444912499:0;cd cygdrive/c
+: 1444912505:0;cd C:/
+: 1444912511:0;w32t
+: 1444912515:0;w32tex
+: 1444912518:0;share
+: 1444912524:0;texmf-local
+: 1444912532:0;mktexlsr
+: 1444912547:0;exit
+: 1444912549:0;make pdf
+: 1444912573:0;mktexlsr
+: 1444912588:0;make pdf
+: 1444913140:0;make bb
+: 1444913278:0;make pdf
+: 1444913483:0;namu
+: 1444913485:0;manual
+: 1444913489:0;make pdf
+: 1444914040:0;..
+: 1444914042:0;3J_class_project
+: 1444914048:0;git fetch upstream
+: 1444914069:0;git commit -am "update man"
+: 1444914086:0;git add man/man_nobuyo.pdf
+: 1444914088:0;git commit -am "update man"
+: 1444914104:0;git push upstream/master
+: 1444914118:0;git push upstream master
+: 1444916065:0;exit
+: 1445254175:0;git clone https://github.com/nobuyo/4J-class-project
+: 1445254192:0;ll
+: 1445254194:0;ls
+: 1445255713:0;4J-class-project
+: 1445255720:0;l
+: 1445255720:0;ll
+: 1445255765:0;git remote add upstream https://github.com/13J-Programmers/4J-class-project
+: 1445255770:0;git branch -a
+: 1445257692:0;subl ideas.md
+: 1445257816:0;git add ideas.md
+: 1445257839:0;git commit -am "add ideas.md"
+: 1445257848:0;git push origin master
+: 1445258019:0;git push upstream master
+: 1445258993:0;ll
+: 1445259347:0;exit
+: 1445317151:0;4J-class-project
+: 1445317155:0;subl ideas.md
+: 1445317164:0;git fetch upstre
+: 1445317168:0;git fetch upstream
+: 1445317176:0;git merge upstream/master
+: 1445317179:0;subl ideas.md
+: 1445317405:0;git commit "update ideas.md"
+: 1445317412:0;git commit -m "update ideas.md"
+: 1445317431:0;git commit -am "update ideas.md"
+: 1445317441:0;git push upstream master
+: 1445317817:0;git commit -am "update ideas.md"
+: 1445317919:0;git push origin master
+: 1445318017:0;git commit -am "update ideas.md"
+: 1445342086:0;subl ideas.md
+: 1445342223:0;git commit -am "add how server use"
+: 1445342232:0;git push upstream master
+: 1445342278:0;git fetch upstream
+: 1445342288:0;git merge upstream/master
+: 1445342347:0;git push upstream mastergit stastus
+: 1445342353:0;git status
+: 1445342536:0;git fetch
+: 1445342541:0;git pull
+: 1445342549:0;git pull upstream
+: 1445345436:0;..
+: 1445345444:0;cyg-fast gelp
+: 1445345449:0;cyg-fast help
+: 1445345478:0;cyg-fast upgrade-sefl
+: 1445345480:0;cyg-fast upgrade-self
+: 1445345826:0;ext
+: 1445345887:0;fuckxit
+: 1445345890:0;exit
+: 1445503138:0;ssh
+: 1445503207:0;ssh 153.126.141.45
+: 1445503283:0;ssh --help
+: 1445503309:0;ssh -l root 153.126.141.45
+: 1445503752:0;ssh -l nobuyo 153.126.141.45
+: 1445503828:0;exit
+: 1445504008:0;ssh -l nobuyo 153.126.141.45
+: 1445504228:0;ssh_keygen
+: 1445504239:0;ssh-keygen
+: 1445504446:0;scp
+: 1445504509:0;scp /.ssh/id_rsa.pub 153.126.141.45:~/
+: 1445504540:0;scp /.ssh/id_rsa.pub nobuyo@153.126.141.45:~/
+: 1445504554:0;ll
+: 1445504566:0;.ssh
+: 1445504575:0;scp id_rsa.pub nobuyo@153.126.141.45:~/
+: 1445504599:0;ssh -l nobuyo 153.126.141.45
+: 1445505457:0;ssh --help
+: 1445505478:0;ssh -lp nobuyo@153.126.141.45 13426
+: 1445505559:0;ssh -p 13426 nobuyo@153.126.141.45
+: 1445506053:0;cat /etc/ssh/ssh_config
+: 1445506100:0;ssh -pv 13426 nobuyo@153.126.141.45
+: 1445506110:0;ssh -v -p 13426 nobuyo@153.126.141.45
+: 1445506174:0;echo $HOME
+: 1445506204:0;which ssh
+: 1445506315:0;ssh -help
+: 1445506327:0;ssh -i id_rsa -p 13426 nobuyo@153.126.141.45
+: 1445506393:0;/home
+: 1445506394:0;ls
+: 1445506408:0;cd
+: 1445506496:0;echo $HOME
+: 1445506678:0;exit
+: 1445506690:0;ssh -i id_rsa -p 13426 nobuyo@153.126.141.45
+: 1445506705:0;ssh -v -p 13426 nobuyo@153.126.141.45
+: 1445506772:0;.ssh
+: 1445506785:0;ssh -v -i id_rsa -p 13426 nobuyo@153.126.141.45
+: 1445506958:0;ssh -v -p 13426 nobuyo@153.126.141.45
+: 1445507353:0;chmod 600 id_rsa
+: 1445507355:0;ssh -v -p 13426 nobuyo@153.126.141.45
+: 1445588125:0;scp --help
+: 1445588155:0;scp .zshrc -p 13426 nobuyo@153.126.141.45:
+: 1445588211:0;scp -p 13426 .zshrc nobuyo@153.126.141.45:
+: 1445588271:0;scp -P 13426 .zshrc nobuyo@153.126.141.45:
+: 1445588419:0;ssh -v -p 13426 nobuyo@153.126.141.45
+: 1445588657:0;ssh -p 13426 nobuyo@153.126.141.45
+: 1445588803:0;ll
+: 1445589133:0;scp -P 13426 .zshrc nobuyo@153.126.141.45:
+: 1445589960:0;..
+: 1445590188:0;cd
+: 1445597987:0;exit
+: 1445598002:0;cat /proc/partitions
+: 1445598102:0;dd if=/dev/zero of=/dev/sdd1
+: 1445598531:0;dd if=/dev/zero of=/dev/sdd1 bs=200MB
+: 1445598731:0;dd if=/dev/zero of=/dev/sdd bs=200MB
+: 1445598766:0;cat /proc/partitions
+: 1445598773:0;dd if=/dev/zero of=/dev/sdc bs=200MB
+: 1445598781:0;sudo dd if=/dev/zero of=/dev/sdc bs=200MB
+: 1445598787:0;dd if=/dev/zero of=/dev/sdc bs=200MB
+: 1445598794:0;dd if=/dev/zero of=/dev/sdc1 bs=200MB
+: 1445598805:0;dd if=/dev/zero of=/dev/sdc bs=200MB
+: 1445598824:0;cat /proc/partitions
+: 1445598829:0;dd if=/dev/zero of=/dev/sdc
+: 1445598841:0;cat /proc/partitions
+: 1445598845:0;dd if=/dev/zero of=/dev/sdc
+: 1445599094:0;exit
+: 1445641540:0;ssh -p 13426 nobuyo@153.126.141.45
+: 1445650971:0;exit
+: 1445679416:0;cd E:/
+: 1445679418:0;C
+: 1445679421:0;make era
+: 1445679429:0;./era
+: 1445680308:0;exit
+: 1446886021:0;cd E:/
+: 1446886036:0;Report
+: 1446886041:0;3J-5
+: 1446886052:0;subl Makefile
+: 1446886077:0;make init
+: 1446886085:0;subl main.
+: 1446886092:0;subl main.tex
+: 1446886491:0;make pdf
+: 1446898405:0;exit
+: 1446899914:0;cd E:/C
+: 1446899916:0;make test
+: 1446899975:0;./test
+: 1446900213:0;make test
+: 1446900226:0;./test
+: 1446900258:0;make test
+: 1446900304:0;./test
+: 1446900516:0;make test
+: 1446900518:0;./test
+: 1446900543:0;make test
+: 1446900544:0;./test
+: 1446900838:0;make test
+: 1446900839:0;./test
+: 1446901140:0;exit
+: 1447062846:0;cd E:/Report/3J-5
+: 1447062849:0;make pdf
+: 1447150014:0;cd F:/
+: 1447150021:0;cd
+: 1447150049:0;cd E:/Report/3J-5
+: 1447150053:0;make pdf
+: 1447160334:0;make bb
+: 1447160336:0;make pdf
+: 1447160392:0;cp image/*.PNG image/*.png
+: 1447160455:0;make bb
+: 1447160457:0;make pdf
+: 1447163832:0;make bb
+: 1447163835:0;make pdf
+: 1447165076:0;exit
+: 1447233080:0;cd E:/Report/3J-5
+: 1447233088:0;make pdf
+: 1447246251:0;make bb
+: 1447246675:0;make pdf
+: 1447248397:0;exit
+: 1447323889:0;cd E:/Report/3J-5
+: 1447323892:0;make open
+: 1447327273:0;make bb
+: 1447327305:0;make pdf
+: 1447329561:0;make bb
+: 1447329570:0;cat /image/
+: 1447329574:0;cat image/
+: 1447329581:0;more image/
+: 1447329605:0;ls image/
+: 1447329654:0;make pdf
+: 1447335068:0;make bb
+: 1447335071:0;make pdf
+: 1447338045:0;exit
+: 1447405261:0;cd E:/Report/3J-5
+: 1447405289:0;make pdf
+: 1447405705:0;make bb
+: 1447405708:0;make pdf
+: 1447414335:0;exit
+: 1447466720:0;cd E:/Report/3J-5
+: 1447466724:0;make open
+: 1447468685:0;make pdf
+: 1447482907:0;exit
+: 1447914660:0;ssh -p 13426 nobuyo@153.126.141.45
+: 1447914734:0;exit
+: 1448521123:0;cd E:/Jv
+: 1448521135:0;chmod +x javalipse.sh
+: 1448521140:0;./javalipse.sh
+: 1448521588:0;./javalipse.sh Queue
+: 1448521591:0;l
+: 1448521935:0;gawk -v
+: 1448521962:0;awk -V
+: 1448522091:0;./javalipse.sh DataArray
+: 1448522096:0;l
+: 1448522123:0;./javalipse.sh DataArray
+: 1448522347:0;ll
+: 1448522440:0;./javalipse.sh DataArray
+: 1448522446:0;./javalipse.sh DataArray/
+: 1448522466:0;./javalipse.sh DataArray
+: 1448522582:0;./javalipse.sh DataArray/
+: 1448522584:0;./javalipse.sh DataArray
+: 1448522592:0;Data
+: 1448522596:0;DataArray
+: 1448522601:0;..
+: 1448522618:0;find DataArray/ -name *.java
+: 1448522626:0;find DataArray/. -name *.java
+: 1448522634:0;find . -name *.java
+: 1448522642:0;find --version
+: 1448522706:0;which find
+: 1448522742:0;./javalipse.sh DataArray
+: 1448527927:0;exit
+: 1448528638:0;cd E:/Jv
+: 1448528678:0;./javalipse.sh DataArray
+: 1448528707:0;exit
+: 1448542010:0;cd E:/scripts
+: 1448542015:0;git add rei
+: 1448542039:0;git commit -am "add Report Environment Initializer"
+: 1448542048:0;subl README.md
+: 1448542107:0;git commit -am "update README"
+: 1448542116:0;git push origin master
+: 1448542150:0;git commit -am "update README"
+: 1448542155:0;git push origin master
+: 1448542176:0;git commit -am "update README"
+: 1448542179:0;git push origin master
+: 1448548227:0;exit
+: 1448695479:0;cd E:/scripts
+: 1448695485:0;git pull
+: 1448699003:0;..
+: 1448699016:0;Multiple-length-arithmetic
+: 1448699024:0;ll
+: 1448699034:0;subl .gitignore
+: 1448708093:0;subl Makefile
+: 1448715170:0;exit
+: 1448870297:0;cd E:/Multiple-length-arithmetic
+: 1448870301:0;git pull
+: 1449051944:0;source ~/.zshrc
+: 1449052062:0;l
+: 1449052066:0;cd 4J-class-project
+: 1449052163:0;source ~/.zshrc
+: 1449052169:0;cd
+: 1449052172:0;3J_class_project
+: 1449052180:0;git branch
+: 1449052229:0;source ~/.zshrc
+: 1449052239:0;cd
+: 1449052241:0;4J-class-project
+: 1449052257:0;source ~/.zshrc
+: 1449052260:0;4J-class-project
+: 1449052262:0;cd
+: 1449052264:0;4J-class-project
+: 1449052361:0;source ~/.zshrc
+: 1449052367:0;4
+: 1449052373:0;cd
+: 1449052377:0;4J-class-project
+: 1449052397:0;cd
+: 1449052399:0;source ~/.zshrc
+: 1449052401:0;4J-class-project
+: 1449052435:0;source ~/.zshrc
+: 1449052441:0;cd
+: 1449052443:0;3J_class_project
+: 1449052749:0;git diff github/master HEAD
+: 1449052766:0;git diff upstream/master HEAD
+: 1449052784:0;cd
+: 1449052788:0;source ~/.zshrc
+: 1449052791:0;3J_class_project
+: 1449052808:0;source ~/.zshrc
+: 1449052817:0;..
+: 1449052819:0;3J_class_project
+: 1449052827:0;..
+: 1449063719:0;exit
+: 1449141331:0;l
+: 1449141375:0;git clone https://github.com/nobuyo/scripts
+: 1449141435:0;la
+: 1449141458:0;scripts/
+: 1449141467:0;subl rei
+: 1449142435:0;git checkout .
+: 1449142445:0;git status
+: 1449142809:0;subl README.md
+: 1449142841:0;git commit -am "update README.md"
+: 1449142848:0;git push origin master
+: 1449217507:0;source ~/.zshe
+: 1449217510:0;source ~/.zshrc
+: 1449217521:0;cd E:/
+: 1449217544:0;subl *.txt
+: 1449217560:0;cd scripts
+: 1449217594:0;mv rei texinit
+: 1449217612:0;git commit -am "rename file"
+: 1449217623:0;git status
+: 1449217638:0;git add texinit
+: 1449217643:0;git commit -am "rename file"
+: 1449217650:0;git status
+: 1449217663:0;subl texinit
+: 1449218700:0;echo $HOME
+: 1449219715:0;mkdir dotfiles
+: 1449219717:0;l
+: 1449219720:0;la
+: 1449219729:0;rm -r dotfiles
+: 1449219730:0;cd
+: 1449219737:0;mkdir dotfiles
+: 1449219749:0;cd mkdir
+: 1449219753:0;cd dotfiles
+: 1449219768:0;mkdir bin doc etc
+: 1449219769:0;cd
+: 1449219779:0;la
+: 1449219960:0;make deploy
+: 1449220165:0;ll
+: 1449220168:0;cd
+: 1449220169:0;ll
+: 1449220285:0;subl .zshrc@
+: 1449220290:0;subl .zshrc
+: 1449220404:0;subl dotfiles/.zshrc
+: 1449220509:0;cd scripts
+: 1449220516:0;git status
+: 1449220554:0;la
+: 1449220557:0;ll
+: 1449220583:0;cd
+: 1449220587:0;dotfiles
+: 1449220591:0;ls
+: 1449220591:0;la
+: 1449220604:0;subl REA
+: 1449220637:0;git init
+: 1449220645:0;git add .

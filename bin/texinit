@@ -1,0 +1,102 @@
+#! /bin/bash
+
+function usage {
+	echo ""
+	echo 'Report Environment Initialize Script'
+	echo 'Usage : [./texinit <Directory name>]'
+	echo ""
+	exit 0
+}
+
+# if some folders already exists, 
+# only missing parts will be created
+# (Makefile will always be overwritten)
+
+# „Ÿexample
+#    „   Makefile
+#    „   
+#    „¥„Ÿimage
+#    „¥„Ÿinclude
+#    „¤„Ÿbuild
+
+if [ "$1" = "" ]
+then
+	usage
+elif [ "$#" -ne 1 ]
+then
+	echo "auguments too much"
+	usage
+fi
+
+if [ ! -e $1 ]
+then
+	mkdir $1
+fi
+
+cd $1
+
+if [ ! -e "image" ]
+then
+	mkdir image
+fi
+
+if [ ! -e "include" ]
+then
+	mkdir include
+fi
+
+if [ ! -e "build" ]
+then
+	mkdir build
+fi
+
+# After making folders and file,
+# please run follow commands 
+# `cd`
+# `make init`
+# ===Makefile Form===
+
+cat <<'EOT'  > "PWD"/Makefile
+# This is Makefile for LaTeX compiling
+
+TARGET=main
+SUB_TARGET=input
+TEX=platex
+
+.SUFFIXES: .tex .dvi
+.PHONY: pdf init pd open clean bb
+
+all: pdf
+
+init: 
+	cp $HOME/dotfiles/doc/report_template.tex main.tex
+	touch $(SUB_TARGET).tex
+	@echo "create $(TARGET).tex"
+
+pdf: $(TARGET).tex
+
+	@yes x | $(TEX) $(TARGET) -interaction=nonstopmode
+
+	dvipdfmx $(TARGET)
+
+	@mv main.pdf build/
+	@mv main.dvi build/
+
+	@cygstart build/$(TARGET).pdf
+
+pd: $(SUB_TARGET).md
+	pandoc $(SUB_TARGET).md -o $(SUB_TARGET).tex --latex-engine=lualatex
+
+open: build/$(TARGET).pdf
+	@cygstart build/$(TARGET).pdf
+
+bb: 
+	ebb image/*.png
+
+clean:
+	rm -f $(TARGET).dvi $(TARGET).aux $(TARGET).log $(TARGET).toc
+	rm -f $(TARGET).tar.gz
+	rm -f *.pbm *.bmc
+EOT
+
+# ===Malefile Form End===
