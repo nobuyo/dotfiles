@@ -8,7 +8,7 @@ SAVEHIST=100000
 #./archey
 
 # PATH setting
-PATH=/usr/local/bin:$PATH:~/bin
+PATH=/usr/local/bin:$PATH:~/dotfiles/bin
 # export MANPATH=/usr/local/share/man:/usr/local/man:/usr/share/man
 
 # some more ls aliases

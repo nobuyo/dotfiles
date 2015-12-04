@@ -4,3 +4,6 @@
 
 # dumpfiles
 .zcompdump
+
+# etc
+.gitconfig
