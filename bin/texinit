@@ -12,13 +12,6 @@ function usage {
 # only missing parts will be created
 # (Makefile will always be overwritten)
 
-# „Ÿexample
-#    „   Makefile
-#    „   
-#    „¥„Ÿimage
-#    „¥„Ÿinclude
-#    „¤„Ÿbuild
-
 if [ "$1" = "" ]
 then
 	usage
