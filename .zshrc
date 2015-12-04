@@ -104,4 +104,4 @@ setopt auto_param_slash
 setopt correct
 
 setopt auto_cd
-function chpwd() { ls }
+function chpwd() { l }
