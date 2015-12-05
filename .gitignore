@@ -1,5 +1,6 @@
 # history files
 .zsh-history
+.bash_history
 .gnuplot_history
 
 # dumpfiles
