@@ -1,8 +1,13 @@
 IGNORE := .DS_Store .git .gitmodules .gitignore
-TARGET   := $(wildcard .??*) bin
-FILES    := $(filter-out $(IGNORE), $(TARGET))
+TARGET := $(wildcard .??*) bin
+FILES  := $(filter-out $(IGNORE), $(TARGET))
 
-.PHONY: deploy update
+.PHONY: compinit deploy update
+
+compinit:
+	@$(RM) ~/.zcompdump
+	@compinit
+	@mv ~/.zcompdump .zcompdump
 
 deploy:
 	@$(foreach val, $(FILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
