@@ -2,10 +2,7 @@ IGNORE := .DS_Store .git .gitmodules .travis.yml
 TARGET   := $(wildcard .??*) bin
 FILES    := $(filter-out $(IGNORE), $(TARGET))
 
-.PHONY: mv deploy update
-
-mv:
-	@mv dotfiles/ .dotfiles/
+.PHONY: deploy update
 
 deploy:
 	@$(foreach val, $(FILES), ln -sfnv $(abspath $(val)) $(HOME)/$(val);)
