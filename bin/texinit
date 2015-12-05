@@ -3,7 +3,7 @@
 function usage {
 	echo ""
 	echo 'Report Environment Initialize Script'
-	echo 'Usage : [./texinit <Directory name>]'
+	echo 'Usage : [texinit <Directory name>]'
 	echo ""
 	exit 0
 }

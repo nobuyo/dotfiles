@@ -3,7 +3,7 @@
 function usage {
 	echo ""
 	echo 'Rebuilding Java Project for Eclipse'
-	echo 'Usage : ./javalipse <Directory name>'
+	echo 'Usage : javalipse <Directory name>'
 	echo ""
 	exit 0
 }
