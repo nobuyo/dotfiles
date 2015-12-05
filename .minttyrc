@@ -1,0 +1,13 @@
+BoldAsFont=no
+Transparency=off
+ScrollbackLines=100000
+CursorType=underscore
+CursorBlinks=yes
+ForegroundColour=255,255,255
+Font=Consolas
+FontHeight=12
+BackgroundColour=0,0,0
+OpaqueWhenFocused=no
+Locale=
+Charset=
+BellTaskbar=no
