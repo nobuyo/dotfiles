@@ -3,8 +3,5 @@
 .bash_history
 .gnuplot_history
 
-# dumpfiles
-.zcompdump
-
 # etc
 .gitconfig

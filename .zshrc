@@ -1,6 +1,6 @@
 export LANG=ja_JP.UTF-8
 
-HISTFILE=$HOME/.zsh-history
+HISTFILE=$HOME/.dotfiles/.zsh-history
 HISTSIZE=100000
 SAVEHIST=100000
 
