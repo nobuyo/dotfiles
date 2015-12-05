@@ -1,4 +1,4 @@
-IGNORE := .DS_Store .git .gitmodules .travis.yml
+IGNORE := .DS_Store .git .gitmodules .gitignore
 TARGET   := $(wildcard .??*) bin
 FILES    := $(filter-out $(IGNORE), $(TARGET))
 
