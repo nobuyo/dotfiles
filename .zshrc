@@ -36,11 +36,29 @@ compinit
 autoload colors
 colors
 
-case ${UID} in
-0)
-  PROMPT="%B%{${fg[white]}%}%/#%{${reset_color}%}%b "
-  PROMPT2="%B%{${fg[white]}%}%_#%{${reset_color}%}%b "
-  SPROMPT="%B%{${fg[white]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
+# case ${UID} in
+# 0)
+#   PROMPT="%B%{${fg[white]}%}%/#%{${reset_color}%}%b "
+#   PROMPT2="%B%{${fg[white]}%}%_#%{${reset_color}%}%b "
+#   SPROMPT="%B%{${fg[white]}%}%r is correct? [n,y,a,e]:%{${reset_color}%}%b "
+#   [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
+#     PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
+#   ;;
+# *)
+#   PROMPT="%{${fg[white]}%}%/%%%{${reset_color}%} "
+#   PROMPT2="%{${fg[white]}%}%_%%%{${reset_color}%} "
+#   SPROMPT="%{${fg[white]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
+#   [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
+#     PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
+#   ;;
+# esac
+
+case ${OSTYPE} in
+darwin*)
+  PROMPT="%{${fg[white]}%}%/%%%{${reset_color}%} "
+  PROMPT2="%{${fg[white]}%}%_%%%{${reset_color}%} "
+  RPROMPT="[~%]"
+  SPROMPT="%{${fg[white]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
   [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
     PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
   ;;
@@ -52,7 +70,6 @@ case ${UID} in
     PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
   ;;
 esac
-
 
 unsetopt promptcr
 
