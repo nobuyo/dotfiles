@@ -62,7 +62,7 @@ TEX=platex
 all: pdf
 
 init: 
-	@cp $(HOME)/dotfiles/doc/report_template.tex main.tex
+	@cp $(DOTPATH)/doc/report_template.tex main.tex
 	@touch $(SUB_TARGET).tex
 	@echo "prepareing..."
 	@echo "OK!"
