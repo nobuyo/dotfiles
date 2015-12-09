@@ -25,11 +25,6 @@ alias apc='apt-cyg'
 alias apci='apt-cyg install'
 alias apcr='apt-cyg remove'
 
-# cyg-fast
-alias cyg-fast='cyg-fast -r'
-
-# like open in cygwin
-alias open='cygstart'
 
 autoload -Uz compinit
 compinit
