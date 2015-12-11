@@ -7,30 +7,64 @@
 # (_)_| |_|_|\___||___/
 #
 
-set -e
-set -u
+set -eu
 
-setup() {
-
-    dotfiles=$HOME/.dotfiles
-
-    has() {
-        type "$1" > /dev/null 2>&1
-    }
-
-    symlink() {
-        [ -e "$2" ] || ln -s "$1" "$2"
-    }
-
-    if [ -d "$dotfiles" ]; then
-        (cd "$dotfiles" && git pull --rebase)
-    else
-        git clone https://github.com/YOUR_ACCOUNT/.dotfiles "$dotfiles"
-    fi
-
-    has git && symlink "$dotfiles/.gitconfig" "$HOME/.gitconfig"
-    has git && symlink "$dotfiles/.zshrc" "$HOME/.zshrc"
-    has vim && symlink "$dotfiles/.vimrc" "$HOME/.vimrc"
+is_available() {
+    which "$1" >/dev/null 2>&1
+    return $?
 }
 
-setup
+if [ -z "${DOTPATH:-}" ]; then
+    DOTPATH=~/.dotfiles; export DOTPATH
+fi
+
+DOTFILES_GITHUB="https://github.com/nobuyo/dotfiles.git"; export DOTGIT
+
+get_dotfile() {
+    if [-d "$DOTPATH" ]; then
+        echo "$DOTPATH already exists"
+        exit 1
+    fi
+
+    if is_available "git"; then
+            git clone --recursive "$DOTGIT" "$DOTPATH"
+
+    elif is_available "curl"; then
+
+        local tarball="https://github.com/nobuyo/dotfiles/archive/master.tar.gz"
+        if is_available "curl"; then
+           curl -L "$tarball"
+        fi | tar xvz
+        if [ ! -d dotfiles-master ]; then
+            log_fail "dotfiles-master: not found"
+            exit 1
+        fi
+        command mv -f dotfiles-master "$DOTPATH"
+        else
+           log_fail "curl or wget required"
+           exit 1
+        fi
+    fi
+    
+    echo "Done"
+}
+
+deploy() {
+    echo ""
+    echo "Deploying dotfiles..."
+
+    if [ ! -d $DOTPATH ]; then
+        log_fail "$DOTPATH: not found"
+        exit 1
+    fi
+
+    cd "$DOTPATH"
+
+    make deploy &&
+
+    echo "Done"
+}
+
+setup() {
+    dotfiles_download && dotfiles_deploy 
+}
