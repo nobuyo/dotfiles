@@ -7,7 +7,8 @@
 # (_)_| |_|_|\___||___/
 #
 
-set -eu
+set -e
+set -u
 
 is_available() {
 	which "$1" >/dev/null 2>&1
