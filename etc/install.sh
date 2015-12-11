@@ -44,10 +44,10 @@ get_dotfile() {
 			exit 1
 		fi
 		command mv -f dotfiles-master "$DOTPATH"
-		else
-		   log_fail "curl or wget required"
+
+	else
+		   echo "curl required"
 		   exit 1
-		fi
 	fi
 	
 	echo "Done"
