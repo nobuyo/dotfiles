@@ -22,7 +22,7 @@ if [ -z "${DOTPATH:-}" ]; then
 	DOTPATH=~/.dotfiles; export DOTPATH
 fi
 
-DOTFILES_GITHUB="https://github.com/nobuyo/dotfiles.git"; export DOTGIT
+DOTGIT="https://github.com/nobuyo/dotfiles.git"; export DOTGIT
 
 get_dotfile() {
 	if [-d "$DOTPATH" ]; then
