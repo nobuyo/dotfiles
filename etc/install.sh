@@ -58,7 +58,7 @@ deploy() {
 	echo "Deploying dotfiles..."
 
 	if [ ! -d $DOTPATH ]; then
-		log_fail "$DOTPATH: not found"
+		echo "$DOTPATH: not found"
 		exit 1
 	fi
 
@@ -70,7 +70,7 @@ deploy() {
 }
 
 setup() {
-	get_dotfile && deploy 
+	get_dotfile && deploy
 }
 
 setup
