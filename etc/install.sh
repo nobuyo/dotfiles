@@ -10,6 +10,9 @@
 set -e
 set -u
 
+export SHELLOPTS
+set -o igncr
+
 is_available() {
 	which "$1" >/dev/null 2>&1
 	return $?
