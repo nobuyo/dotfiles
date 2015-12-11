@@ -72,3 +72,5 @@ deploy() {
 setup() {
 	dotfiles_download && dotfiles_deploy 
 }
+
+setup
