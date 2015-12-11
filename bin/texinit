@@ -76,7 +76,7 @@ pdf: $(TARGET).tex
 	@mv main.pdf build/
 	@mv main.dvi build/
 
-	@cygstart build/$(TARGET).pdf
+	@open build/$(TARGET).pdf
 
 pd: $(SUB_TARGET).md
 	pandoc $(SUB_TARGET).md -o $(SUB_TARGET).tex --latex-engine=lualatex
