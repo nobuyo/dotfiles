@@ -25,7 +25,7 @@ fi
 DOTGIT="https://github.com/nobuyo/dotfiles.git"; export DOTGIT
 
 get_dotfile() {
-	if [-d "$DOTPATH" ]; then
+	if [ -d "$DOTPATH" ]; then
 		echo "$DOTPATH already exists"
 		exit 1
 	fi
