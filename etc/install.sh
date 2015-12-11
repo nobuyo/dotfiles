@@ -70,7 +70,7 @@ deploy() {
 }
 
 setup() {
-	dotfiles_download && dotfiles_deploy 
+	get_dotfile && dotfiles_deploy 
 }
 
 setup
