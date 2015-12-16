@@ -17,9 +17,9 @@ $ cd .dotfiles/
 $ make deploy
 ~~~
 
-***********
+------------------------
 
-### scripts
+### Scripts
 included in bin/
 
 #### texinit
