@@ -17,6 +17,8 @@ $ cd .dotfiles/
 $ make deploy
 ~~~
 
+========================================-
+
 ### scripts
 included in bin/
 
