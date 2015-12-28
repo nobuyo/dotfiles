@@ -197,7 +197,7 @@ do
     shift
     ;;
 
-    --help)
+    --help|help)
       usage
       exit 0
     ;;
