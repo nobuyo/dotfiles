@@ -1,6 +1,6 @@
 # dotfiles
 
-### Installation
+## Installation
 
 Please run following command your terminal:
 
@@ -17,14 +17,13 @@ $ cd .dotfiles/
 $ make deploy
 ~~~
 
-------------------------
-
-### Scripts
+## Scripts
 included in bin/
 
 #### texinit
 
 Initialize report writing environment
+
 [code](https://github.com/nobuyo/dotfiles/blob/master/bin/texinit)
 
 Usage:
@@ -37,6 +36,7 @@ $ make init #=> create tex sources
 #### javalipse
 
 rebuild Java project for eclipse
+
 [code](https://github.com/nobuyo/dotfiles/blob/master/bin/javalipse)
 
 Usage:
@@ -47,6 +47,7 @@ $ javalipse (directory name)
 ####tenki
 
 get weather forecast from weather.livedoor.com
+
 [code](https://github.com/nobuyo/dotfiles/blob/master/bin/tenki)
 
 Usage:
