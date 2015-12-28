@@ -1,5 +1,15 @@
 #! /usr/bin/bash
 
+# # using GNU sed (for dev)
+# function sed {
+#   case `uname` in
+#     Darwin) # mac os
+#       /usr/local/bin/gsed "$@" ;;
+#     *)
+#       /usr/bin/sed "$@" ;;
+#   esac
+# }
+
 function get_today {
 	WEATHER_FORECAST="$(wget -q $WEATHER_URL/$WHETHER_AREA_CODE -O - |\
  sed -ne "/\t<h3>.*$(date '+%m').$(date '+%d').*<\/h3>/,/<div/p" |\
@@ -63,6 +73,8 @@ function support_subcommand {
     	echo "tenki: Unable access to $AREA"
  	fi
 }
+
+
 
 WEATHER_URL="http://weather.livedoor.com/area/forecast"
 #default: NAGANO
