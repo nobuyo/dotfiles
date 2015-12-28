@@ -146,9 +146,9 @@ function usage {
   echo ""
   echo "Options:"
   echo "  --tomorrow|-t :show tomorrow's forecast"
-  echo "  --week|w :show weekly forecast"
-  echo "  --version|-V :show version info"
-  echo "  --help :show this menu"
+  echo "  --week|w      :show weekly forecast"
+  echo "  --version|-V  :show version info"
+  echo "  --help        :show this menu"
 }
 
 function version {
