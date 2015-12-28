@@ -111,7 +111,7 @@ function disp_week {
   echo "";  echo -n "|  "
   for d in ${WEEK_MIN_TEMP[@]};
   do
-    echo -n $d "   |  "
+    echo -n $d "  |  "
   done
   echo "";  echo -n "|   "
   for d in ${WEEK_RAIN[@]};
