@@ -230,7 +230,7 @@ elif [ "$WEEK" = 1 ]; then
   disp_week
   exit 0
 else
-	get_today
+  get_today
   mold
   disp
 fi
