@@ -18,9 +18,6 @@ alias l='ls -CF'
 alias git='nocorrect git'
 alias tree='nocorrect tree'
 
-# fxxk alias
-eval "$(thefuck --alias)"
-
 autoload -Uz compinit
 compinit
 autoload colors

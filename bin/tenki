@@ -1,0 +1,78 @@
+#! /usr/bin/bash
+
+function get_today {
+	WEATHER_FORECAST="$(wget -q $WEATHER_URL/$WHETHER_AREA_CODE -O - |\
+ sed -ne "/\t<h3>.*$(date '+%m').$(date '+%d').*<\/h3>/,/<div/p" |\
+ sed -e 's/<[/].*>//g' -e 's/.*>//g' -e 's/\s/\n/g' |\
+ sed '/^$/d' | head -n -2
+ )"
+}
+
+function get_tomorrow {
+	WEATHER_FORECAST="$(wget -q $WEATHER_URL/$WHETHER_AREA_CODE -O - |\
+ sed -ne "/\t<h3>.*$(date '+%m').$(date '+%d' -d tomorrow).*<\/h3>/,/<div/p" |\
+ sed -e 's/<[/].*>//g' -e 's/.*>//g' -e 's/\s/\n/g' |\
+ sed '/^$/d' | head -n -2
+ )"
+}
+
+function mold {
+	WEATHER_TITLE="$(echo "$WEATHER_FORECAST" | head -3 )"
+	WEATHER_STATE="$(echo "$WEATHER_FORECAST" | head -4 | tail -1)"
+	WEATHER_MAX="$(echo "$WEATHER_FORECAST" | head -5 | tail -1 )"
+	WEATHER_MAX_TEMP="$(echo "$WEATHER_FORECAST" | head -6 | tail -1 )"
+	WEATHER_MAX_DIFF="$(echo "$WEATHER_FORECAST" | head -8 | tail -1 )"
+	WEATHER_MIN="$(echo "$WEATHER_FORECAST" | head -9 | tail -1 )"
+	WEATHER_MIN_TEMP="$(echo "$WEATHER_FORECAST" | head -10 | tail -1 )"
+	WEATHER_MIN_DIFF="$(echo "$WEATHER_FORECAST" | head -12 | tail -1 )"
+	WEATHER_RAIN_TITLE="$(echo "$WEATHER_FORECAST" | tail -7 | head -1 )"
+	WEATHER_RAIN="$(echo "$WEATHER_FORECAST" | tail -6 | head -4 )"
+	WEATHER_RAIN_SIX="$(echo "$WEATHER_RAIN" | head -1 )"
+	WEATHER_RAIN_TWE="$(echo "$WEATHER_RAIN" | head -2 | tail -1 )"
+	WEATHER_RAIN_EIT="$(echo "$WEATHER_RAIN" | head -3 | tail -1 )"
+	WEATHER_RAIN_ZERO="$(echo "$WEATHER_RAIN" | tail -1 )"
+	WEATHER_WIND_TITLE="$(echo "$WEATHER_FORECAST" | tail -2 | head -1 )"
+	WEATHER_WIND="$(echo "$WEATHER_FORECAST" | tail -1 )"
+	}
+
+function disp {
+	echo -e "\033[33m"$WEATHER_TITLE"\033[m"
+	echo "$WEATHER_STATE" 
+	echo ""
+	echo -e "\033[33m$WEATHER_MAX/$WEATHER_MIN\033[m"
+	echo "$WEATHER_MAX_TEMP$WEATHER_MAX_DIFF/$WEATHER_MIN_TEMP$WEATHER_MIN_DIFF"
+	echo ""
+	echo -e "\033[33m$WEATHER_RAIN_TITLE\033[m"
+	echo "| 0-6 | 7-12 | 13-18 | 19-24 |"
+	echo "| $WEATHER_RAIN_SIX |  $WEATHER_RAIN_TWE |  $WEATHER_RAIN_EIT  |  $WEATHER_RAIN_ZERO  |"
+	echo ""
+	echo -e "\033[33m$WEATHER_WIND_TITLE\033[m"
+	echo "$WEATHER_WIND"
+}
+
+function set_area {
+	WHETHER_PREF_CODE="$1"
+}
+
+function support_subcommand {
+	local AREA="${@:1:1}"
+	local ARGS=( "${@:2}" )
+	if type "$ACTION" &>/dev/null; then
+    	"$ACTION" "${ARGS[@]}"
+  	else
+    	echo "tenki: Unable access to $AREA"
+ 	fi
+}
+
+WEATHER_URL="http://weather.livedoor.com/area/forecast"
+#default: NAGANO
+WHETHER_PREF_CODE="20"
+WHETHER_CITY_CODE="0010"
+
+WHETHER_AREA_CODE="$WHETHER_PREF_CODE$WHETHER_CITY_CODE"
+
+
+get_today
+
+mold
+disp
