@@ -79,7 +79,7 @@ function set_area {
       fi
     done
   if [ "$valid" = 0 ]; then
-    error "unknown area $1, exiting"
+    error "unknown area $1, see --help. exit"
     exit 1
   fi
 	WHETHER_AREA_CODE="${place["$1"]}"
