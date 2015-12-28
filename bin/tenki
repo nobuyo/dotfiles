@@ -31,6 +31,16 @@ function get_tomorrow {
  )"
 }
 
+function get_week {
+  WEATHER_FORECAST="$(wget -q $WEATHER_URL/$WHETHER_AREA_CODE -O - |\
+ sed -ne "/week/,/<div/p" | sed -e 's/<\/span>//g' -e 's/<span class="maxtemp">//g' |\
+ sed -e 's/<span style="color: .*">//g' -e 's/>/>\n/g' |\
+ sed -e 's/<span.*">\n//g' -e 's/<\/.*>//g'  -e 's/<.*>//g' -e 's/&.*//g' -e 's/\+\n/\+/g' |\
+ sed '/^$/d' 
+ )"
+}
+
+
 function mold {
 	WEATHER_TITLE="$(echo "$WEATHER_FORECAST" | head -3 )"
 	WEATHER_STATE="$(echo "$WEATHER_FORECAST" | head -4 | tail -1)"
@@ -52,6 +62,18 @@ function mold {
   # WEATHER_WAVE="$(echo "$WEATHER_FORECAST" | tail -n +26)"
 	}
 
+function mold_week {
+  WEEK_DAYS="$(echo "$WEATHER_FORECAST" | head -6 )"
+  WEEK_STATE_TITLE="$(echo "$WEATHER_FORECAST" | head -7 | tail -1 )"
+  WEEK_STATE="$(echo "$WEATHER_FORECAST" | tail -n +8 | head -6 )"
+  WEEK_MAX_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +14 | head -1 )"
+  WEEK_MAX_TEMP="$(echo "$WEATHER_FORECAST" | tail -n +15 | head -6 )"
+  WEEK_MIN_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +21 | head -1 )"
+  WEEK_MIN_TEMP="$(echo "$WEATHER_FORECAST" | tail -n +22 | head -6 )"
+  WEEK_RAIN_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +28 | head -1 )"
+  WEEK_RAIN="$(echo "$WEATHER_FORECAST" | tail -n +29 )"
+}
+
 function disp {
 	echo -e "\033[33m"$WEATHER_TITLE"\033[m"
 	echo "$WEATHER_STATE" 
@@ -68,6 +90,35 @@ function disp {
   # echo ""
   # echo -e "\033[33m$WEATHER_WAVE_TITLE\033[m"
   # echo $WEATHER_WAVE
+}
+
+function disp_week {
+  echo -n "|"
+  for d in ${WEEK_DAYS[@]};
+  do
+    echo -ne "\033[36m"$d"\033[m"" | "
+  done
+  echo "";  echo -n "|"
+  for d in ${WEEK_STATE[@]};
+  do
+    echo -n $d"| "
+  done
+  echo "";  echo -n "|  "
+  for d in ${WEEK_MAX_TEMP[@]};
+  do
+    echo -n $d "  |  "
+  done
+  echo "";  echo -n "|  "
+  for d in ${WEEK_MIN_TEMP[@]};
+  do
+    echo -n $d "   |  "
+  done
+  echo "";  echo -n "|   "
+  for d in ${WEEK_RAIN[@]};
+  do
+    echo -n $d "  |   "
+  done
+  echo "";  echo -n "| "
 }
 
 
@@ -124,6 +175,7 @@ place[okinawa]="471010"
 set_area "nagano"
 
 valid=0
+WEEK=0
 TOMORROW=0
 while [ $# -gt 0 ]
 do
@@ -133,6 +185,11 @@ do
 	  TOMORROW=1
 	  shift
 	  ;;
+
+    --week|-w)
+    WEEK=1
+    shift
+    ;;
 
     --help)
       usage
@@ -158,9 +215,16 @@ done
 
 if [ "$TOMORROW" = 1 ]; then
 	get_tomorrow
+  mold
+  disp
+  exit 0
+elif [ "$WEEK" = 1 ]; then
+  get_week
+  mold_week
+  disp_week
+  exit 0
 else
 	get_today
+  mold
+  disp
 fi
-
-mold
-disp
