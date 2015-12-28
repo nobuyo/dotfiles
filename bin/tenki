@@ -53,8 +53,8 @@ function disp {
 	echo "$WEATHER_MAX_TEMP$WEATHER_MAX_DIFF/$WEATHER_MIN_TEMP$WEATHER_MIN_DIFF"
 	echo ""
 	echo -e "\033[33m$WEATHER_RAIN_TITLE\033[m"
-	echo "| 0-6 | 7-12 | 13-18 | 19-24 |"
-	echo "| $WEATHER_RAIN_SIX |  $WEATHER_RAIN_TWE |  $WEATHER_RAIN_EIT  |  $WEATHER_RAIN_ZERO  |"
+	echo "|  0-6  | 07-12 | 13-18 | 19-24 |"
+	echo "|  $WEATHER_RAIN_SIX  |  $WEATHER_RAIN_TWE  |  $WEATHER_RAIN_EIT  |  $WEATHER_RAIN_ZERO  |"
 	echo ""
 	echo -e "\033[33m$WEATHER_WIND_TITLE\033[m"
 	echo "$WEATHER_WIND"
@@ -64,16 +64,14 @@ function set_area {
 	WHETHER_PREF_CODE="$1"
 }
 
-function support_subcommand {
-	local AREA="${@:1:1}"
-	local ARGS=( "${@:2}" )
-	if type "$ACTION" &>/dev/null; then
-    	"$ACTION" "${ARGS[@]}"
-  	else
-    	echo "tenki: Unable access to $AREA"
- 	fi
+function help {
+	:
 }
 
+function version {
+	echo "tenki 0.10"
+	echo "written by @nobuyo"
+}
 
 
 WEATHER_URL="http://weather.livedoor.com/area/forecast"
@@ -81,10 +79,41 @@ WEATHER_URL="http://weather.livedoor.com/area/forecast"
 WHETHER_PREF_CODE="20"
 WHETHER_CITY_CODE="0010"
 
+TOMORROW=0
+while [ $# -gt 0 ]
+do
+  case "$1" in
+
+    --tomorrow|-t)
+	  TOMORROW=1
+	  shift
+	;;
+
+    --version|-V)
+      version
+      exit 0
+    ;;
+
+    *)
+      if [ -z "$AREA" ]; then
+        AREA="$1"
+      else
+        ARGS+=( "$1" )
+      fi
+      shift
+    ;;
+  esac
+done
+
 WHETHER_AREA_CODE="$WHETHER_PREF_CODE$WHETHER_CITY_CODE"
 
 
-get_today
+
+if [ "$TOMORROW" = 1 ]; then
+	get_tomorrow
+else
+	get_today
+fi
 
 mold
 disp

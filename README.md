@@ -25,19 +25,31 @@ included in bin/
 #### texinit
 
 Initialize report writing environment
+[code](https://github.com/nobuyo/dotfiles/blob/master/bin/texinit)
 
 Usage:
-~~~
-texinit (newdir) #=> create working directory
-cd (newdir)
-make init #=> create tex sources
+~~~ bash
+$ texinit (newdir) #=> create working directory
+$ cd (newdir)
+$ make init #=> create tex sources
 ~~~
 
 #### javalipse
 
 rebuild Java project for eclipse
+[code](https://github.com/nobuyo/dotfiles/blob/master/bin/javalipse)
 
 Usage:
+~~~ bash
+$ javalipse (directory name)
 ~~~
-javalipse (directory name)
+
+####tenki
+
+get weather forecast from weather.livedoor.com
+[code](https://github.com/nobuyo/dotfiles/blob/master/bin/tenki)
+
+Usage:
+~~~ bash
+$ tenki <OPTION> <AREA>
 ~~~
