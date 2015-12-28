@@ -10,6 +10,11 @@
 #   esac
 # }
 
+function error {
+  # color:red
+  echo -e "\033[31mError\033[m" "$*"
+}
+
 function get_today {
 	WEATHER_FORECAST="$(wget -q $WEATHER_URL/$WHETHER_AREA_CODE -O - |\
  sed -ne "/\t<h3>.*$(date '+%m').$(date '+%d').*<\/h3>/,/<div/p" |\
@@ -35,14 +40,16 @@ function mold {
 	WEATHER_MIN="$(echo "$WEATHER_FORECAST" | head -9 | tail -1 )"
 	WEATHER_MIN_TEMP="$(echo "$WEATHER_FORECAST" | head -10 | tail -1 )"
 	WEATHER_MIN_DIFF="$(echo "$WEATHER_FORECAST" | head -12 | tail -1 )"
-	WEATHER_RAIN_TITLE="$(echo "$WEATHER_FORECAST" | tail -7 | head -1 )"
-	WEATHER_RAIN="$(echo "$WEATHER_FORECAST" | tail -6 | head -4 )"
+	WEATHER_RAIN_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +18 | head -1 )"
+	WEATHER_RAIN="$(echo "$WEATHER_FORECAST" | tail -n +19 | head -4 )"
 	WEATHER_RAIN_SIX="$(echo "$WEATHER_RAIN" | head -1 )"
 	WEATHER_RAIN_TWE="$(echo "$WEATHER_RAIN" | head -2 | tail -1 )"
 	WEATHER_RAIN_EIT="$(echo "$WEATHER_RAIN" | head -3 | tail -1 )"
 	WEATHER_RAIN_ZERO="$(echo "$WEATHER_RAIN" | tail -1 )"
-	WEATHER_WIND_TITLE="$(echo "$WEATHER_FORECAST" | tail -2 | head -1 )"
-	WEATHER_WIND="$(echo "$WEATHER_FORECAST" | tail -1 )"
+	WEATHER_WIND_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +23 | head -1 )"
+	WEATHER_WIND="$(echo "$WEATHER_FORECAST" | tail -n +24 | head -1 )"
+  # WEATHER_WAVE_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +25 | head -1)"
+  # WEATHER_WAVE="$(echo "$WEATHER_FORECAST" | tail -n +26)"
 	}
 
 function disp {
@@ -57,15 +64,34 @@ function disp {
 	echo "|  $WEATHER_RAIN_SIX  |  $WEATHER_RAIN_TWE  |  $WEATHER_RAIN_EIT  |  $WEATHER_RAIN_ZERO  |"
 	echo ""
 	echo -e "\033[33m$WEATHER_WIND_TITLE\033[m"
-	echo "$WEATHER_WIND"
+	echo $WEATHER_WIND
+  # echo ""
+  # echo -e "\033[33m$WEATHER_WAVE_TITLE\033[m"
+  # echo $WEATHER_WAVE
 }
+
 
 function set_area {
-	WHETHER_PREF_CODE="$1"
+  for chk in ${!place[*]};
+    do
+      if [ "$1" = "$chk" ]; then
+        valid=1
+      fi
+    done
+  if [ "$valid" = 0 ]; then
+    error "unknown area $1, exiting"
+    exit 1
+  fi
+	WHETHER_AREA_CODE="${place["$1"]}"
 }
 
-function help {
-	:
+function usage {
+	echo "usage: tenki <option> <area>"
+  echo ""
+  echo "script supports following AREA"
+  echo "-----"
+  echo "${!place[@]}"
+  echo "-----"
 }
 
 function version {
@@ -75,10 +101,29 @@ function version {
 
 
 WEATHER_URL="http://weather.livedoor.com/area/forecast"
-#default: NAGANO
-WHETHER_PREF_CODE="20"
-WHETHER_CITY_CODE="0010"
 
+# Add your city ... place[city name]="tail of URL"
+declare -A place
+place[kushiro]="014020"
+place[sapporo]="016010"
+place[sendai]="040010"
+place[akita]="050010"
+place[tokyo]="130010"
+place[saitama]="110010"
+place[yokohama]="140010"
+place[kanazawa]="170010"
+place[nagano]="200010"
+place[nagoya]="230010"
+place[osaka]="270010"
+place[hiroshima]="340010"
+place[kochi]="390010"
+place[hukuoka]="400010"
+place[okinawa]="471010"
+
+#default: NAGANO,Nagano
+set_area "nagano"
+
+valid=0
 TOMORROW=0
 while [ $# -gt 0 ]
 do
@@ -87,7 +132,12 @@ do
     --tomorrow|-t)
 	  TOMORROW=1
 	  shift
-	;;
+	  ;;
+
+    --help)
+      usage
+      exit 0
+    ;;
 
     --version|-V)
       version
@@ -96,7 +146,7 @@ do
 
     *)
       if [ -z "$AREA" ]; then
-        AREA="$1"
+       set_area $1
       else
         ARGS+=( "$1" )
       fi
@@ -104,9 +154,6 @@ do
     ;;
   esac
 done
-
-WHETHER_AREA_CODE="$WHETHER_PREF_CODE$WHETHER_CITY_CODE"
-
 
 
 if [ "$TOMORROW" = 1 ]; then
