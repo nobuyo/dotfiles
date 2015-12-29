@@ -33,6 +33,7 @@ darwin*)
 esac
 
 unsetopt promptcr
+unsetopt NOMATCH # or setopt NONOMATCH
 setopt prompt_subst
 setopt nobeep
 
