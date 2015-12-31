@@ -6,3 +6,9 @@
 # etc
 .gitconfig
 .zcompdump
+
+# bin files
+bin/*
+!tenki
+!javalipse
+!texinit
