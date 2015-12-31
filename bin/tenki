@@ -25,7 +25,7 @@ function get_today {
 
 function get_tomorrow {
 	WEATHER_FORECAST="$(wget -q $WEATHER_URL/$WHETHER_AREA_CODE -O - |\
- sed -ne "/\t<h3>.*$(date '+%-m').$(date '+%-d' -d tomorrow).*<\/h3>/,/<div/p" |\
+ sed -ne "/\t<h3>.*$(date '+%-m' -d tomorrow).$(date '+%-d' -d tomorrow).*<\/h3>/,/<div/p" |\
  sed -e 's/<[/].*>//g' -e 's/.*>//g' -e 's/\s/\n/g' |\
  sed '/^$/d' | head -n -2
  )"
