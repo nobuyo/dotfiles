@@ -201,12 +201,12 @@ do
     shift
     ;;
 
-    --help|help)
+    --help|help|-h)
       usage
       exit 0
     ;;
 
-    --version|-V)
+    --version|version|-V)
       version
       exit 0
     ;;
