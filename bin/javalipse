@@ -13,34 +13,28 @@ function error {
 	exit 0
 }
 
-if [ "$1" = "" ]
-then
+if [ "$1" = "" ]; then
 	usage
-elif [ "$#" -ne 1 ]
-then
+elif [ "$#" -ne 1 ]; then
 	echo "auguments too much"
 	usage
 fi
 
-if [ ! -e "$1" ]
-then
+if [ ! -e "$1" ]; then
 	error
 fi
 
-if [ ! -e "$1.orig" ]
-then
+if [ ! -e "$1.orig" ]; then
 	cp -r $1 $1.orig
 fi
 
 cd $1
 
-if [ ! -e "bin" ]
-then
+if [ ! -e "bin" ]; then
 	mkdir bin
 fi
 
-if [ ! -e "src" ]
-then
+if [ ! -e "src" ]; then
 	mkdir src
 fi
 
@@ -61,8 +55,7 @@ done
 #find . -type d -empty -exec rm -rf {} \; # for windows
 find . -type d -empty -delete  # for mac or BSD
 
-if [ -e "src/Main.java" ]
-then
+if [ -e "src/Main.java" ]; then
 	gsed -i '1s/^/package main\;\n\n/' src/Main.java
 	mv src/Main.java src/main/Main.java 
 	mv bin/Main.class bin/main/Main.class

@@ -5,6 +5,8 @@ function usage {
 	echo 'Report Environment Initialize Script'
 	echo 'Usage : [texinit <Directory name>]'
 	echo ""
+  echo "Option:"
+  echo "  -i  : run `make init` automatically"
 	exit 0
 }
 
@@ -12,34 +14,31 @@ function usage {
 # only missing parts will be created
 # (Makefile will always be overwritten)
 
-if [ "$1" = "" ]
-then
+if [ "$1" = "" ]; then
 	usage
-elif [ "$#" -ne 1 ]
-then
-	echo "auguments too much"
-	usage
+elif [ "$1" = "-i" ]; then
+	auto_make=1
+	shift
+elif [ "$#" -ne 1 ]; then
+  echo "auguments too much"
+  usage
 fi
 
-if [ ! -e $1 ]
-then
+if [ ! -e $1 ]; then
 	mkdir $1
 fi
 
 cd $1
 
-if [ ! -e "image" ]
-then
+if [ ! -e "image" ]; then
 	mkdir image
 fi
 
-if [ ! -e "include" ]
-then
+if [ ! -e "include" ]; then
 	mkdir include
 fi
 
-if [ ! -e "build" ]
-then
+if [ ! -e "build" ]; then
 	mkdir build
 fi
 
@@ -64,7 +63,7 @@ all: pdf
 init: 
 	@cp $(DOTPATH)/doc/report_template.tex main.tex
 	@touch $(SUB_TARGET).tex
-	@echo "prepareing..."
+	@echo -n "prepareing..."
 	@echo "OK!"
 
 pdf: $(TARGET).tex
@@ -94,3 +93,11 @@ clean:
 EOT
 
 # ===Malefile Form End===
+
+if [ "$(echo $OSTYPE)" = "cygwin" ]; then
+	sed -ie 's/@open/@cygstart/g' Makefile
+fi
+
+if [ $auto_make = 1 ]; then
+  make init 2> /dev/null
+fi
