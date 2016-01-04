@@ -57,5 +57,5 @@ get weather forecast from weather.livedoor.com
 
 Usage:
 ~~~ bash
-$ tenki <OPTION> <AREA>
+$ tenki [<OPTION>] [<AREA>]
 ~~~
