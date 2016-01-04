@@ -1,5 +1,9 @@
 #! /usr/bin/bash
 
+# TODO
+# support weekend
+# ==> remove html coloring code
+
 # # using GNU sed (for dev)
 # function sed {
 #   case `uname` in
@@ -152,7 +156,7 @@ function usage {
 }
 
 function version {
-	echo "tenki 0.20"
+	echo "tenki 0.2.0"
 	echo "written by @nobuyo"
 }
 
