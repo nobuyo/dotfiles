@@ -163,7 +163,7 @@ function version {
 
 WEATHER_URL="http://weather.livedoor.com/area/forecast"
 
-# Add your city ... place[city name]="tail of URL"
+# Add your city ... place[city name]="basename of URL"
 declare -A place
 place[kushiro]="014020"
 place[sapporo]="016010"
