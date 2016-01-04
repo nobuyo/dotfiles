@@ -20,7 +20,7 @@ $ make deploy
 ## Scripts
 included in bin/
 
-#### texinit
+#### texenv
 
 Initialize report writing environment
 
@@ -31,6 +31,11 @@ Usage:
 $ texinit (newdir) #=> create working directory
 $ cd (newdir)
 $ make init #=> create tex sources
+~~~
+
+You can use a option -i to automatically run `make init`.
+~~~bash
+$ texinit -i (newdir) #=> create working directory and initialize
 ~~~
 
 #### javalipse
