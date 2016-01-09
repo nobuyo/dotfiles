@@ -1,9 +1,11 @@
-#!/bin/zsh
+#!/bin/sh
 
 if [ $PROMPT_COLOR_SWITCH = 0 ]; then
-  source ~/.zshrc_color
+  # echo "color"
+  . ~/.zshrc_color
   export PROMPT_COLOR_SWITCH=1
 elif [ $PROMPT_COLOR_SWITCH = 1 ]; then
-  source ~/.zshrc_cygwin
+  # echo "plain"
+  . ~/.zshrc_cygwin
   export PROMPT_COLOR_SWITCH=0
 fi
