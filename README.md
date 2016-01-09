@@ -49,7 +49,7 @@ Usage:
 $ javalipse (directory name)
 ~~~
 
-####tenki
+#### tenki
 
 get weather forecast from weather.livedoor.com
 
@@ -58,4 +58,31 @@ get weather forecast from weather.livedoor.com
 Usage:
 ~~~ bash
 $ tenki [<OPTION>] [<AREA>]
+~~~
+
+#### gitch
+
+ssh/https switcher on git repogitory
+
+[code](https://github.com/nobuyo/dotfiles/blob/master/bin/gitch)
+
+Usage(on git directory):
+~~~bash
+$ gitch
+~~~
+
+#### chcolor
+
+prompt switcher by sourcing dotfiles (.zshrc_XXX)
+
+[code](https://github.com/nobuyo/dotfiles/blob/master/bin/chcolor)
+
+
+Require:
+* An environmental variable `PROMPT_COLOR_SWITCH` is exported
+* your dotfiles available
+
+Usage:
+~~~bash
+$ chcolor
 ~~~
