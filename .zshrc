@@ -21,7 +21,7 @@ alias tree='nocorrect tree'
 alias hexo='nocorrect hexo'
 
 # change prompt color
-alias chcol='source chcolor'
+alias chprm='source chcolor'
 
 autoload -Uz compinit
 compinit

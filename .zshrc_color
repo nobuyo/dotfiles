@@ -7,7 +7,7 @@ alias apcr='apt-cyg remove'
 alias open='cygstart'
 
 PROMPT="%{${fg[cyan]}%}%/
-%{${fg[yellow]}%}%%%{${reset_color}%} "
+%{${fg[white]}%}→%{${reset_color}%}"
 PROMPT2="%{${fg[white]}%}%_%%%{${reset_color}%} "
 SPROMPT="%{${fg[white]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
 [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
