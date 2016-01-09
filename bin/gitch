@@ -3,17 +3,17 @@
 
 function warn {
   # color:yellow
-  echo -e "\033[33m$*\033[m"
+  echo -e "\033[33mWarning:\033[m" "$*"
 }
 
 function error {
   # color:red
-  echo -e "\033[31m$*\033[m"
+  echo -e "\033[31mError:\033[m" "$*"
 }
 
 function success {
   # color:green
-  echo -e "\033[32m$*\033[m"
+  printf " \033[32m✔ \033[m%s...\033[32mOK\033[m\n" "$*"
 }
 
 function is_git_dir {
@@ -51,15 +51,19 @@ function encode {
     new_origin="https://github.com/"$repo
     # echo $new_origin
   fi
-  }
+}
 
   function set_new_origin {
     git remote set-url origin $new_origin && {
-      success "Changing origin URL ==> Done"
+      success "Change origin URL"
       echo "new remote:"
       git remote -v
     }
-  }
+}
+
+if [ "$1" != "" ]; then
+  warn "Given argument(s) will be ignored."
+fi
 
 is_git_dir
 get_origin_url
