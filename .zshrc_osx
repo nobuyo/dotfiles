@@ -1,5 +1,7 @@
+alias sed='gsed'
+
 PROMPT="%{${fg[white]}%}%/%%%{${reset_color}%} "
 PROMPT2="%{${fg[white]}%}%_%%%{${reset_color}%} "
 SPROMPT="%{${fg[white]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
-[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] && 
+[ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
 PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
