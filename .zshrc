@@ -17,6 +17,7 @@ alias l='ls -CF'
 # nocorrect
 alias git='nocorrect git'
 alias tree='nocorrect tree'
+alias hexo='nocorrect hexo'
 
 autoload -Uz compinit
 compinit
