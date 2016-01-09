@@ -2,6 +2,7 @@ export LANG=ja_JP.UTF-8
 
 # PATH setting
 export DOTPATH=~/.dotfiles
+export PROMPT_COLOR_SWITCH=0
 PATH=/usr/local/bin:$PATH:~/.dotfiles/bin
 # export MANPATH=/usr/local/share/man:/usr/local/man:/usr/share/man
 
