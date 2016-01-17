@@ -95,7 +95,7 @@ EOT
 # ===Malefile Form End===
 
 if [ "$(echo $OSTYPE)" = "cygwin" ]; then
-	sed -ie 's/@open/@cygstart/g' Makefile
+	sed -i 's/@open/@cygstart/g' Makefile
 fi
 
 if [ "$auto_make" = 1 ]; then
