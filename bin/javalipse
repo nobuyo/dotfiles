@@ -40,11 +40,11 @@ fi
 
 for file in $(find . -name '*.java')
 do
-	classfile=`echo $file | gsed -e 's/java/class/g'`
+	classfile=`echo $file | sed -e 's/java/class/g'`
 	name=`echo $file | awk -F / '{print $NF}'`
-	classname=`echo $name | gsed -e 's/java/class/g'`
+	classname=`echo $name | sed -e 's/java/class/g'`
 	echo $name $classname
-	dir=`cat ${file} | grep 'package' | awk '{print $2}' | gsed -e 's/\;//g' | gsed -e 's/\r//g'`
+	dir=`cat ${file} | grep 'package' | awk '{print $2}' | sed -e 's/\;//g' | sed -e 's/\r//g'`
 	echo "src/$dir" "bin/$dir"
 	mkdir -p src/$dir
 	mv $file src/$dir/$name
@@ -56,7 +56,7 @@ done
 find . -type d -empty -delete  # for mac or BSD
 
 if [ -e "src/Main.java" ]; then
-	gsed -i '1s/^/package main\;\n\n/' src/Main.java
+	sed -i '1s/^/package main\;\n\n/' src/Main.java
 	mv src/Main.java src/main/Main.java 
 	mv bin/Main.class bin/main/Main.class
 fi
