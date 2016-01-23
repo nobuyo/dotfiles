@@ -1,5 +1,15 @@
 #! /bin/bash
 
+# using GNU sed (for dev)
+function sed {
+  case `uname` in
+    Darwin) # mac os
+      /usr/local/bin/gsed "$@" ;;
+    *)
+      /usr/bin/sed "$@" ;;
+  esac
+}
+
 function usage {
 	echo ""
 	echo 'Rebuilding Java Project for Eclipse'
