@@ -65,8 +65,10 @@ done
 #find . -type d -empty -exec rm -rf {} \; # for windows
 find . -type d -empty -delete  # for mac or BSD
 
+# TODO
+# flexible processing to "Main.java"
 if [ -e "src/Main.java" ]; then
-	grep '^package main;' src/Main.java && mv src/Main.java src/main/Main.java && mv bin/Main.class bin/main/Main.class
+	grep '^package main;' src/Main.java && mkdir -p main && mv src/Main.java src/main/Main.java && mv bin/Main.class bin/main/Main.class
 fi
 
 cat << EOT > .classpath
