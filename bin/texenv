@@ -10,7 +10,7 @@ function usage {
 	exit 0
 }
 
-# if some folders already exists, 
+# if some folders already exists,
 # only missing parts will be created
 # (Makefile will always be overwritten)
 
@@ -43,7 +43,7 @@ if [ ! -e "build" ]; then
 fi
 
 # After making folders and file,
-# please run follow commands 
+# please run follow commands
 # `cd <dir name>`
 # `make init`
 # ===Makefile Form===
@@ -60,7 +60,7 @@ TEX=platex
 
 all: pdf
 
-init: 
+init:
 	@cp $(DOTPATH)/doc/report_template.tex main.tex
 	@touch $(SUB_TARGET).tex
 	@echo -n "prepareing..."
@@ -83,7 +83,7 @@ pd: $(SUB_TARGET).md
 open: build/$(TARGET).pdf
 	@open build/$(TARGET).pdf
 
-bb: 
+bb:
 	ebb image/*.png
 
 clean:
@@ -95,9 +95,9 @@ EOT
 # ===Malefile Form End===
 
 if [ "$(echo $OSTYPE)" = "cygwin" ]; then
-	sed -ie 's/@open/@cygstart/g' Makefile
+	sed -i 's/@open/@cygstart/g' Makefile
 fi
 
-if [ $auto_make = 1 ]; then
+if [ "$auto_make" = 1 ]; then
   make init 2> /dev/null
 fi
