@@ -1,5 +1,7 @@
 alias sed='gsed'
 
+export NODE_PATH=/usr/local/bin
+
 PROMPT="%{${fg[yellow]}%}%/ ➡︎%{${reset_color}%} "
 PROMPT2="%{${fg[white]}%}%_%%%{${reset_color}%} "
 SPROMPT="%{${fg[white]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
