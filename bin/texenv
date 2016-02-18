@@ -63,7 +63,7 @@ all: pdf
 init:
 	@cp $(DOTPATH)/doc/report_template.tex main.tex
 	@touch $(SUB_TARGET).tex
-	@echo -n "prepareing..."
+	git init .
 	@echo "OK!"
 
 pdf: $(TARGET).tex
