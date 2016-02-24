@@ -59,6 +59,24 @@ Usage:
 $ tenki [<OPTION>] [<AREA>]
 ~~~
 
+Supported area:
+- kushiro
+- sapporo
+- sendai
+- akita
+- tokyo
+- saitama
+- yokohama
+- kanazawa
+- nagano
+- nagoya
+- osaka
+- hiroshima
+- kochi
+- fukuoka
+- okinawa
+and you can add more areas
+
 #### gitch
 
 ssh/https switcher on git repogitory
