@@ -11,9 +11,8 @@ bash -c "$(curl -fsSL dot.medy.xyz)"
 **OR**
 
 ~~~
-$ git clone https://github.com/nobuyo/dotfiles
-$ mv dotfiles/ .dotfiles/
-$ cd .dotfiles/
+$ git clone https://github.com/nobuyo/dotfiles ~/.dotfiles
+$ cd ~/.dotfiles/
 $ make deploy
 ~~~
 
