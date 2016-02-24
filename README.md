@@ -61,9 +61,9 @@ $ tenki [<OPTION>] [<AREA>]
 
 Supported area:
 ~~~
-saitama tokyo hiroshima okinawa nagoya
-fukuoka osaka sendai kochi akita
-sapporo yokohama kanazawa nagano kushiro
+akita fukuoka hiroshima kanazawa kochi
+kushiro nagano nagoya okinawa osaka
+saitama sapporo sendai tokyo yokohama
 ~~~
 and you can add more areas
 
