@@ -60,21 +60,11 @@ $ tenki [<OPTION>] [<AREA>]
 ~~~
 
 Supported area:
-- kushiro
-- sapporo
-- sendai
-- akita
-- tokyo
-- saitama
-- yokohama
-- kanazawa
-- nagano
-- nagoya
-- osaka
-- hiroshima
-- kochi
-- fukuoka
-- okinawa
+~~~
+saitama tokyo hiroshima okinawa nagoya
+fukuoka osaka sendai kochi akita
+sapporo yokohama kanazawa nagano kushiro
+~~~
 and you can add more areas
 
 #### gitch
