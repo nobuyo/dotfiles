@@ -3,10 +3,10 @@
 function usage {
 	echo ""
 	echo 'Report Environment Initialize Script'
-	echo 'Usage : [texinit <Directory name>]'
+	echo "Usage : [${0##*/} <Directory name>]"
 	echo ""
   echo "Option:"
-  echo "  -i  : run `make init` automatically"
+  echo "  -i  : run make init automatically"
 	exit 0
 }
 
