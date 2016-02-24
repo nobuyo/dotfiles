@@ -77,9 +77,6 @@ pdf: $(TARGET).tex
 
 	@open build/$(TARGET).pdf
 
-pd: $(SUB_TARGET).md
-	pandoc $(SUB_TARGET).md -o $(SUB_TARGET).tex --latex-engine=lualatex
-
 open: build/$(TARGET).pdf
 	@open build/$(TARGET).pdf
 
