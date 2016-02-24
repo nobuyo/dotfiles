@@ -64,6 +64,10 @@ init:
 	@touch $(SUB_TARGET).tex
 	@echo "OK!"
 
+git:
+	git commit -am "$(date)"
+	git push origin master
+
 pdf: $(TARGET).tex
 
 	@yes x | $(TEX) $(TARGET) -interaction=nonstopmode
