@@ -178,7 +178,7 @@ place[nagoya]="230010"
 place[osaka]="270000"
 place[hiroshima]="340010"
 place[kochi]="390010"
-place[hukuoka]="400010"
+place[fukuoka]="400010"
 place[okinawa]="471010"
 
 #default: NAGANO,Nagano
