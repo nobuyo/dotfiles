@@ -64,7 +64,7 @@ function encode {
 if [ "$1" = "help" ] || [ "$1" = "-h" ] || [ "$1" = "-v" ]; then
   echo -e " g\033[37;4mitch v0.1.0\033[m"
   echo "  written by nobuyo"
-  echo "  This script is git push way switcher."
+  echo "  This script is git push protocol switcher."
   exit 0
 elif [ "$1" != "" ]; then
   warn "Given argument(s) will be ignored."
