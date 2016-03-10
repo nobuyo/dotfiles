@@ -45,7 +45,7 @@ function get_week {
  )"
 }
 
-
+# 2016 3.10 fix line number
 function mold {
 	WEATHER_TITLE="$(echo "$WEATHER_FORECAST" | head -3 )"
 	WEATHER_STATE="$(echo "$WEATHER_FORECAST" | head -4 | tail -1)"
