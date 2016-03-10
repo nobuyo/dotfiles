@@ -25,7 +25,6 @@ function get_today {
  sed -e 's/<[/].*>//g' -e 's/.*>//g' -e 's/\s/\n/g' |\
  sed '/^$/d' | head -n -2
  )"
- echo "$WEATHER_FORECAST"
 }
 
 function get_tomorrow {
