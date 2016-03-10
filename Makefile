@@ -15,5 +15,8 @@ deploy:
 update:
 	git pull origin master
 
+sshdecrypt:
+	openssl aes-256-cbc -d -in sshconfig -out ~/.ssh/config
+
 # init:
 # 	@$(foreach val, $(wildcard ./etc/init/*.sh), bash $(val);)
