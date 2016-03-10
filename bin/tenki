@@ -25,6 +25,7 @@ function get_today {
  sed -e 's/<[/].*>//g' -e 's/.*>//g' -e 's/\s/\n/g' |\
  sed '/^$/d' | head -n -2
  )"
+ echo "$WEATHER_FORECAST"
 }
 
 function get_tomorrow {
@@ -50,18 +51,18 @@ function mold {
 	WEATHER_STATE="$(echo "$WEATHER_FORECAST" | head -4 | tail -1)"
 	WEATHER_MAX="$(echo "$WEATHER_FORECAST" | head -5 | tail -1 )"
 	WEATHER_MAX_TEMP="$(echo "$WEATHER_FORECAST" | head -6 | tail -1 )"
-	WEATHER_MAX_DIFF="$(echo "$WEATHER_FORECAST" | head -8 | tail -1 )"
-	WEATHER_MIN="$(echo "$WEATHER_FORECAST" | head -9 | tail -1 )"
-	WEATHER_MIN_TEMP="$(echo "$WEATHER_FORECAST" | head -10 | tail -1 )"
-	WEATHER_MIN_DIFF="$(echo "$WEATHER_FORECAST" | head -12 | tail -1 )"
-	WEATHER_RAIN_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +18 | head -1 )"
-	WEATHER_RAIN="$(echo "$WEATHER_FORECAST" | tail -n +19 | head -4 )"
+	# WEATHER_MAX_DIFF="$(echo "$WEATHER_FORECAST" | head -8 | tail -1 )"
+	WEATHER_MIN="$(echo "$WEATHER_FORECAST" | head -7 | tail -1 )"
+	WEATHER_MIN_TEMP="$(echo "$WEATHER_FORECAST" | head -8 | tail -1 )"
+	# WEATHER_MIN_DIFF="$(echo "$WEATHER_FORECAST" | head -12 | tail -1 )"
+	WEATHER_RAIN_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +14 | head -1 )"
+	WEATHER_RAIN="$(echo "$WEATHER_FORECAST" | tail -n +15 | head -4 )"
 	WEATHER_RAIN_SIX="$(echo "$WEATHER_RAIN" | head -1 )"
 	WEATHER_RAIN_TWE="$(echo "$WEATHER_RAIN" | head -2 | tail -1 )"
 	WEATHER_RAIN_EIT="$(echo "$WEATHER_RAIN" | head -3 | tail -1 )"
 	WEATHER_RAIN_ZERO="$(echo "$WEATHER_RAIN" | tail -1 )"
-	WEATHER_WIND_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +23 | head -1 )"
-	WEATHER_WIND="$(echo "$WEATHER_FORECAST" | tail -n +24 | head -1 )"
+	WEATHER_WIND_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +19 | head -1 )"
+	WEATHER_WIND="$(echo "$WEATHER_FORECAST" | tail -n +20 | head -1 )"
   # WEATHER_WAVE_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +25 | head -1)"
   # WEATHER_WAVE="$(echo "$WEATHER_FORECAST" | tail -n +26)"
 	}
