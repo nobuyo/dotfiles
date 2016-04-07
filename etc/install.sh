@@ -10,7 +10,7 @@
 set -e
 set -u
 
-export SHELLOPTS
+# export SHELLOPTS
 # set -o igncr
 
 is_available() {
