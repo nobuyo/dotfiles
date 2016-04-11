@@ -56,7 +56,7 @@ function encode {
   fi
 }
 
-  function set_new_origin {
+function set_new_origin {
     git remote set-url origin $new_origin && {
       success "Change origin URL"
       echo "new remote:"
