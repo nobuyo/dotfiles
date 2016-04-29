@@ -1,0 +1,12 @@
+{
+	"draw_white_space": "all",
+	"font_size": 12,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"show_encoding": true,
+	"show_line_endings": true,
+	"theme": "Material-Theme-Darker.sublime-theme",
+	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
+}
