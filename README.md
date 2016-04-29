@@ -93,3 +93,12 @@ Usage:
 ~~~bash
 $ chcolor
 ~~~
+
+#### setsubl
+
+sublime setting deployer(~/.dotfiles/doc/Preferences.sublime-settings)
+
+Usage:
+~~~
+$ setsubl
+~~~
