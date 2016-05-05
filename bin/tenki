@@ -20,7 +20,7 @@ function error {
 }
 
 function get_today {
-	WEATHER_FORECAST="$(wget -q $WEATHER_URL/$WHETHER_AREA_CODE -O - |\
+  WEATHER_FORECAST="$(wget -q $WEATHER_URL/$WHETHER_AREA_CODE -O - |\
  sed -ne "/\t<h3>.*$(date '+%-m').$(date '+%-d').*<\/h3>/,/<div/p" |\
  sed -e 's/<[/].*>//g' -e 's/.*>//g' -e 's/\s/\n/g' |\
  sed '/^$/d' | head -n -2
@@ -28,7 +28,7 @@ function get_today {
 }
 
 function get_tomorrow {
-	WEATHER_FORECAST="$(wget -q $WEATHER_URL/$WHETHER_AREA_CODE -O - |\
+  WEATHER_FORECAST="$(wget -q $WEATHER_URL/$WHETHER_AREA_CODE -O - |\
  sed -ne "/\t<h3>.*$(date '+%-m' -d tomorrow).$(date '+%-d' -d tomorrow).*<\/h3>/,/<div/p" |\
  sed -e 's/<[/].*>//g' -e 's/.*>//g' -e 's/\s/\n/g' |\
  sed '/^$/d' | head -n -2
@@ -46,25 +46,25 @@ function get_week {
 
 # 2016 3.10 fix line number
 function mold {
-	WEATHER_TITLE="$(echo "$WEATHER_FORECAST" | head -3 )"
-	WEATHER_STATE="$(echo "$WEATHER_FORECAST" | head -4 | tail -1)"
-	WEATHER_MAX="$(echo "$WEATHER_FORECAST" | head -5 | tail -1 )"
-	WEATHER_MAX_TEMP="$(echo "$WEATHER_FORECAST" | head -6 | tail -1 )"
-	# WEATHER_MAX_DIFF="$(echo "$WEATHER_FORECAST" | head -8 | tail -1 )"
-	WEATHER_MIN="$(echo "$WEATHER_FORECAST" | head -7 | tail -1 )"
-	WEATHER_MIN_TEMP="$(echo "$WEATHER_FORECAST" | head -8 | tail -1 )"
-	# WEATHER_MIN_DIFF="$(echo "$WEATHER_FORECAST" | head -12 | tail -1 )"
-	WEATHER_RAIN_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +14 | head -1 )"
-	WEATHER_RAIN="$(echo "$WEATHER_FORECAST" | tail -n +15 | head -4 )"
-	WEATHER_RAIN_SIX="$(echo "$WEATHER_RAIN" | head -1 )"
-	WEATHER_RAIN_TWE="$(echo "$WEATHER_RAIN" | head -2 | tail -1 )"
-	WEATHER_RAIN_EIT="$(echo "$WEATHER_RAIN" | head -3 | tail -1 )"
-	WEATHER_RAIN_ZERO="$(echo "$WEATHER_RAIN" | tail -1 )"
-	WEATHER_WIND_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +19 | head -1 )"
-	WEATHER_WIND="$(echo "$WEATHER_FORECAST" | tail -n +20 | head -1 )"
+  WEATHER_TITLE="$(echo "$WEATHER_FORECAST" | head -3 )"
+  WEATHER_STATE="$(echo "$WEATHER_FORECAST" | head -4 | tail -1)"
+  WEATHER_MAX="$(echo "$WEATHER_FORECAST" | head -5 | tail -1 )"
+  WEATHER_MAX_TEMP="$(echo "$WEATHER_FORECAST" | head -6 | tail -1 )"
+  # WEATHER_MAX_DIFF="$(echo "$WEATHER_FORECAST" | head -8 | tail -1 )"
+  WEATHER_MIN="$(echo "$WEATHER_FORECAST" | head -7 | tail -1 )"
+  WEATHER_MIN_TEMP="$(echo "$WEATHER_FORECAST" | head -8 | tail -1 )"
+  # WEATHER_MIN_DIFF="$(echo "$WEATHER_FORECAST" | head -12 | tail -1 )"
+  WEATHER_RAIN_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +14 | head -1 )"
+  WEATHER_RAIN="$(echo "$WEATHER_FORECAST" | tail -n +15 | head -4 )"
+  WEATHER_RAIN_SIX="$(echo "$WEATHER_RAIN" | head -1 )"
+  WEATHER_RAIN_TWE="$(echo "$WEATHER_RAIN" | head -2 | tail -1 )"
+  WEATHER_RAIN_EIT="$(echo "$WEATHER_RAIN" | head -3 | tail -1 )"
+  WEATHER_RAIN_ZERO="$(echo "$WEATHER_RAIN" | tail -1 )"
+  WEATHER_WIND_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +19 | head -1 )"
+  WEATHER_WIND="$(echo "$WEATHER_FORECAST" | tail -n +20 | head -1 )"
   # WEATHER_WAVE_TITLE="$(echo "$WEATHER_FORECAST" | tail -n +25 | head -1)"
   # WEATHER_WAVE="$(echo "$WEATHER_FORECAST" | tail -n +26)"
-	}
+  }
 
 function mold_week {
   WEEK_DAYS="$(echo "$WEATHER_FORECAST" | head -6 )"
@@ -79,18 +79,18 @@ function mold_week {
 }
 
 function disp {
-	echo -e "\033[33m"$WEATHER_TITLE"\033[m"
-	echo "$WEATHER_STATE"
-	echo ""
-	echo -e "\033[33m$WEATHER_MAX/$WEATHER_MIN\033[m"
-	echo "$WEATHER_MAX_TEMP$WEATHER_MAX_DIFF/$WEATHER_MIN_TEMP$WEATHER_MIN_DIFF"
-	echo ""
-	echo -e "\033[33m$WEATHER_RAIN_TITLE\033[m"
-	echo "|  0-6  | 06-12 | 12-18 | 18-24 |"
-	echo "|  $WEATHER_RAIN_SIX  |  $WEATHER_RAIN_TWE  |  $WEATHER_RAIN_EIT  |  $WEATHER_RAIN_ZERO  |"
-	echo ""
-	echo -e "\033[33m$WEATHER_WIND_TITLE\033[m"
-	echo $WEATHER_WIND
+  echo -e "\033[33m"$WEATHER_TITLE"\033[m"
+  echo "$WEATHER_STATE"
+  echo ""
+  echo -e "\033[33m$WEATHER_MAX/$WEATHER_MIN\033[m"
+  echo "$WEATHER_MAX_TEMP$WEATHER_MAX_DIFF/$WEATHER_MIN_TEMP$WEATHER_MIN_DIFF"
+  echo ""
+  echo -e "\033[33m$WEATHER_RAIN_TITLE\033[m"
+  echo "|  0-6  | 06-12 | 12-18 | 18-24 |"
+  echo "|  $WEATHER_RAIN_SIX  |  $WEATHER_RAIN_TWE  |  $WEATHER_RAIN_EIT  |  $WEATHER_RAIN_ZERO  |"
+  echo ""
+  echo -e "\033[33m$WEATHER_WIND_TITLE\033[m"
+  echo $WEATHER_WIND
   # echo ""
   # echo -e "\033[33m$WEATHER_WAVE_TITLE\033[m"
   # echo $WEATHER_WAVE
@@ -151,11 +151,11 @@ function set_area {
     error "unknown area $1, see --help. exit"
     exit 1
   fi
-	WHETHER_AREA_CODE="${place["$1"]}"
+  WHETHER_AREA_CODE="${place["$1"]}"
 }
 
 function usage {
-	echo "usage: tenki <option> <area>"
+  echo "usage: tenki <option> <area>"
   echo ""
   echo "script supports following AREA"
   echo "-----"
@@ -170,8 +170,8 @@ function usage {
 }
 
 function version {
-	echo "tenki 0.2.3"
-	echo "written by @nobuyo"
+  echo "tenki 0.2.3"
+  echo "written by @nobuyo"
 }
 
 
@@ -206,9 +206,9 @@ do
   case "$1" in
 
     --tomorrow|-t)
-	  TOMORROW=1
-	  shift
-	  ;;
+    TOMORROW=1
+    shift
+    ;;
 
     --week|-w)
     WEEK=1
@@ -238,7 +238,7 @@ done
 
 
 if [ "$TOMORROW" = 1 ]; then
-	get_tomorrow
+  get_tomorrow
   mold
   disp
   exit 0
