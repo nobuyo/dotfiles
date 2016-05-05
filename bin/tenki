@@ -97,30 +97,44 @@ function disp {
 }
 
 function disp_week {
-  echo -n "|"
+  # title line
+  echo -n "| "
   for d in ${WEEK_DAYS[@]};
   do
-    echo -ne "\033[36m"$d"\033[m"" | "
+    printf "%8s | " "$(echo -ne "\033[36m"$d"\033[m")"
   done
-  echo "";  echo -n "|"
+  echo "";
+
+  # state line
+  echo -n "| "
   for d in ${WEEK_STATE[@]};
   do
-    echo -n $d"| "
+    printf "%7s | "  "$d"
   done
-  echo "";  echo -n "|  "
+  echo "";
+
+  # max temp line
+  echo -n "| "
   for d in ${WEEK_MAX_TEMP[@]};
   do
-    echo -n $d "  |  "
+    printf "%8s | "  "$d"
   done
-  echo "";  echo -n "|  "
+  echo "";
+
+  # min temp line
+  echo -n "| "
   for d in ${WEEK_MIN_TEMP[@]};
   do
-    echo -n $d "  |  "
+    printf "%8s | "  "$d"
   done
-  echo "";  echo -n "|   "
+  echo ""; # echo -n "|   "
+
+
+  # rain line
+  echo -n "| "
   for d in ${WEEK_RAIN[@]};
   do
-    echo -n $d "  |   "
+    printf "%7s | "  "$d"
   done
   echo "";
 }
