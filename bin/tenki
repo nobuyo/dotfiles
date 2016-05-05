@@ -170,7 +170,7 @@ function usage {
 }
 
 function version {
-	echo "tenki 0.2.2"
+	echo "tenki 0.2.3"
 	echo "written by @nobuyo"
 }
 
