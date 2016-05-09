@@ -10,16 +10,16 @@ case ${OSTYPE} in
     MOVETO="C:/Users/$USERNAME/AppData/Roaming/Sublime Text 3/Packages/User"
     ;;
   darwin* )
-    MOVETO="/Users/$USERNAME/Library/Application Support/Sublime Text 3/Packages/User"
+    MOVETO="/Users/"$USER"/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
     ;;
 esac
 
-ORIGIN="$MOVETO/Preferences.sublime-settings.orig"
+ORIGIN="$MOVETO/Preferences.sublime-settings.org"
 
 if [ -e $FILE ]; then
   mv "$MOVETO/Preferences.sublime-settings" "$ORIGIN"
   cp "$FILE" "$MOVETO" || mv "$ORIGIN" "$MOVETO/Preferences.sublime-settings"
 else
-  echo "no such file"
+  echo "$FILE :file not found"
   exit 1
 fi
