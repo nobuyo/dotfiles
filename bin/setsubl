@@ -10,7 +10,7 @@ case ${OSTYPE} in
     MOVETO="C:/Users/$USERNAME/AppData/Roaming/Sublime Text 3/Packages/User"
     ;;
   darwin* )
-    MOVETO="/Users/"$USER"/Library/Application\ Support/Sublime\ Text\ 3/Packages/User"
+    MOVETO="/Users/"$USER"/Library/Application Support/Sublime Text 3/Packages/User"
     ;;
 esac
 
