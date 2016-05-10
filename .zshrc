@@ -33,7 +33,7 @@ darwin*)
 	. ~/.zshrc_osx
 	;;
 linux*)
-	. ~/zshrc_osx
+	. ~/.zshrc_osx
 	;;
 *)
 	. ~/.zshrc_cygwin
