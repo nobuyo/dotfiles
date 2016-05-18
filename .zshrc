@@ -3,7 +3,7 @@ export LANG=ja_JP.UTF-8
 # PATH setting
 export DOTPATH=~/.dotfiles
 export PROMPT_COLOR_SWITCH=0
-PATH=/usr/local/bin:$PATH:~/.dotfiles/bin
+PATH=/usr/local/bin:$PATH:~/.dotfiles/bin:~/picnic-tools/bin
 # export MANPATH=/usr/local/share/man:/usr/local/man:/usr/share/man
 
 HISTFILE=$DOTPATH/.zsh-history
@@ -64,6 +64,7 @@ setopt hist_verify
 setopt numeric_glob_sort
 setopt print_eight_bit
 setopt share_history
+setopt magic_equal_subst
 
 zstyle ':completion:*:default' menu select=1
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
