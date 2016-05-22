@@ -27,19 +27,19 @@ Initialize report writing environment
 
 Usage:
 ~~~ bash
-$ texinit (newdir) #=> create working directory
+$ texenv (newdir) #=> create working directory
 $ cd (newdir)
 $ make init #=> create tex sources
 ~~~
 
 You can use a option -i to automatically run `make init`.
 ~~~bash
-$ texinit -i (newdir) #=> create working directory and initialize
+$ texenv -i (newdir) #=> create working directory and initialize
 ~~~
 
 #### javalipse
 
-rebuild Java project for eclipse
+rebuild Java project for eclipse(!UNMAINTAINED!)
 
 [code](https://github.com/nobuyo/dotfiles/blob/master/bin/javalipse)
 
@@ -72,6 +72,7 @@ and you can add more areas
 ssh/https switcher on git repogitory
 
 [code](https://github.com/nobuyo/dotfiles/blob/master/bin/gitch)
+[code(remote name supported version)](https://github.com/tex2e/dotfiles/blob/master/bash/gitch.sh)
 
 Usage(on git directory):
 ~~~bash
@@ -83,7 +84,6 @@ $ gitch
 prompt switcher by sourcing dotfiles (.zshrc_XXX)
 
 [code](https://github.com/nobuyo/dotfiles/blob/master/bin/chcolor)
-
 
 Require:
 * An environmental variable `PROMPT_COLOR_SWITCH` is exported
@@ -97,6 +97,8 @@ $ chcolor
 #### setsubl
 
 sublime setting deployer(~/.dotfiles/doc/Preferences.sublime-settings)
+
+[code](https://github.com/nobuyo/dotfiles/blob/master/bin/setsubl)
 
 Usage:
 ~~~
