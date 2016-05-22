@@ -71,7 +71,7 @@ and you can add more areas
 
 ssh/https switcher on git repogitory
 
-[code](https://github.com/nobuyo/dotfiles/blob/master/bin/gitch)
+[code](https://github.com/nobuyo/dotfiles/blob/master/bin/gitch)  
 [code(remote name supported version)](https://github.com/tex2e/dotfiles/blob/master/bash/gitch.sh)
 
 Usage(on git directory):
