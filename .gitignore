@@ -6,6 +6,10 @@
 # etc
 .gitconfig
 .zcompdump
+.DS_Store
+.minttyrc
+.viminfo
+
 
 # bin files
 bin/*
