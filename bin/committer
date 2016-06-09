@@ -1,5 +1,11 @@
 #!/bin/bash
 
+function check_pwd_is_git_dir {
+  if [ ! -e .git ]; then
+    exit 1
+  fi
+}
+
 function check_changes_to_be_committed {
   git status | grep "Changes to be committed" > /dev/null
   echo "$?"
@@ -30,4 +36,6 @@ function parse_status {
   fi
 }
 
+
+check_pwd_is_git_dir
 parse_status
