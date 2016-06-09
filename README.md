@@ -104,3 +104,14 @@ Usage:
 ~~~
 $ setsubl
 ~~~
+
+#### guid
+
+get unique 32-bit key (GUID)
+
+[code](https://github.com/nobuyo/dotfiles/blob/master/bin/guid)
+
+Usage:
+~~~
+$ guid
+~~~
