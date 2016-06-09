@@ -1,0 +1,33 @@
+#!/bin/bash
+
+function check_changes_to_be_committed {
+  git status | grep "Changes to be committed" > /dev/null
+  echo "$?"
+}
+
+function check_changes_not_staged {
+  git status | grep "Changes not staged for commit" > /dev/null
+  echo "$?"
+}
+
+function count_line {
+  echo "$1" | grep -c ''
+}
+
+function summarize {
+  :
+}
+
+function parse_status {
+  if [[ "$(check_changes_to_be_committed)" == "0" ]]; then
+    msg="$(git status | sed -n -e '/Changes/,/Changes not staged/p' | sed -n -e '/Changes/,/Untrack/p' | grep $'\t' | sed -e 's/^\t//g')"
+    count_line "$msg"
+    echo "$msg"
+  elif [[ "$(check_changes_not_staged)" == "0" ]]; then
+    msg="$(git status | sed -n -e '/Changes not staged/,/Untrack/p' | grep $'\t' | sed -e 's/^\t//g')"
+    count_line "$msg"
+    echo "$msg"
+  fi
+}
+
+parse_status
