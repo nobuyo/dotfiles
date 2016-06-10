@@ -23,6 +23,9 @@ alias hexo='nocorrect hexo'
 # change prompt color
 alias chprm='source chcolor'
 
+# git commit message generator
+alias cmt='committer'
+
 autoload -Uz compinit
 compinit
 autoload colors
