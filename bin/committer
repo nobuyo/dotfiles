@@ -21,7 +21,7 @@ function check_changes_not_staged {
 }
 
 function restate {
-  msg="$(echo $1 | sed -e 's/modified/modify/g' -e 's/deleted/delete/g')"
+  msg="$(echo $1 | sed -e 's/modified:/modify/g' -e 's/deleted:/delete/g')"
 }
 
 function summarize {
