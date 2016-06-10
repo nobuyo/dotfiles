@@ -1,5 +1,9 @@
 #!/bin/sh
 
+#
+# chcolor - prompt color switcher
+#
+
 if [ $PROMPT_COLOR_SWITCH = 0 ]; then
   # echo "color"
   . ~/.zshrc_color

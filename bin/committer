@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#
+# committer - get git status for commit message
+#
+
 function check_pwd_is_git_dir {
   if [ ! -e .git ]; then
     exit 1
@@ -17,7 +21,11 @@ function check_changes_not_staged {
 }
 
 function count_line {
-  echo "$1" | grep -c ''
+  if [[ "$(echo "$1" | grep -c '')" -gt 1 ]]; then
+    echo "$1" | head
+    # local tmp="$(echo "$1" | head)"
+    # echo "$tmp' and more(auto generated)'"
+  fi
 }
 
 function summarize {
