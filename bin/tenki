@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# get weather forecast
+
 # TODO
 # support weekend
 # ==> remove html coloring code

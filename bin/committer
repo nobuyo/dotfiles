@@ -20,30 +20,30 @@ function check_changes_not_staged {
   echo "$?"
 }
 
-function count_line {
-  if [[ "$(echo "$1" | grep -c '')" -gt 1 ]]; then
-    echo "$1" | head
-    # local tmp="$(echo "$1" | head)"
-    # echo "$tmp' and more(auto generated)'"
-  fi
+function restate {
+  msg="$(echo $1 | sed -e 's/modified/modify/g' -e 's/deleted/delete/g')"
 }
 
 function summarize {
-  :
+  if [[ "$(echo "$1" | grep -c '')" -gt 1 ]]; then
+    local tmp="$(echo "$1" | head -1 | sed -e 's/:   /: /g')"
+    restate "$tmp"
+    echo "${msg} , etc.(auto generated)"
+  else
+    restate "$(echo "$1" | sed -e 's/:   /: /g')"
+    echo "$msg"
+  fi
 }
 
 function parse_status {
   if [[ "$(check_changes_to_be_committed)" == "0" ]]; then
     msg="$(git status | sed -n -e '/Changes/,/Changes not staged/p' | sed -n -e '/Changes/,/Untrack/p' | grep $'\t' | sed -e 's/^\t//g')"
-    count_line "$msg"
-    echo "$msg"
+    summarize "$msg"
   elif [[ "$(check_changes_not_staged)" == "0" ]]; then
     msg="$(git status | sed -n -e '/Changes not staged/,/Untrack/p' | grep $'\t' | sed -e 's/^\t//g')"
-    count_line "$msg"
-    echo "$msg"
+    summarize "$msg"
   fi
 }
-
 
 check_pwd_is_git_dir
 parse_status
