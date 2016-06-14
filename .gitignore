@@ -12,6 +12,7 @@
 
 # bin files
 bin/*
+!README.md
 !tenki
 !javalipse
 !texenv
