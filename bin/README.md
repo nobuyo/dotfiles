@@ -5,7 +5,7 @@ included in bin/
 
 Initialize report writing environment
 
-[code](https://github.com/nobuyo/dotfiles/blob/master/bin/texinit)
+[code](bin/texinit)
 
 Usage:
 ~~~ bash
@@ -23,7 +23,7 @@ $ texenv -i (newdir) #=> create working directory and initialize
 
 rebuild Java project for eclipse(!UNMAINTAINED!)
 
-[code](https://github.com/nobuyo/dotfiles/blob/master/bin/javalipse)
+[code](bin/javalipse)
 
 Usage:
 ~~~ bash
@@ -34,7 +34,7 @@ $ javalipse (directory name)
 
 get weather forecast from weather.livedoor.com
 
-[code](https://github.com/nobuyo/dotfiles/blob/master/bin/tenki)
+[code](bin/tenki)
 
 Usage:
 ~~~ bash
@@ -53,7 +53,7 @@ and you can add more areas
 
 ssh/https switcher on git repogitory
 
-[code](https://github.com/nobuyo/dotfiles/blob/master/bin/gitch)  
+[code](bin/gitch)  
 [code(remote name supported version)](https://github.com/tex2e/dotfiles/blob/master/bash/gitch.sh)
 
 Usage(on git directory):
@@ -65,7 +65,7 @@ $ gitch
 
 prompt switcher by sourcing dotfiles (.zshrc_XXX)
 
-[code](https://github.com/nobuyo/dotfiles/blob/master/bin/chcolor)
+[code](bin/chcolor)
 
 Require:
 * An environmental variable `PROMPT_COLOR_SWITCH` is exported
@@ -80,7 +80,7 @@ $ chcolor
 
 sublime setting deployer(~/.dotfiles/doc/Preferences.sublime-settings)
 
-[code](https://github.com/nobuyo/dotfiles/blob/master/bin/setsubl)
+[code](bin/setsubl)
 
 Usage:
 ~~~
@@ -91,7 +91,7 @@ $ setsubl
 
 get unique 32-bit key (GUID)
 
-[code](https://github.com/nobuyo/dotfiles/blob/master/bin/guid)
+[code](bin/guid)
 
 Usage:
 ~~~
@@ -103,7 +103,7 @@ $ guid
 
 generate simple commite message
 
-[code](https://github.com/nobuyo/dotfiles/blob/master/bin/committer)
+[code](bin/committer)
 
 Usage:
 ~~~
