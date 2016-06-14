@@ -15,6 +15,9 @@ deploy:
 update:
 	git pull origin master
 
+push:
+	git push origin master
+
 sshdecrypt:
 	openssl aes-256-cbc -d -in ~/.dotfiles/sshconfig -out ~/.ssh/config
 
