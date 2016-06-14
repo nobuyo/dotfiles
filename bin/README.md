@@ -4,7 +4,7 @@
 
 Initialize report writing environment
 
-[code](texinit)
+[code](texenv)
 
 Usage:
 ~~~ bash
@@ -22,7 +22,7 @@ $ texenv -i (newdir) #=> create working directory and initialize
 
 rebuild Java project for eclipse(!UNMAINTAINED!)
 
-[code](bin/javalipse)
+[code](javalipse)
 
 Usage:
 ~~~ bash
@@ -33,7 +33,7 @@ $ javalipse (directory name)
 
 get weather forecast from weather.livedoor.com
 
-[code](bin/tenki)
+[code](tenki)
 
 Usage:
 ~~~ bash
