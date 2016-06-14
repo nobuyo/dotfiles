@@ -1,0 +1,29 @@
+[user]
+	email = world_fantasy_2017@live.jp
+	name = nobuyo
+
+[alias]
+	a = add
+	aa = add -A
+	amend = commit --amend
+	amendm = commit --amend -m
+	b = branch
+	c = commit
+	cm = commit -m
+	cam = commit -am
+	autocm = commit -m "$(committer)"
+	autocam = "!f () { git commit -am "\"$(committer)\""; }; f"
+	ch = checkout
+	chb = checkout -b
+	chm = checkout master
+	d = diff
+	f = fetch
+	l = log
+	lp = log -p
+	r = remote
+	ru = remote update
+	rv = remote -v
+	s = status
+	ss = status -s
+	undo = reset HEAD~1 --mixed
+	unstage = reset HEAD
