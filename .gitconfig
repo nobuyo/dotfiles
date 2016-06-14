@@ -19,6 +19,7 @@
 	d = diff
 	f = fetch
 	l = log
+	lo = log --oneline
 	lp = log -p
 	pob = "!f(){ push origin $1;};f"
 	pom = push origin master
