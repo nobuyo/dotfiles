@@ -11,8 +11,8 @@
 	c = commit
 	cm = commit -m
 	cam = commit -am
-	autocm = commit -m "$(committer)"
-	autocam = "!f () { git commit -am "\"$(committer)\""; }; f"
+	acm = "!f () { git commit -m "\"$(committer)\""; }; f"
+	acam = "!f () { git commit -am "\"$(committer)\""; }; f"
 	ch = checkout
 	chb = checkout -b
 	chm = checkout master
