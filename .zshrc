@@ -26,6 +26,11 @@ alias chprm='source chcolor'
 # git commit message generator
 alias cmt='committer'
 
+# VirtualBox aliases
+alias vbstart='VBoxManage startvm "CentOS6.7" --type headless'
+alias vbsave='VBoxManage controlvm "CentOS6.7" savestate'
+alias vblist='VBoxManage list runningvms'
+
 autoload -Uz compinit
 compinit
 autoload colors
