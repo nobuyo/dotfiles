@@ -1,11 +1,10 @@
 ## Scripts
-included in bin/
 
 #### texenv
 
 Initialize report writing environment
 
-[code](bin/texinit)
+[code](texinit)
 
 Usage:
 ~~~ bash
@@ -53,7 +52,7 @@ and you can add more areas
 
 ssh/https switcher on git repogitory
 
-[code](bin/gitch)  
+[code](gitch)  
 [code(remote name supported version)](https://github.com/tex2e/dotfiles/blob/master/bash/gitch.sh)
 
 Usage(on git directory):
@@ -65,7 +64,7 @@ $ gitch
 
 prompt switcher by sourcing dotfiles (.zshrc_XXX)
 
-[code](bin/chcolor)
+[code](chcolor)
 
 Require:
 * An environmental variable `PROMPT_COLOR_SWITCH` is exported
@@ -80,7 +79,7 @@ $ chcolor
 
 sublime setting deployer(~/.dotfiles/doc/Preferences.sublime-settings)
 
-[code](bin/setsubl)
+[code](setsubl)
 
 Usage:
 ~~~
@@ -91,7 +90,7 @@ $ setsubl
 
 get unique 32-bit key (GUID)
 
-[code](bin/guid)
+[code](guid)
 
 Usage:
 ~~~
@@ -103,7 +102,7 @@ $ guid
 
 generate simple commite message
 
-[code](bin/committer)
+[code](committer)
 
 Usage:
 ~~~
