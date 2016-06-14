@@ -2,7 +2,7 @@ IGNORE := .DS_Store .git .gitmodules .gitignore
 TARGET := $(wildcard .??*) bin
 FILES  := $(filter-out $(IGNORE), $(TARGET))
 
-.PHONY: compinit deploy update
+.PHONY: compinit deploy update push
 
 compinit:
 	@$(RM) ~/.zcompdump
@@ -20,6 +20,3 @@ push:
 
 sshdecrypt:
 	openssl aes-256-cbc -d -in ~/.dotfiles/sshconfig -out ~/.ssh/config
-
-# init:
-# 	@$(foreach val, $(wildcard ./etc/init/*.sh), bash $(val);)
