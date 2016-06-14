@@ -44,7 +44,7 @@ darwin*)
 	. ~/.zshrc_osx
 	;;
 linux*)
-	. ~/.zshrc_osx
+	. ~/.zshrc_linux
 	;;
 *)
 	. ~/.zshrc_cygwin
