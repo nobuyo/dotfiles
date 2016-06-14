@@ -22,6 +22,7 @@
 	lp = log -p
 	pob = "!f(){ push origin $1;};f"
 	pom = push origin master
+	update = pull origin master
 	r = remote
 	ru = remote update
 	rv = remote -v
@@ -29,3 +30,4 @@
 	ss = status -s
 	undo = reset HEAD~1 --mixed
 	unstage = reset HEAD
+	ver = !git --version
