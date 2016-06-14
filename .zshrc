@@ -23,6 +23,9 @@ alias hexo='nocorrect hexo'
 # change prompt color
 alias chprm='source chcolor'
 
+# madness git
+alias g='git'
+
 # git commit message generator
 alias cmt='committer'
 
