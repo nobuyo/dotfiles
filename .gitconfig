@@ -4,7 +4,8 @@
 
 [alias]
 	a = add
-	aa = add -A
+	# aa = add -A
+	aa = "!f(){ git add -A --dry-run | cut -d' ' -f 2 | xargs file | grep -v '\\-bit \\| x86' | cut -d':' -f 1 | xargs git add; }; f"
 	amend = commit --amend
 	amendm = commit --amend -m
 	b = branch
