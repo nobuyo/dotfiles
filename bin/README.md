@@ -108,3 +108,14 @@ Usage:
 ~~~
 git commit -<m|am> "$(committer)"
 ~~~
+
+#### csubl
+
+wrapper to open directory for subl
+
+[code](csubl)
+
+Usage:
+~~~
+csubl <dir>
+~~~
