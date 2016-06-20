@@ -12,7 +12,7 @@ SAVEHIST=100000
 
 # some more ls aliases
 alias ll='ls -alF'
-alias la='ls -A'
+alias la='ls -AF'
 alias l='ls -CF'
 
 # nocorrect
