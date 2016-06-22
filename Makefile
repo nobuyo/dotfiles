@@ -2,7 +2,9 @@ IGNORE := .DS_Store .git .gitmodules .gitignore
 TARGET := $(wildcard .??*) bin
 FILES  := $(filter-out $(IGNORE), $(TARGET))
 
-.PHONY: compinit deploy update push
+.PHONY: compinit deploy update push sshdecrypt
+
+all: deploy
 
 compinit:
 	@$(RM) ~/.zcompdump
