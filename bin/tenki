@@ -167,6 +167,7 @@ function usage {
   echo "Options:"
   echo "  --tomorrow|-t :show tomorrow's forecast"
   echo "  --week|-w     :show weekly forecast"
+  echo "  --more|-m     :show more on browser"
   echo "  --version|-V  :show version info"
   echo "  --help|-h     :show this menu"
 }
@@ -203,23 +204,29 @@ set_area "nagano"
 valid=0
 WEEK=0
 TOMORROW=0
+MORE=0
 while [ $# -gt 0 ]
 do
   case "$1" in
 
     --tomorrow|-t)
-    TOMORROW=1
-    shift
+      TOMORROW=1
+      shift
     ;;
 
     --week|-w)
-    WEEK=1
-    shift
+      WEEK=1
+      shift
     ;;
 
     --help|help|-h)
       usage
       exit 0
+    ;;
+
+    --more|-m)
+      MORE=1
+      shift
     ;;
 
     --version|version|-V)
@@ -248,6 +255,17 @@ elif [ "$WEEK" = 1 ]; then
   get_week
   mold_week
   disp_week
+  exit 0
+elif [ "$MORE" = 1 ]; then
+  case ${OSTYPE} in
+    cygwin )
+      cygstart "$WEATHER_URL/$WHETHER_AREA_CODE"
+      ;;
+
+    *)
+      open "$WEATHER_URL/$WHETHER_AREA_CODE"
+      ;;
+  esac
   exit 0
 else
   get_today
