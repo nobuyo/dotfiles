@@ -120,8 +120,8 @@ Usage:
 csubl <dir>
 ~~~
 
-#### unhtm
+#### untag
 
 strip html tag
 
-[code](unhtm)
+[code](untag)
