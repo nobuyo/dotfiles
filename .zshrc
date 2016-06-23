@@ -30,9 +30,9 @@ alias g='git'
 alias cmt='committer'
 
 # VirtualBox aliases
-alias vbstart='VBoxManage startvm "CentOS6.7" --type headless'
-alias vbsave='VBoxManage controlvm "CentOS6.7" savestate'
-alias vblist='VBoxManage list runningvms'
+alias vmup='VBoxManage startvm "CentOS6.7" --type headless'
+alias vmsave='VBoxManage controlvm "CentOS6.7" savestate'
+alias vmlist='VBoxManage list runningvms'
 
 autoload -Uz compinit
 compinit
