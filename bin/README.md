@@ -119,3 +119,9 @@ Usage:
 ~~~
 csubl <dir>
 ~~~
+
+#### unhtm
+
+strip html tag
+
+[code](unhtm)
