@@ -1,4 +1,4 @@
-PROMPT="%{${fg[white]}%}%/%%%{${reset_color}%} "
+PROMPT="%{${fg[yellow]}%}%/%%%{${reset_color}%} "
 PROMPT2="%{${fg[white]}%}%_%%%{${reset_color}%} "
 SPROMPT="%{${fg[white]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
 [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
