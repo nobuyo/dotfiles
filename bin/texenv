@@ -62,6 +62,7 @@ all: pdf
 init:
 	@cp $(DOTPATH)/doc/report_template.tex main.tex
 	@touch $(SUB_TARGET).tex
+	@printf *.log\n*.aux" > .gitignore
 	@echo "OK!"
 
 git:
