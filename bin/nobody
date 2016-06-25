@@ -14,6 +14,39 @@ function get_head() {
   if [[ ! -z "$hd" ]];then
     expr $hd + 1 > /dev/null
     if [[ "$?" -lt 1 ]]; then
+      text_head="$(echo "$1" | head -"$hd")"
+    fi
+  else
+    text_head="$(echo "$1" | head -n "$DEFAULT_REMOVE_LINE")"
+  fi
+}
+
+function get_tail() {
+  if [ ! -z "$tl" ]; then
+    expr $tl + 1 > /dev/null
+    if [[ "$?" -lt 1 ]]; then
+      text_tail="$(echo "$1" | tail -"$tl")"
+    fi
+  else
+    text_tail="$(echo "$1" | tail -n "$DEFAULT_REMOVE_LINE")"
+  fi
+}
+
+function disp() {
+  get_head "$1"
+  get_tail "$1"
+
+  echo "$text_head"
+  echo
+  echo "~~~~~~~~~~~~~~~~"
+  echo
+  echo "$text_tail"
+}
+
+function get_head_arg() {
+  if [[ ! -z "$hd" ]];then
+    expr $hd + 1 > /dev/null
+    if [[ "$?" -lt 1 ]]; then
       text_head="$(cat $1 | head -"$hd")"
     fi
   else
@@ -21,7 +54,7 @@ function get_head() {
   fi
 }
 
-function get_tail() {
+function get_tail_arg() {
   if [ ! -z "$tl" ]; then
     expr $tl + 1 > /dev/null
     if [[ "$?" -lt 1 ]]; then
@@ -32,9 +65,9 @@ function get_tail() {
   fi
 }
 
-function disp() {
-  get_head "$1"
-  get_tail "$1"
+function disp_arg() {
+  get_head_arg "$1"
+  get_tail_arg "$1"
 
   echo "$text_head"
   echo
@@ -68,9 +101,10 @@ shift $((OPTIND - 1))
 DEFAULT_REMOVE_LINE=10
 
 # main
-if [[ $# -eq 0 ]]; then
-  usage
-  exit 0
+if [ -p /dev/stdin ]; then
+  disp "$(cat -)"
+elif [ $# -eq 1 ]; then
+  disp_arg "$1"
 else
-  disp "$1"
+  usage
 fi

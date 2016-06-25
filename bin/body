@@ -13,22 +13,22 @@ function usage() {
 
 function get_body_without_head_and_tail() {
   if [[ ! -z "$hd" ]] && [[ ! -z "$tl" ]];then
-    text="$(cat $1 | tail -n +`expr $hd + 1` | head -n -"$tl")"
+    text="$(cat - | tail -n +`expr $hd + 1` | head -n -"$tl")"
   elif [[ -z "$hd" ]] && [[ ! -z "$tl" ]]; then
-    text="$(cat $1 | tail -n +"$DEFAULT_REMOVE_LINE" | head -n -"$tl")"
+    text="$(cat - | tail -n +"$DEFAULT_REMOVE_LINE" | head -n -"$tl")"
   elif [[ ! -z "$hd" ]] && [[ -z "$tl" ]]; then
-    text="$(cat $1 | tail -n +`expr $hd + 1` | head -n -"$DEFAULT_REMOVE_LINE")"
+    text="$(cat - | tail -n +`expr $hd + 1` | head -n -"$DEFAULT_REMOVE_LINE")"
   else
     # default: remove each 10 lines 
-    text="$(cat $1 | tail -n +"$DEFAULT_REMOVE_LINE" | head -n -"$DEFAULT_REMOVE_LINE")"
+    text="$(cat - | tail -n +"$DEFAULT_REMOVE_LINE" | head -n -"$DEFAULT_REMOVE_LINE")"
   fi
   echo "$text"
 }
 
-function get_body_from_center() {
+function get_body_from_center_arg() {
   line_count="$(cat $1 | grep -c '')"
   center_line="$(expr $line_count / 2)"
-  range=10
+  range=$DEFAULT_REMOVE_LINE
   if [[ ! -z "$line" ]];then
     range="$(expr $line / 2)"
     # even lines
@@ -50,6 +50,31 @@ function get_body_from_center() {
   echo "$text"
 }
 
+function get_body_from_center_pipe() {
+  line_count="$(echo "$1" | grep -c '')"
+  center_line="$(expr $line_count / 2)"
+  range=$DEFAULT_REMOVE_LINE
+  if [[ ! -z "$line" ]];then
+    range="$(expr $line / 2)"
+    # even lines
+    if [[ "$(expr $line_count % 2 )" -eq 0 ]]; then
+      bf="$(expr $center_line - $range)"
+      af="$(expr $center_line + $range)"
+      text="$(echo "$1" | head -"$af" | tail -`expr $af - $bf + 1`)"
+    # odd lines
+    elif [[ "$(expr $line_count % 2 )" -eq 1 ]]; then
+      bf="$(expr $center_line - $range)"
+      af="$(expr $center_line + $range + 1)"
+      text="$(echo "$1" | head -n "$af" | tail -n `expr $af - $bf`)"
+    fi
+  else
+    bf="$(expr $center_line - $range)"
+    af="$(expr $center_line + $range)"
+    text="$(echo "$1" | head -"$af" | tail -`expr $af - $bf + 1`)"
+  fi
+  echo "$text"
+}
+
 MODE=0
 while getopts "h:t:n:" opts
 do
@@ -67,6 +92,7 @@ do
       MODE=2
       ;;
     \?)
+      usage
       exit 1
       ;;
   esac
@@ -78,17 +104,27 @@ DEFAULT_REMOVE_LINE=10
 
 # main
 
-if [[ $# -eq 0 ]]; then
-  usage
-  exit 0
-fi
-
 case "$MODE" in
+  0 )
+    usage
+    exit
+    ;;
   1 )
-    get_body_without_head_and_tail "$1"
+    if [ -p /dev/stdin ]; then
+      cat -
+    else
+      echo "$1"
+    fi | get_body_without_head_and_tail
     ;;
   2 )
-    get_body_from_center "$1"
+    if [ -p /dev/stdin ]; then
+      get_body_from_center_pipe "$(cat -)"
+    elif [ $# -eq 1 ]; then
+      get_body_from_center_arg "$1"
+    else
+      usage
+    fi
+    ;;
 esac
 
 
