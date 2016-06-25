@@ -1,0 +1,64 @@
+#!/bin/bash
+
+function usage() {
+  echo "nobody v0.1.0"
+}
+
+function get_head() {
+  if [[ ! -z "$hd" ]];then
+    expr $hd + 1 > /dev/null
+    if [[ "$?" -lt 1 ]]; then
+      text_head="$(cat $1 | head -"$hd")"
+    fi
+  else
+    text_head="$(cat $1 | head -n "$DEFAULT_REMOVE_LINE")"
+  fi
+}
+
+function get_tail() {
+  if [ ! -z "$tl" ]; then
+    expr $tl + 1 > /dev/null
+    if [[ "$?" -lt 1 ]]; then
+      text_tail="$(cat $1 | tail -"$tl")"
+    fi
+  else
+    text_tail="$(cat $1 | tail -n "$DEFAULT_REMOVE_LINE")"
+  fi
+}
+
+function disp() {
+  get_head "$1"
+  get_tail "$1"
+
+  echo "$text_head"
+  echo
+  echo "~~~~~~~~~~~~~~~~"
+  echo
+  echo "$text_tail"
+}
+
+while getopts "h:t:n:" opts
+do
+  case $opts in
+    h )
+      hd="$OPTARG"
+      ;;
+    t )
+      tl="$OPTARG"
+      ;;
+    n )
+      hd="$OPTARG"
+      tl="$OPTARG"
+      ;;
+    \?)
+      exit 1
+      ;;
+  esac
+done
+
+shift $((OPTIND - 1))
+
+DEFAULT_REMOVE_LINE=10
+
+# main
+disp "$1"

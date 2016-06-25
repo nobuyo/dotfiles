@@ -1,44 +1,19 @@
 #!/bin/bash
 
 function usage() {
-  echo "body v0.1.0"
-}
-
-function get_head() {
-  if [[ ! -z "$hd" ]];then
-    expr $hd + 1 > /dev/null
-    if [[ "$?" -lt 1 ]]; then
-      text_head="$(cat $1 | head -"$hd")"
-    fi
-  else
-    text_head="$(cat $1 | head -n 10)"
-  fi
-}
-
-function get_tail() {
-  if [ ! -z "$tl" ]; then
-    expr $tl + 1 > /dev/null
-    if [[ "$?" -lt 1 ]]; then
-      text_tail="$(cat $1 | tail -"$tl")"
-    fi
-  else
-    text_tail="$(cat $1 | tail -n 10)"
-  fi
+  echo "body"
 }
 
 function get_body_without_head_and_tail() {
   if [[ ! -z "$hd" ]] && [[ ! -z "$tl" ]];then
-    expr $hd + 1 > /dev/null
-    hd_ret="$?"
-    expr $tl + 1 > /dev/null
-    tl_ret="$?"
-
-    if [[ "$hd_ret" -lt 1 ]] && [[ "$tl_ret" -lt 1 ]]; then
-      text="$(cat $1 | tail -n +"$hd" | head -n -"$tl")"
-    fi
-
+    text="$(cat $1 | tail -n +`expr $hd + 1` | head -n -"$tl")"
+  elif [[ -z "$hd" ]] && [[ ! -z "$tl" ]]; then
+    text="$(cat $1 | tail -n +"$DEFAULT_REMOVE_LINE" | head -n -"$tl")"
+  elif [[ ! -z "$hd" ]] && [[ -z "$tl" ]]; then
+    text="$(cat $1 | tail -n +`expr $hd + 1` | head -n -"$DEFAULT_REMOVE_LINE")"
   else
-    text="$(cat $1 | tail -n +10 | head -n -10)"
+    # default: remove each 10 lines 
+    text="$(cat $1 | tail -n +"$DEFAULT_REMOVE_LINE" | head -n -"$DEFAULT_REMOVE_LINE")"
   fi
   echo "$text"
 }
@@ -46,30 +21,28 @@ function get_body_without_head_and_tail() {
 function get_body_from_center() {
   line_count="$(cat $1 | grep -c '')"
   center_line="$(expr $line_count / 2)"
+  range=10
   if [[ ! -z "$line" ]];then
     range="$(expr $line / 2)"
-    expr $tl + 1 > /dev/null
-    if [[ "$?" -lt 1 ]]; then
-      text="$(cat $1 | tail -n +`expr $center_line - $range` | head -n `expr $center_line + $range` )"
+    # even lines
+    if [[ "$(expr $line_count % 2 )" -eq 0 ]]; then
+      bf="$(expr $center_line - $range)"
+      af="$(expr $center_line + $range)"
+      text="$(cat $1 | head -"$af" | tail -`expr $af - $bf + 1`)"
+    # odd lines
+    elif [[ "$(expr $line_count % 2 )" -eq 1 ]]; then
+      bf="$(expr $center_line - $range)"
+      af="$(expr $center_line + $range + 1)"
+      text="$(cat $1 | head -n "$af" | tail -n `expr $af - $bf`)"
     fi
   else
-    text="$(cat $1 | tail -n +10 | head -n -10)"
+    bf="$(expr $center_line - $range)"
+    af="$(expr $center_line + $range)"
+    text="$(cat $1 | head -"$af" | tail -`expr $af - $bf + 1`)"
   fi
   echo "$text"
 }
 
-function disp() {
-  get_head "$1"
-  get_tail "$1"
-
-  echo "$text_head"
-  echo
-  echo "~~~~~~~~~~~~~~~~~~~~~~"
-  echo
-  echo "$text_tail"
-}
-
-# head and tail flag
 MODE=0
 while getopts "h:t:n:" opts
 do
@@ -94,13 +67,15 @@ done
 
 shift $((OPTIND - 1))
 
+DEFAULT_REMOVE_LINE=10
+
 # main
 case "$MODE" in
   1 )
-    disp "$1"
+    get_body_without_head_and_tail "$1"
     ;;
   2 )
     get_body_from_center "$1"
-    ;;
 esac
+
 
