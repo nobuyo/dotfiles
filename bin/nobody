@@ -11,7 +11,7 @@ function get_head() {
       text_head="$(cat $1 | head -"$hd")"
     fi
   else
-    text_head="$(cat $1 | head -5)"
+    text_head="$(cat $1 | head -n 10)"
   fi
 }
 
@@ -22,7 +22,7 @@ function get_tail() {
       text_tail="$(cat $1 | tail -"$tl")"
     fi
   else
-    text_tail="$(cat $1 | tail -5)"
+    text_tail="$(cat $1 | tail -n 10)"
   fi
 }
 
