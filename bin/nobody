@@ -1,7 +1,13 @@
 #!/bin/bash
 
 function usage() {
-  echo "nobody v0.1.0"
+  echo "nobody - show head and tail of file"
+  echo
+  echo "version 0.1.1"
+  echo "[option]"
+  echo "  -n lines: show lines head and tail"
+  echo "  -h lines: assign head lines"
+  echo "  -t lines: assign tail lines"
 }
 
 function get_head() {
@@ -51,6 +57,7 @@ do
       tl="$OPTARG"
       ;;
     \?)
+      usage
       exit 1
       ;;
   esac
@@ -61,4 +68,9 @@ shift $((OPTIND - 1))
 DEFAULT_REMOVE_LINE=10
 
 # main
-disp "$1"
+if [[ $# -eq 0 ]]; then
+  usage
+  exit 0
+else
+  disp "$1"
+fi

@@ -1,8 +1,15 @@
 #!/bin/bash
 
 function usage() {
-  echo "body"
+  echo "body - show body of file"
+  echo
+  echo "version 0.1.0"
+  echo "[option]"
+  echo "  -n lines: show lines from center"
+  echo "  -h lines: assign head lines"
+  echo "  -t lines: assign tail lines"
 }
+
 
 function get_body_without_head_and_tail() {
   if [[ ! -z "$hd" ]] && [[ ! -z "$tl" ]];then
@@ -70,6 +77,12 @@ shift $((OPTIND - 1))
 DEFAULT_REMOVE_LINE=10
 
 # main
+
+if [[ $# -eq 0 ]]; then
+  usage
+  exit 0
+fi
+
 case "$MODE" in
   1 )
     get_body_without_head_and_tail "$1"
