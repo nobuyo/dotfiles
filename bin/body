@@ -1,0 +1,59 @@
+#!/bin/bash
+
+function usage() {
+  echo "nobody"
+}
+
+function get_body_without_head_and_tail() {
+  if [[ ! -z "$hd" ]] && [[ ! -z "$tl" ]];then
+    expr $hd + 1 > /dev/null
+    hd_ret="$?"
+    expr $tl + 1 > /dev/null
+    tl_ret="$?"
+
+    if [[ "$hd_ret" -lt 1 ]] && [[ "$tl_ret" -lt 1 ]]; then
+      text="$(cat $1 | tail -n +"$hd" | head -n -"$tl")"
+    fi
+
+  else
+    text="$(cat $1 | tail -n +10 | head -n -10)"
+  fi
+  echo "$text"
+}
+
+function get_body_from_center() {
+  if [[ ! -z "$line" ]];then
+    expr $tl + 1 > /dev/null
+    if [[ "$?" -lt 1 ]]; then
+      text="$(cat $1 | tail -"$tl")"
+    fi
+
+  else
+    text="$(cat $1 | tail -n +10 | head -n -10)"
+  fi
+  echo "$text"
+}
+
+while getopts "h:t:" opts
+do
+  case $opts in
+    h )
+      hd="$OPTARG"
+      ;;
+    t )
+      tl="$OPTARG"
+      ;;
+    n )
+      line="$OPTARG"
+      ;;
+    \?)
+      exit 1
+      ;;
+  esac
+done
+
+shift $((OPTIND - 1))
+
+# main
+get_body "$1"
+
