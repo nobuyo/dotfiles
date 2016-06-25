@@ -1,7 +1,29 @@
 #!/bin/bash
 
 function usage() {
-  echo "nobody"
+  echo "body v0.1.0"
+}
+
+function get_head() {
+  if [[ ! -z "$hd" ]];then
+    expr $hd + 1 > /dev/null
+    if [[ "$?" -lt 1 ]]; then
+      text_head="$(cat $1 | head -"$hd")"
+    fi
+  else
+    text_head="$(cat $1 | head -n 10)"
+  fi
+}
+
+function get_tail() {
+  if [ ! -z "$tl" ]; then
+    expr $tl + 1 > /dev/null
+    if [[ "$?" -lt 1 ]]; then
+      text_tail="$(cat $1 | tail -"$tl")"
+    fi
+  else
+    text_tail="$(cat $1 | tail -n 10)"
+  fi
 }
 
 function get_body_without_head_and_tail() {
@@ -22,29 +44,47 @@ function get_body_without_head_and_tail() {
 }
 
 function get_body_from_center() {
+  line_count="$(cat $1 | grep -c '')"
+  center_line="$(expr $line_count / 2)"
   if [[ ! -z "$line" ]];then
+    range="$(expr $line / 2)"
     expr $tl + 1 > /dev/null
     if [[ "$?" -lt 1 ]]; then
-      text="$(cat $1 | tail -"$tl")"
+      text="$(cat $1 | tail -n +`expr $center_line - $range` | head -n `expr $center_line + $range` )"
     fi
-
   else
     text="$(cat $1 | tail -n +10 | head -n -10)"
   fi
   echo "$text"
 }
 
-while getopts "h:t:" opts
+function disp() {
+  get_head "$1"
+  get_tail "$1"
+
+  echo "$text_head"
+  echo
+  echo "~~~~~~~~~~~~~~~~~~~~~~"
+  echo
+  echo "$text_tail"
+}
+
+# head and tail flag
+MODE=0
+while getopts "h:t:n:" opts
 do
   case $opts in
     h )
       hd="$OPTARG"
+      MODE=1
       ;;
     t )
       tl="$OPTARG"
+      MODE=1
       ;;
     n )
       line="$OPTARG"
+      MODE=2
       ;;
     \?)
       exit 1
@@ -55,5 +95,12 @@ done
 shift $((OPTIND - 1))
 
 # main
-get_body "$1"
+case "$MODE" in
+  1 )
+    disp "$1"
+    ;;
+  2 )
+    get_body_from_center "$1"
+    ;;
+esac
 
