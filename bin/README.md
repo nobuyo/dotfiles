@@ -125,3 +125,27 @@ csubl <dir>
 strip html tag
 
 [code](untag)
+
+Usage:
+~~~
+cat file | untag
+~~~
+
+~~~
+untag file
+~~~
+
+#### body/nobody
+
+[body(code)](body)
+
+[nobody(code)](nobody)
+
+Usage:
+~~~
+body [-n lines][-t lines][-h lines] file
+~~~
+
+~~~
+nobody [-n lines][-t lines][-h lines] file
+~~~
