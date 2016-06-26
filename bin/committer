@@ -2,10 +2,19 @@
 
 #
 # committer - get git status for commit message
+# https://github.com/nobuyo/dotfiles/blob/master/bin/committer
 #
+
+function info() {
+  echo "committer - generate commit message"
+  echo
+  echo "[Usage]"
+  echo "  % git commit -m \"\$(comitter)\""
+}
 
 function check_pwd_is_git_dir {
   if [ ! -e .git ]; then
+    info
     exit 1
   fi
 }
