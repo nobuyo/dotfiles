@@ -14,6 +14,7 @@ function info() {
 
 function check_pwd_is_git_dir {
   if [ ! -e .git ]; then
+    echo -e "\033[31mfatal:\033[m Not a git repository, exitting"
     info
     exit 1
   fi
