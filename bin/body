@@ -11,7 +11,7 @@ function usage() {
 }
 
 
-function get_body_without_head_and_tail() {
+function get_body_without_head_and_tail_pipe() {
   if [[ ! -z "$hd" ]] && [[ ! -z "$tl" ]];then
     text="$(cat - | tail -n +`expr $hd + 1` | head -n -"$tl")"
   elif [[ -z "$hd" ]] && [[ ! -z "$tl" ]]; then
@@ -21,6 +21,20 @@ function get_body_without_head_and_tail() {
   else
     # default: remove each 10 lines 
     text="$(cat - | tail -n +"$DEFAULT_REMOVE_LINE" | head -n -"$DEFAULT_REMOVE_LINE")"
+  fi
+  echo "$text"
+}
+
+function get_body_without_head_and_tail_arg() {
+  if [[ ! -z "$hd" ]] && [[ ! -z "$tl" ]];then
+    text="$(cat $1 | tail -n +`expr $hd + 1` | head -n -"$tl")"
+  elif [[ -z "$hd" ]] && [[ ! -z "$tl" ]]; then
+    text="$(cat $1 | tail -n +"$DEFAULT_REMOVE_LINE" | head -n -"$tl")"
+  elif [[ ! -z "$hd" ]] && [[ -z "$tl" ]]; then
+    text="$(cat $1 | tail -n +`expr $hd + 1` | head -n -"$DEFAULT_REMOVE_LINE")"
+  else
+    # default: remove each 10 lines 
+    text="$(cat $1 | tail -n +"$DEFAULT_REMOVE_LINE" | head -n -"$DEFAULT_REMOVE_LINE")"
   fi
   echo "$text"
 }
@@ -111,10 +125,12 @@ case "$MODE" in
     ;;
   1 )
     if [ -p /dev/stdin ]; then
-      cat -
+      get_body_without_head_and_tail_pipe "$(cat -)"
+    elif [ $# -eq 1 ]; then
+      get_body_without_head_and_tail_arg "$1"
     else
-      echo "$1"
-    fi | get_body_without_head_and_tail
+      usage
+    fi
     ;;
   2 )
     if [ -p /dev/stdin ]; then
