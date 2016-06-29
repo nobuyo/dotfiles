@@ -6,6 +6,9 @@ export PROMPT_COLOR_SWITCH=0
 PATH=/usr/local/bin:$PATH:~/.dotfiles/bin:~/picnic-tools/bin
 # export MANPATH=/usr/local/share/man:/usr/local/man:/usr/share/man
 
+# passbox file
+export PASSBOX_LOCATION=$DOTPATH/passbox.gpg
+
 HISTFILE=$DOTPATH/.zsh-history
 HISTSIZE=100000
 SAVEHIST=100000
