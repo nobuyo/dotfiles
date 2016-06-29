@@ -8,6 +8,7 @@ PATH=/usr/local/bin:$PATH:~/.dotfiles/bin:~/picnic-tools/bin
 
 # passbox file
 export PASSBOX_LOCATION=$DOTPATH/passbox.gpg
+alias pass='passbox'
 
 HISTFILE=$DOTPATH/.zsh-history
 HISTSIZE=100000
