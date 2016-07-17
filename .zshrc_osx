@@ -1,5 +1,9 @@
 alias sed='gsed'
 
+# for hyperterm
+alias github='github.com'
+alias tw='tweetdeck.twitter.com'
+
 export NODE_PATH=/usr/local/bin
 
 PROMPT="%{${fg[yellow]}%}%/
