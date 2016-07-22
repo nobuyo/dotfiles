@@ -38,7 +38,7 @@ function summarize {
   if [[ "$(echo "$1" | grep -c '')" -gt 1 ]]; then
     local tmp="$(echo "$1" | head -1 | sed -e 's/:   /: /g')"
     restate "$tmp"
-    echo "${msg} , etc."
+    echo "${msg}, etc."
   else
     restate "$(echo "$1" | sed -e 's/:   /: /g')"
     echo "$msg"
