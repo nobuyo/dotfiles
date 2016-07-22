@@ -26,7 +26,8 @@
 	pob = "!f(){ push origin $1;};f"
 	pom = push origin master
 	update = pull origin master
-	open = "!git-open"
+	open = "!f(){ git-open $* }"
+	o = open
 	r = remote
 	ru = remote update
 	rv = remote -v

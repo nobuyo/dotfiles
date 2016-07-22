@@ -1,5 +1,7 @@
 #!/bin/bash
 
+REMOTE=${1:-origin}
+
 function variable_open() {
   case ${OSTYPE} in
     darwin* )
@@ -14,13 +16,25 @@ function variable_open() {
   esac
 }
 
+function error {
+  # color:red
+  echo -e "\033[31mError\033[m" "$*"
+}
+
+function check_remote() {
+  git remote -v | grep "$REMOTE" >/dev/null || {
+    error "Remote \"$REMOTE\" not found, exitting."
+    exit 1
+  }
+}
+
 function encode_to_html() {
   local repo="$(echo $url | awk -F: '{ print $2 }')"
   encoded="https://github.com/$repo"
 }
 
 function extract_url() {
-  url="$(git remote -v | grep origin | awk '{print $2}' | uniq )"
+  url="$(git remote -v | grep "$REMOTE" | awk '{print $2}' | uniq )"
   case "$url" in
     git@* )
       encode_to_html
@@ -33,4 +47,5 @@ function extract_url() {
 }
 
 extract_url
+check_remote
 variable_open "$url"
