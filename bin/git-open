@@ -1,6 +1,18 @@
 #!/bin/bash
 
+# git-open - open remote web site with browser
+
+# Usage: git open [remote] (aliased in ~/.gitconfig)
+#        git-open [remote] (directly use this script)
+
 REMOTE=${1:-origin}
+
+# function usage() {
+#   echo "git-open - open remote web site with browser"
+#   echo ""
+#   echo "Usage: git open [remote] (aliased in ~/.gitconfig)"
+#   echo "       git-open [remote] (directly use this script)"
+# }
 
 function variable_open() {
   case ${OSTYPE} in
@@ -43,9 +55,14 @@ function extract_url() {
     https* )
       :
       ;;
+    * )
+      error "URL format invalid"
+      echo "===> $url"
+      exit 2
+      ;;
   esac
 }
 
-extract_url
 check_remote
+extract_url
 variable_open "$url"
