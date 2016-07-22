@@ -25,3 +25,4 @@ bin/*
 !untag
 !body
 !nobody
+!git-open

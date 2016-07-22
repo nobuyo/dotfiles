@@ -1,0 +1,36 @@
+#!/bin/bash
+
+function variable_open() {
+  case ${OSTYPE} in
+    darwin* )
+      open "$1"
+      ;;
+    linux* )
+      xdg-open "$1"
+      ;;
+    cygwin* )
+      cygstart "$1"
+      ;;
+  esac
+}
+
+function encode_to_html() {
+  local repo="$(echo $url | awk -F: '{ print $2 }')"
+  encoded="https://github.com/$repo"
+}
+
+function extract_url() {
+  url="$(git remote -v | grep origin | awk '{print $2}' | uniq )"
+  case "$url" in
+    git@* )
+      encode_to_html
+      url="$encoded"
+      ;;
+    https* )
+      :
+      ;;
+  esac
+}
+
+extract_url
+variable_open "$url"
