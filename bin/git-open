@@ -29,7 +29,6 @@ function variable_open() {
 }
 
 function error {
-  # color:red
   echo -e "\033[31mError\033[m" "$*"
 }
 
