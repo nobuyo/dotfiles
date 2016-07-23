@@ -29,7 +29,7 @@ function variable_open() {
 }
 
 function error {
-  echo -e "\033[31mError\033[m" "$*"
+  echo -e "\033[31mfatal\033[m" "$*"
 }
 
 function check_remote() {
