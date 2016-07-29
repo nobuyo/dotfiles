@@ -23,7 +23,7 @@
 	l = log
 	lo = log --oneline --decorate
 	lp = log -p
-	pob = "!f(){ push origin $1;};f"
+	pob = "!f(){ git push origin $1; }; f"
 	pom = push origin master
 	update = pull origin master
 	open = "!f(){ git-open $* }"
