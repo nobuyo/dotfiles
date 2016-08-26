@@ -29,6 +29,9 @@ alias g='git'
 # git commit message generator
 alias cmt='committer'
 
+# weather 
+# alias weather='curl -s wttr.in/nagano | head -n7'
+
 # VirtualBox aliases
 alias vmup='VBoxManage startvm "CentOS6.7" --type headless'
 alias vmsave='VBoxManage controlvm "CentOS6.7" savestate'
@@ -88,3 +91,7 @@ setopt correct
 
 setopt auto_cd
 function chpwd() { l }
+
+function weather() {
+  curl -s "wttr.in/${1:-"nagano"}" | head -n7
+}
