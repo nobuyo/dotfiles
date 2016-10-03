@@ -3,7 +3,7 @@
 ## Installation
 
 ~~~
-% bash -c "$(curl -fsSL dot.medy.xyz)"
+% bash -c "$(curl -fsSL goo.gl/d0tqZJ)"
 ~~~
 
 **OR**
