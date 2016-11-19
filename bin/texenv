@@ -4,9 +4,13 @@ function usage {
 	echo 'Report Environment Initialize Script'
 	echo "  Usage : [${0##*/} <Directory name>]"
 	echo ""
-  echo "  Option:"
-  echo "    -i  : run make init automatically"
+	echo "  Option:"
+	echo "    -i  : run make init automatically"
 	exit 0
+}
+
+function mksubdir {
+	mkdir -p "$1" && touch "$1/.keep"
 }
 
 # if some folders already exists,
@@ -19,8 +23,8 @@ elif [ "$1" = "-i" ]; then
 	auto_make=1
 	shift
 elif [ "$#" -ne 1 ]; then
-  echo "auguments too much"
-  usage
+	echo "auguments too much"
+	usage
 fi
 
 if [ ! -e $1 ]; then
@@ -29,17 +33,10 @@ fi
 
 cd $1
 
-if [ ! -e "image" ]; then
-	mkdir image
-fi
-
-if [ ! -e "include" ]; then
-	mkdir include
-fi
-
-if [ ! -e "build" ]; then
-	mkdir build
-fi
+mksubdir "image"
+mksubdir "include"
+mksubdir "pages"
+mksubdir "build"
 
 # After making folders and file,
 # please run follow commands
@@ -53,6 +50,7 @@ cat <<'EOT'  > "$PWD"/Makefile
 TARGET=main
 SUB_TARGET=input
 TEX=platex
+UNAME=$(shell uname)
 
 .SUFFIXES: .tex .dvi
 .PHONY: pdf init pd open clean bb
@@ -78,10 +76,18 @@ pdf: $(TARGET).tex
 	@mv main.pdf build/
 	@mv main.dvi build/
 
+ifeq ($(UNAME), Darwin)
 	@open build/$(TARGET).pdf
+else
+	@cygstart build/$(TARGET).pdf
+endif
 
 open: build/$(TARGET).pdf
+ifeq ($(UNAME), Darwin)
 	@open build/$(TARGET).pdf
+else
+	@cygstart build/$(TARGET).pdf
+endif
 
 bb:
 	ebb image/*.png
@@ -94,8 +100,8 @@ EOT
 
 # ===Malefile Form End===
 
-if [ "$(echo $OSTYPE)" = "cygwin" ]; then
-	sed -i 's/@open/@cygstart/g' Makefile
+if [ "$(uname)" = "cygwin" ]; then
+	sed -e 's/@open/@cygstart/g' -i Makefile
 fi
 
 if [ "$auto_make" = 1 ]; then
