@@ -15,3 +15,14 @@ PROMPT2="%{${fg[white]}%}%_%%%{${reset_color}%} "
 SPROMPT="%{${fg[white]}%}%r is correct? [n,y,a,e]:%{${reset_color}%} "
 [ -n "${REMOTEHOST}${SSH_CONNECTION}" ] &&
 PROMPT="%{${fg[white]}%}${HOST%%.*} ${PROMPT}"
+
+
+alias twd=new_terminal_working_directory
+function new_terminal_working_directory() {
+osascript <<END 
+  tell application "Terminal"
+    tell application "System Events" to tell process "Terminal" to keystroke "t" using command down
+      do script "cd $(pwd)" in first window
+  end tell
+END
+}
