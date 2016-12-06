@@ -92,6 +92,9 @@ endif
 bb:
 	ebb image/*.png
 
+test:
+	ruby ~/.dotfiles/etc/latex-test.rb input.tex
+
 clean:
 	rm -f $(TARGET).dvi $(TARGET).aux $(TARGET).log $(TARGET).toc
 	rm -f $(TARGET).tar.gz
