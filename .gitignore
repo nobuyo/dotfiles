@@ -22,7 +22,5 @@ bin/*
 !guid
 !committer
 !csubl
-!untag
-!body
-!nobody
+!tracking
 !git-open
