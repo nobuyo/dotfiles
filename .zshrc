@@ -23,6 +23,9 @@ alias hexo='nocorrect hexo'
 # change prompt color
 alias chprm='source chcolor'
 
+# track yamato
+alias yamato='track yamato'
+
 # madness git
 alias g='git'
 

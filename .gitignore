@@ -22,5 +22,5 @@ bin/*
 !guid
 !committer
 !csubl
-!tracking
+!track
 !git-open
