@@ -2,6 +2,9 @@
 	email = world_fantasy_2017@live.jp
 	name = nobuyo
 
+[core]
+    excludesfile = ~/.gitignore_global
+
 [alias]
 	a = add
 	# aa = add -A
