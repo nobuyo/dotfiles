@@ -26,7 +26,7 @@
 	l = log
 	lo = log --oneline --decorate
 	lp = log -p
-	pob = "!f(){ git push origin $1; }; f"
+	pob = !git branch | grep \\* | cut -d' ' -f 2 | xargs git push origin
 	pom = push origin master
 	update = pull origin master
 	open = "!f(){ git-open $* }"
