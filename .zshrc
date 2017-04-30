@@ -98,3 +98,7 @@ function chpwd() { l }
 function weather() {
   curl -s "wttr.in/${1:-"nagano"}" | head -n7
 }
+
+function bb-create-repo() {
+  curl --request POST --user nobuyo https://api.bitbucket.org/1.0/repositories/ --data name=$1 --data scm=git --data is_private=true
+}
