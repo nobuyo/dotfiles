@@ -38,6 +38,16 @@
 			 \today
 			 \advance\day by -1}
 
+\newcommand{\insertImage}[4][width=10cm]{
+	\begin{figure}[H]
+	\begin{center}
+	\includegraphics[#1]{image/#2}
+	\caption{#3}
+	\label{#4}
+	\end{center}
+	\end{figure}
+}
+
 % === title form ===
 
 \begin{titlepage}
