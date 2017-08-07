@@ -6,30 +6,39 @@ class LaTeX
   def initialize(filepath)
     @text = File.read(filepath)
     @text.gsub!(/\%.*$/, "")
+    @text.scan(/\\input{(.*?)}/).flatten.flatten.each do |i|
+      partial = File.read(i+'.tex')
+      @text.gsub!(/\\input{#{i}}/, partial)
+    end
   end
 
   def document
     @document ||= @text.gsub!(/\\begin{verbatim}.*?\\end{verbatim}|\\begin{lstlisting}.*?\\end{lstlisting}|\\verb\*?[\|#].*?[\|#]/mx,"")
   end
 
+  def inputs(&block)
+    @inputs ||= @text.scan(/\\input{(.*?)}/).flatten
+    @inputs.tap { |array| array.each(&block) if block_given? }
+  end
+
   def labels(&block)
     @labels ||= @text.scan(/label[={]([^,\}\]]*)/).flatten
-      .tap { |array| array.each(&block) if block_given? }
+    @labels.tap { |array| array.each(&block) if block_given? }
   end
 
   def refs(&block)
     @refs ||= @text.scan(/\\ref{(.*?)}/).flatten
-      .tap { |array| array.each(&block) if block_given? }
+    @refs.tap { |array| array.each(&block) if block_given? }
   end
 
   def figures(&block)
     @figures ||= @text.scan(/\\begin{figure}(.*?)\\end{figure}/m).flatten
-      .tap { |array| array.each(&block) if block_given? }
+    @figures.tap { |array| array.each(&block) if block_given? }
   end
 
   def tables(&block)
     @tables ||= @text.scan(/\\begin{table}(.*?)\\end{table}/mx).flatten
-      .tap { |array| array.each(&block) if block_given? }
+    @tables.tap { |array| array.each(&block) if block_given? }
   end
 
   def listings(&block)
@@ -39,12 +48,12 @@ class LaTeX
       \\lstinputlisting.*?\[(.*?)\]
     }mx)
     .flatten.compact
-    .tap { |array| array.each(&block) if block_given? }
+    @listings.tap { |array| array.each(&block) if block_given? }
   end
 
   def sections(&block)
     @sections ||= @text.scan(/\\section{.*}/)
-      .tap { |array| array.each(&block) if block_given? }
+    @sections.tap { |array| array.each(&block) if block_given? }
   end
 end
 
