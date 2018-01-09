@@ -10,6 +10,7 @@ class LaTeX
       partial = File.read(i+'.tex')
       @text.gsub!(/\\input{#{i}}/, partial)
     end
+    @text.gsub!(/\%.*$/, "")
   end
 
   def document
@@ -39,6 +40,11 @@ class LaTeX
   def tables(&block)
     @tables ||= @text.scan(/\\begin{table}(.*?)\\end{table}/mx).flatten
     @tables.tap { |array| array.each(&block) if block_given? }
+  end
+
+  def equations(&block)
+    @equations ||= @text.scan(/\$\\tt\s(.*?_.*?)\$/).flatten
+    @equations.tap { |array| array.each(&block) if block_given? }
   end
 
   def listings(&block)
@@ -96,6 +102,10 @@ class TestReportFormat < Test::Unit::TestCase
     assert_equal @pdf.labels.sort.uniq, @pdf.refs.sort.uniq
   end
 
+  def test_labels_uniqueness
+    assert_equal @pdf.labels.sort, @pdf.labels.sort.uniq
+  end
+
   # --- figures ---
 
   def test_figure_contains_label_definition
@@ -145,6 +155,14 @@ class TestReportFormat < Test::Unit::TestCase
   def test_table_has_centering
     @pdf.tables do |tab|
       assert_match /center/, tab, '\\table must be centering'
+    end
+  end
+
+  # --- equations ---
+
+  def test_underscore_in_variable_name_should_escape
+    @pdf.equations do |eq|
+      assert_match /.*?\\_.*?/, eq, 'inline equation which uses \\tt has no escaped underscore'
     end
   end
 
