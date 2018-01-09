@@ -28,7 +28,7 @@
 	lp = log -p
 	pob = !git branch | grep \\* | cut -d' ' -f 2 | xargs git push origin
 	pom = push origin master
-	update = pull origin master
+	update = !git branch | grep \\* | cut -d' ' -f 2 | xargs git pull origin
 	open = "!f(){ git-open $* }"
 	o = open
 	r = remote
