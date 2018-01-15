@@ -5,6 +5,9 @@ export PYENV_ROOT="${HOME}/.pyenv"
 export PATH="${PYENV_ROOT}/bin:$PATH"
 eval "$(pyenv init -)"
 
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+
 alias -s py=python3
 
 PROMPT="%{${fg[white]}%}%/
