@@ -32,6 +32,16 @@ class LaTeX
     @refs.tap { |array| array.each(&block) if block_given? }
   end
 
+  def bibitems(&block)
+    @refs ||= @text.scan(/\\bibitem{(.*?)}/).flatten
+    @refs.tap { |array| array.each(&block) if block_given? }
+  end
+
+  def cites(&block)
+    @refs ||= @text.scan(/\\cite{(.*?)}/).flatten
+    @refs.tap { |array| array.each(&block) if block_given? }
+  end
+
   def figures(&block)
     @figures ||= @text.scan(/\\begin{figure}(.*?)\\end{figure}/m).flatten
     @figures.tap { |array| array.each(&block) if block_given? }
@@ -104,6 +114,12 @@ class TestReportFormat < Test::Unit::TestCase
 
   def test_labels_uniqueness
     assert_equal @pdf.labels.sort, @pdf.labels.sort.uniq
+  end
+
+  # --- bib and cite ---
+
+  def test_bibs_cites
+    assert_equal @pdf.bibitems.sort.uniq, @pdf.cites.sort.uniq
   end
 
   # --- figures ---
