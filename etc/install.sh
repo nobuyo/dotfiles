@@ -10,9 +10,6 @@
 set -e
 set -u
 
-# export SHELLOPTS
-# set -o igncr
-
 is_available() {
   which "$1" >/dev/null 2>&1
   return $?
@@ -31,10 +28,8 @@ get_dotfile() {
   fi
 
   if is_available "git"; then
-      git clone --recursive "$DOTGIT" "$DOTPATH"
-
+    git clone --recursive "$DOTGIT" "$DOTPATH"
   elif is_available "curl"; then
-
     local tarball="https://github.com/nobuyo/dotfiles/archive/master.tar.gz"
     if is_available "curl"; then
        curl -L "$tarball"
@@ -44,10 +39,9 @@ get_dotfile() {
       exit 1
     fi
     command mv -f dotfiles-master "$DOTPATH"
-
   else
-       echo "curl required"
-       exit 1
+    echo "curl required"
+    exit 1
   fi
 
   echo "Done"
@@ -69,22 +63,8 @@ deploy() {
   echo "Done"
 }
 
-check() {
-  local req=("zsh","gcc","bzip2","xz","git","aria2","make","curl","wget")
-  for $r in ${req[@]}; do
-    echo -n "$r"
-    which "$r"
-    if [ $? -eq 0 ]; then
-      echo "OK"
-    else
-      echo "Not installed"
-    fi
-  done
-}
-
 setup() {
   get_dotfile && deploy
 }
 
 setup
-# check

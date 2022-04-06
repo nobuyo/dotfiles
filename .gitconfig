@@ -1,5 +1,5 @@
 [user]
-	email = world_fantasy_2017@live.jp
+	email = longzechangsheng@gmail.com
 	name = nobuyo
 
 [core]
@@ -15,19 +15,14 @@
 	c = commit
 	cm = commit -m
 	cam = commit -am
-	# auto commit
-	acm = "!f(){ git commit -m "\"$(committer)\""; }; f"
-	acam = "!f(){ git commit -am "\"$(committer)\""; }; f"
 	ch = checkout
 	chb = checkout -b
-	chm = checkout master
 	d = diff
 	f = fetch
 	l = log
 	lo = log --oneline --decorate
 	lp = log -p
 	pob = !git branch | grep \\* | cut -d' ' -f 2 | xargs git push origin
-	pom = push origin master
 	update = !git branch | grep \\* | cut -d' ' -f 2 | xargs git pull origin
 	open = "!f(){ git-open $* }"
 	o = open
@@ -39,6 +34,4 @@
 	undo = reset HEAD~1 --mixed
 	unstage = reset HEAD
 	ver = !git --version
-	# commit count
-	cc = !git log --oneline --no-merges | grep -c ''
 	alias = "!f(){ if test -z $1; then loop=; for k in `git config --get-regexp ^alias\\. | sort | sed -e 's/^alias\\.\\(\\S*\\).*/\\1/g'`; do echo -n $k; loop="${loop}1"; if test ${#loop} -lt 5; then echo -n '\t'; else echo; loop=; fi; done; echo; exit; fi; git config --list | grep ^alias\\.$1= | sed -e s/^alias\\.//; exit;};f"

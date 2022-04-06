@@ -2,9 +2,7 @@ export LANG=ja_JP.UTF-8
 
 # PATH setting
 export DOTPATH=~/.dotfiles
-export PROMPT_COLOR_SWITCH=0
-PATH=/usr/local/bin:$PATH:~/.dotfiles/bin:~/picnic-tools/bin
-# export MANPATH=/usr/local/share/man:/usr/local/man:/usr/share/man
+export PATH="$HOME/.anyenv/bin:$PATH"
 
 HISTFILE=$DOTPATH/.zsh-history
 HISTSIZE=100000
@@ -18,27 +16,9 @@ alias l='ls -CF'
 # nocorrect
 alias git='nocorrect git'
 alias tree='nocorrect tree'
-alias hexo='nocorrect hexo'
-
-# change prompt color
-alias chprm='source chcolor'
-
-# track yamato
-alias yamato='track yamato'
 
 # madness git
 alias g='git'
-
-# git commit message generator
-alias cmt='committer'
-
-# weather 
-# alias weather='curl -s wttr.in/nagano | head -n7'
-
-# VirtualBox aliases
-alias vmup='VBoxManage startvm "CentOS6.7" --type headless'
-alias vmsave='VBoxManage controlvm "CentOS6.7" savestate'
-alias vmlist='VBoxManage list runningvms'
 
 autoload -Uz compinit
 compinit
@@ -51,9 +31,6 @@ darwin*)
 	;;
 linux*)
 	. ~/.zshrc_linux
-	;;
-*)
-	. ~/.zshrc_cygwin
 	;;
 esac
 
@@ -94,12 +71,3 @@ setopt correct
 
 setopt auto_cd
 function chpwd() { l }
-
-function weather() {
-  curl -s "wttr.in/${1:-"nagano"}" | head -n7
-}
-
-# function bb-create-repo() {
-#   curl --request POST --user nobuyo https://api.bitbucket.org/1.0/repositories/ --data name=$1 --data scm=git --data is_private=true
-#   && echo "git remote add origin ssh://git@bitbucket.org/nobuyo/$1.git"
-# }
